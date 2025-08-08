@@ -1,14 +1,12 @@
 name: 🌍 Update Geo IP Data
 
 on:
-  # 每天凌晨2点自动运行
+  # Run daily at 02:00 UTC
   schedule:
     - cron: '0 2 * * *'
-  
-  # 手动触发
+  # Allow manual trigger
   workflow_dispatch:
-  
-  # 当数据相关脚本更新时运行
+  # Run when data scripts change
   push:
     paths:
       - 'scripts/import-**'
@@ -16,7 +14,8 @@ on:
       - '.github/workflows/update-data.yml'
 
 env:
-  NODE_VERSION: '18'
+  NODE_VERSION: '20'
+  PNPM_VERSION: '9'
 
 permissions:
   contents: write
@@ -35,11 +34,27 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
       
       - name: 📦 Install dependencies
         run: |
-          npm install -g pnpm@9
           pnpm install --no-frozen-lockfile
       
       - name: 🗄️ Setup SQLite database
