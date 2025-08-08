@@ -99,11 +99,12 @@ jobs:
         run: |
           # 自定义提交身份（作者与提交者）
           git config --local user.name "GeoIP Data Bot"
-          git config --local user.email "bot@geo-ip-generator.local"
+          # Use GitHub Actions bot noreply email to keep the robot avatar
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           export GIT_AUTHOR_NAME="GeoIP Data Bot"
-          export GIT_AUTHOR_EMAIL="bot@geo-ip-generator.local"
+          export GIT_AUTHOR_EMAIL="41898282+github-actions[bot]@users.noreply.github.com"
           export GIT_COMMITTER_NAME="GeoIP Data Bot"
-          export GIT_COMMITTER_EMAIL="bot@geo-ip-generator.local"
+          export GIT_COMMITTER_EMAIL="41898282+github-actions[bot]@users.noreply.github.com"
           
           # 添加变更的文件
           git add data/
@@ -114,7 +115,7 @@ jobs:
           FILE_SIZE=$(jq -r '.metadata.dataSize' data/combined-geo-ip-data.json)
           
           # 提交变更
-          git commit --author="GeoIP Data Bot <bot@geo-ip-generator.local>" -m "🤖 Auto-update geo IP data
+          git commit --author="GeoIP Data Bot <41898282+github-actions[bot]@users.noreply.github.com>" -m "🤖 Auto-update geo IP data
           
           📊 Updated data statistics:
           - Countries/Regions: $COUNTRIES

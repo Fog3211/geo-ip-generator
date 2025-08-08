@@ -56,16 +56,37 @@ export function IpRegionLookup() {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement>(null);
 
-	// State for IP generation
+    // State for IP generation
 	const [generateData, setGenerateData] = useState<GenerateIpResponse | null>(null);
 	const [generateLoading, setGenerateLoading] = useState(false);
 	const [generateError, setGenerateError] = useState<string | null>(null);
+
+    // Data metadata (last updated)
+    const [lastUpdated, setLastUpdated] = useState<string | null>(null);
 
 
 
 	useEffect(() => {
 		setIsClient(true);
 	}, []);
+
+  // Fetch metadata for last updated timestamp
+  useEffect(() => {
+    const fetchMeta = async () => {
+      try {
+        const res = await fetch('/api/countries');
+        if (!res.ok) return;
+        const data = await res.json();
+        const meta = data?.data?.meta as { lastUpdated?: string } | undefined;
+        if (meta?.lastUpdated) {
+          setLastUpdated(meta.lastUpdated);
+        }
+      } catch (error) {
+        // silent
+      }
+    };
+    fetchMeta();
+  }, []);
 
 	// Handle click outside dropdown to close it
 	useEffect(() => {
@@ -152,6 +173,9 @@ export function IpRegionLookup() {
 				<p className="text-sm sm:text-base text-gray-600 leading-relaxed">
 					Professional service to generate real IP addresses from any country or region worldwide
 				</p>
+        {lastUpdated && (
+          <p className="mt-2 text-xs text-gray-500">Data last updated: {new Date(lastUpdated).toLocaleString()}</p>
+        )}
 			</div>
 
 			{/* Generation input */}

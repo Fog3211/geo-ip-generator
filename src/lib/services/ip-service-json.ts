@@ -4,6 +4,7 @@
  */
 
 import { z } from 'zod';
+import { cache } from '~/lib/cache';
 
 // 简化的缓存接口，用于JSON服务
 interface SimpleCache {
@@ -210,6 +211,11 @@ async function loadGeoIpData(): Promise<GeoIpData> {
   // 更新缓存
   try {
     await cache.set(DATA_CONFIG.CACHE_KEY, 'latest', data, DATA_CONFIG.CACHE_TTL);
+    // 同步缓存元信息，供前端显示最后更新时间
+    await cache.set('geo-ip-data', 'meta', {
+      lastUpdated: data.metadata.generatedAt,
+      version: data.metadata.version,
+    }, DATA_CONFIG.CACHE_TTL);
   } catch (error) {
     console.warn('Failed to cache data:', error);
   }
