@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCountries } from '~/lib/services/ip-service';
+import { cache } from '~/lib/cache';
 import { withRateLimit } from '~/lib/middleware/rate-limit-middleware';
 
 /**
@@ -13,7 +14,10 @@ import { withRateLimit } from '~/lib/middleware/rate-limit-middleware';
  */
 async function handleGetCountries(request: NextRequest) {
   try {
-    // Call service function directly
+    // Try cached metadata first (last updated info)
+    const cachedMeta = await cache.get<{ lastUpdated?: string; version?: string }>('geo-ip-data:meta');
+
+    // Call service to get countries list
     const countries = await getCountries();
 
     // Return clean REST response
@@ -22,6 +26,7 @@ async function handleGetCountries(request: NextRequest) {
       data: {
         countries,
         totalCount: countries.length,
+        meta: cachedMeta ?? null,
       },
       timestamp: new Date().toISOString(),
     });
