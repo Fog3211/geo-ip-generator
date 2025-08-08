@@ -1,12 +1,12 @@
 {
-  "timestamp": "2025-08-08T15:55:09.435Z",
+  "timestamp": "2025-08-08T15:58:27.640Z",
   "summary": {
     "totalSamples": 50,
     "correctCount": 46,
     "incorrectCount": 4,
     "errorCount": 0,
     "accuracyRate": 0.92,
-    "averageConfidence": 0.86
+    "averageConfidence": 0.88
   },
   "providerStats": {
     "ipwho.is": {
@@ -16,7 +16,7 @@
     },
     "geojs.io": {
       "successRate": 1,
-      "accuracyRate": 0.82,
+      "accuracyRate": 0.86,
       "responseTime": 0
     }
   },
