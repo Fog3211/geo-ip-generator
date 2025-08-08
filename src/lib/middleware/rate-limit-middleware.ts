@@ -4,7 +4,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { incrementRateLimit } from '~/lib/cache';
+import { incrementRateLimit, getRateLimitCount } from '~/lib/cache';
 import { RATE_LIMITS } from '~/config';
 import type { RateLimitEndpoint, RateLimitInfo } from '~/types';
 
@@ -126,7 +126,30 @@ export function withRateLimit(
     }
     
     // Otherwise, continue with the original handler
-    return handler(request);
+    const response = await handler(request);
+
+    // After successful handling, attach rate limit headers as well
+    try {
+      const clientIP = getClientIP(request);
+      const endpointName = endpoint || getEndpointName(request);
+      const config = RATE_LIMITS[endpointName as RateLimitEndpoint] || RATE_LIMITS.default;
+
+      // Fetch current usage (may be 0 if Redis disabled)
+      const currentCount = await getRateLimitCount(clientIP, endpointName);
+      const limit = config.requests;
+      const remaining = Math.max(0, limit - currentCount);
+      const resetAt = new Date(Date.now() + config.windowMs).toISOString();
+
+      response.headers.set('X-RateLimit-Limit', String(limit));
+      response.headers.set('X-RateLimit-Remaining', String(remaining));
+      response.headers.set('X-RateLimit-Reset', resetAt);
+      // Do not set Retry-After on success; it's meaningful when rejecting
+    } catch (err) {
+      // Fail open: do not block response if headers setting failed
+      console.warn('Failed to attach rate limit headers:', err);
+    }
+
+    return response;
   };
 }
 

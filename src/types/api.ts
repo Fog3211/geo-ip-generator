@@ -37,13 +37,21 @@ export interface GenerateIpRequest {
 }
 
 export interface GenerateIpResponse {
-  ips: string[];
   country: {
-    code: string;
-    name: string;
+    id: string;
+    code2: string;
+    nameEn: string;
+    nameZh?: string;
+    continent?: string;
+    region?: string;
   };
-  count: number;
-  ranges_used: number;
+  ips: Array<{
+    ip: string;
+    location: { region: string | null; city: string | null; isp: string | null };
+    ipRange: { startIp: string; endIp: string };
+  }>;
+  totalRanges: number;
+  cached: boolean;
 }
 
 export interface Country {

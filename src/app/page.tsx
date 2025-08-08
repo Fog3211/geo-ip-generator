@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { IpRegionLookup } from "~/app/_components/ip-region-lookup";
+import { IpRegionLookup } from "~/app/_components/IpRegionLookup";
 
 export default function Home() {
 	return (
