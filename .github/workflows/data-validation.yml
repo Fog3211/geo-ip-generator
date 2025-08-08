@@ -1,10 +1,10 @@
-name: Data Validation
+name: Weekly Data Validation
 
 on:
   schedule:
-    # 每周一 UTC 03:00 运行（北京时间 11:00）
+    # Run every Monday at 03:00 UTC
     - cron: '0 3 * * 1'
-  workflow_dispatch: # 允许手动触发
+  workflow_dispatch:
     inputs:
       sample_size:
         description: 'Number of IPs to validate'
@@ -13,8 +13,11 @@ on:
         type: number
 
 env:
-  NODE_VERSION: '18'
-  PNPM_VERSION: '8'
+  NODE_VERSION: '20'
+  PNPM_VERSION: '9'
+
+permissions:
+  contents: write
 
 jobs:
   validate-data:
@@ -32,7 +35,7 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
 
     - name: Setup pnpm
-      uses: pnpm/action-setup@v2
+      uses: pnpm/action-setup@v4
       with:
         version: ${{ env.PNPM_VERSION }}
 
@@ -42,7 +45,7 @@ jobs:
         echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
     - name: Setup pnpm cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ${{ env.STORE_PATH }}
         key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -50,11 +53,11 @@ jobs:
           ${{ runner.os }}-pnpm-store-
 
     - name: Install dependencies
-      run: pnpm install --frozen-lockfile
+      run: pnpm install --no-frozen-lockfile
 
     - name: Setup database
       run: |
-        # 使用现有数据库或创建临时数据库
+        # Use existing DB or create a temporary one for validation
         if [ ! -f "prisma/dev.db" ]; then
           export DATABASE_URL="file:./validation.db"
           pnpm run db:push
@@ -66,7 +69,7 @@ jobs:
       env:
         SAMPLE_SIZE: ${{ github.event.inputs.sample_size || '100' }}
       run: |
-        echo "🔍 开始验证IP数据质量..."
+        echo "Start validating IP data quality..."
         pnpm run validate:data $SAMPLE_SIZE
 
     - name: Check validation results
@@ -79,7 +82,7 @@ jobs:
           echo "accuracy=$ACCURACY" >> $GITHUB_OUTPUT
           echo "error_count=$ERROR_COUNT" >> $GITHUB_OUTPUT
           
-          # 如果准确率低于85%，标记为需要关注
+          # Mark as attention needed if accuracy < 85%
           if (( $(echo "$ACCURACY < 0.85" | bc -l) )); then
             echo "needs_attention=true" >> $GITHUB_OUTPUT
           else
@@ -103,8 +106,8 @@ jobs:
     - name: Commit validation reports
       if: always()
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "Data Validation Bot"
+        git config --local user.name "GeoIP Data Bot"
+        git config --local user.email "bot@geo-ip-generator.local"
         
         if [ -d "data/validation" ]; then
           git add data/validation/latest-validation-summary.json
@@ -124,7 +127,7 @@ jobs:
           git push origin HEAD:${{ github.ref_name }} || echo "Push failed, but continuing"
         fi
 
-    - name: Create Issue for Low Accuracy
+    - name: Create Issue for low accuracy
       if: steps.check_results.outputs.needs_attention == 'true'
       uses: actions/github-script@v6
       with:
@@ -136,33 +139,20 @@ jobs:
           const title = `🚨 Data Validation Alert: Low Accuracy Detected`;
           
           const body = `# Data Validation Alert
-          
-          **⚠️ 数据质量警报：检测到准确率偏低**
-          
-          ## 📊 验证结果
-          - **准确率**: ${(accuracy * 100).toFixed(1)}%
-          - **错误数量**: ${errorCount}
-          - **验证时间**: $(date)
-          - **样本大小**: ${{ github.event.inputs.sample_size || '100' }}
-          
-          ## 🔍 可能原因
-          1. 第三方API返回了不一致的结果
-          2. 数据源更新导致的地区代码变化
-          3. IP地址段分配发生变更
-          4. 网络连接或API限制问题
-          
-          ## 📋 建议操作
-          - [ ] 检查验证报告详情：[GitHub Actions Run](${runUrl})
-          - [ ] 下载完整的验证日志进行分析
-          - [ ] 检查数据源是否有更新
-          - [ ] 验证第三方API服务状态
-          - [ ] 考虑更新IP数据库
-          
-          ## 📎 相关文件
-          - 验证报告将作为工作流附件提供
-          - 错误详情保存在 \`data/validation/\` 目录
-          
-          **此问题由数据验证工作流自动创建。**`;
+
+          Accuracy is below the threshold.
+
+          ## Results
+          - Accuracy: ${(accuracy * 100).toFixed(1)}%
+          - Errors: ${errorCount}
+          - Sample size: ${{ github.event.inputs.sample_size || '100' }}
+
+          ## Suggested actions
+          - Check the run logs: ${runUrl}
+          - Download validation artifacts for details
+          - Check upstream data sources and API providers
+
+          _This issue was created automatically by the validation workflow._`;
           
           // 检查是否已存在类似的开放issue
           const existingIssues = await github.rest.issues.listForRepo({
@@ -186,13 +176,13 @@ jobs:
             });
           }
 
-    - name: Post Success Summary
+    - name: Post success summary
       if: steps.check_results.outputs.needs_attention == 'false'
       run: |
         ACCURACY=$(jq -r '.summary.accuracyRate' data/validation/latest-validation-summary.json)
         TOTAL_SAMPLES=$(jq -r '.summary.totalSamples' data/validation/latest-validation-summary.json)
         
-        echo "✅ 数据验证通过！"
-        echo "📊 准确率: $(echo "scale=1; $ACCURACY * 100" | bc)%"
-        echo "🎯 样本数: $TOTAL_SAMPLES"
-        echo "🕒 验证时间: $(date '+%Y-%m-%d %H:%M:%S UTC')" 
+        echo "Validation passed"
+        echo "Accuracy: $(echo "scale=1; $ACCURACY * 100" | bc)%"
+        echo "Samples: $TOTAL_SAMPLES"
+        echo "Timestamp: $(date '+%Y-%m-%d %H:%M:%S UTC')"

@@ -2,10 +2,9 @@ name: Keep Render App Alive
 
 on:
   schedule:
-    # 每 14 分钟运行一次，防止 Render 免费版休眠
-    # Render 通常在 15 分钟不活跃后休眠
+    # Run every 14 minutes to prevent Render free tier from sleeping
     - cron: '*/14 * * * *'
-  workflow_dispatch: # 允许手动触发
+  workflow_dispatch:
 
 jobs:
   ping:
@@ -15,10 +14,10 @@ jobs:
         run: |
           echo "Pinging app to prevent Render from sleeping..."
           
-          # 使用你的 Render 应用 URL
+          # Use your Render app URL
           APP_URL="${{ secrets.RENDER_APP_URL || 'https://ipregion.onrender.com' }}"
           
-          # 1. 请求前端主页面
+          # 1) Frontend homepage
           echo "🏠 Pinging frontend homepage..."
           frontend_response=$(curl -s -o /dev/null -w "%{http_code}" "$APP_URL" || echo "000")
           
@@ -28,7 +27,7 @@ jobs:
             echo "⚠️  Frontend responded with status: $frontend_response"
           fi
           
-          # 2. 请求健康检查端点
+          # 2) Health check endpoint
           echo "🏥 Pinging health check endpoint..."
           health_response=$(curl -s -o /dev/null -w "%{http_code}" "$APP_URL/api/health" || echo "000")
           
@@ -38,7 +37,7 @@ jobs:
             echo "⚠️  Health check responded with status: $health_response"
           fi
           
-          # 3. 汇总结果
+          # 3) Summary
           if ([ "$frontend_response" -eq 200 ] || [ "$frontend_response" -eq 304 ]) && ([ "$health_response" -eq 200 ] || [ "$health_response" -eq 304 ]); then
             echo "🎉 Both frontend and backend are fully operational!"
           elif [ "$frontend_response" -eq 200 ] || [ "$frontend_response" -eq 304 ]; then
@@ -54,4 +53,4 @@ jobs:
       - name: Log activity
         run: |
           echo "Keep-alive job executed successfully"
-          echo "Next scheduled run: $(date -d '+14 minutes')" 
+          echo "Next scheduled run: $(date -d '+14 minutes')"
