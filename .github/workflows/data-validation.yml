@@ -93,7 +93,7 @@ jobs:
 
     - name: Upload validation reports
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: validation-reports-${{ github.run_number }}
         path: |
