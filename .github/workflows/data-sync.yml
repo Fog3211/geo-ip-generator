@@ -84,8 +84,13 @@ jobs:
     - name: Configure Git
       if: steps.check_changes.outputs.changes == 'true'
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "Data Sync Bot"
+        # 自定义提交身份（作者与提交者）
+        git config --local user.name "GeoIP Data Bot"
+        git config --local user.email "bot@geo-ip-generator.local"
+        export GIT_AUTHOR_NAME="GeoIP Data Bot"
+        export GIT_AUTHOR_EMAIL="bot@geo-ip-generator.local"
+        export GIT_COMMITTER_NAME="GeoIP Data Bot"
+        export GIT_COMMITTER_EMAIL="bot@geo-ip-generator.local"
 
     - name: Commit and push changes
       if: steps.check_changes.outputs.changes == 'true'
@@ -96,8 +101,8 @@ jobs:
         # 添加所有数据文件
         git add data/
         
-        # 提交变更
-        git commit -m "chore: update geo-ip data - ${TIMESTAMP}
+        # 提交变更（显式作者信息）
+        git commit --author="GeoIP Data Bot <bot@geo-ip-generator.local>" -m "chore: update geo-ip data - ${TIMESTAMP}
 
         📊 Data sync summary:
         - Updated at: $(date '+%Y-%m-%d %H:%M:%S UTC')
