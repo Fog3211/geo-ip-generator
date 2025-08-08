@@ -93,44 +93,16 @@ export async function generateIpByCountry(input: z.infer<typeof generateIpSchema
         throw new Error(`Country/region not found: ${query}. Please use 3-letter country codes (e.g., CHN, USA, JPN) or country names.`);
       }
 
-      // Get IP ranges for the country with caching
-      const ipRanges = await withCache(
-        {
-          prefix: CACHE_KEYS.IP_RANGES,
-          identifier: country.id
-        },
-        CACHE_TTL.IP_RANGES,
-        async () => {
-          return await db.ipRange.findMany({
-            where: {
-              countryId: country.id,
-            },
-            select: {
-              startIp: true,
-              endIp: true,
-              region: {
-                select: {
-                  name: true,
-                },
-              },
-              city: {
-                select: {
-                  name: true,
-                },
-              },
-              isp: true,
-            },
-            // Optimize: limit the number of ranges we fetch for random selection
-            take: 1000, // Get up to 1000 ranges, should be enough for random selection
-          });
-        }
-      );
+      // Count total IP ranges for the country to enable unbiased random sampling
+      const totalRangesCount = await db.ipRange.count({
+        where: { countryId: country.id },
+      });
 
-      if (ipRanges.length === 0) {
+      if (totalRangesCount === 0) {
         throw new Error(`No IP range data available for country/region: ${query}. Please import real IP data first.`);
       }
 
-      // Generate specified number of random IPs
+      // Generate specified number of random IPs using unbiased random offset sampling
       const generatedIps: Array<{
         ip: string;
         location: {
@@ -145,22 +117,55 @@ export async function generateIpByCountry(input: z.infer<typeof generateIpSchema
       }> = [];
 
       for (let i = 0; i < count; i++) {
-        // Randomly select an IP range
-        const randomRange = ipRanges[Math.floor(Math.random() * ipRanges.length)]!;
-        
-        // Generate random IP within that range
-        const randomIp = generateRandomIpInRange(randomRange.startIp, randomRange.endIp);
-        
+        // Random offset in [0, totalRangesCount)
+        const offset = Math.floor(Math.random() * totalRangesCount);
+
+        // Fetch exactly one range at the random offset with deterministic ordering
+        const rows = await db.ipRange.findMany({
+          where: { countryId: country.id },
+          select: {
+            startIp: true,
+            endIp: true,
+            region: { select: { name: true } },
+            city: { select: { name: true } },
+            isp: true,
+          },
+          orderBy: { id: 'asc' },
+          skip: offset,
+          take: 1,
+        });
+
+        const chosen = rows[0] ?? (await db.ipRange.findMany({
+          where: { countryId: country.id },
+          select: {
+            startIp: true,
+            endIp: true,
+            region: { select: { name: true } },
+            city: { select: { name: true } },
+            isp: true,
+          },
+          orderBy: { id: 'asc' },
+          skip: Math.max(0, totalRangesCount - 1),
+          take: 1,
+        }))[0];
+
+        if (!chosen) {
+          // Extremely unlikely; safeguard against race conditions
+          throw new Error('Failed to fetch a random IP range. Please retry.');
+        }
+
+        const randomIp = generateRandomIpInRange(chosen.startIp, chosen.endIp);
+
         generatedIps.push({
           ip: randomIp,
           location: {
-            region: randomRange.region?.name || null,
-            city: randomRange.city?.name || null,
-            isp: randomRange.isp,
+            region: chosen.region?.name ?? null,
+            city: chosen.city?.name ?? null,
+            isp: chosen.isp ?? null,
           },
           ipRange: {
-            startIp: randomRange.startIp,
-            endIp: randomRange.endIp,
+            startIp: chosen.startIp,
+            endIp: chosen.endIp,
           },
         });
       }
@@ -175,7 +180,7 @@ export async function generateIpByCountry(input: z.infer<typeof generateIpSchema
           region: country.region,
         },
         ips: generatedIps,
-        totalRanges: ipRanges.length,
+        totalRanges: totalRangesCount,
         cached: false, // This will be true when served from cache
       };
     }

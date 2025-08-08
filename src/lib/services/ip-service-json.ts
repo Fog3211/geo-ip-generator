@@ -73,12 +73,18 @@ interface GeoIpData {
 
 // 配置
 const DATA_CONFIG = {
-  // 本地测试路径
-  LOCAL_DATA_PATH: '',
-  // GitHub Raw URL - 指向你的数据仓库
-  DATA_URL: 'https://raw.githubusercontent.com/Fog3211/geo-ip-generator/main/data/combined-geo-ip-data.json',
-  // 备用CDN URL (可选)
-  BACKUP_URL: 'https://cdn.jsdelivr.net/gh/Fog3211/geo-ip-generator@main/data/combined-geo-ip-data.json',
+  // 本地测试路径（可通过环境变量覆盖）
+  LOCAL_DATA_PATH:
+    (process.env.GEO_DATA_LOCAL_PATH && String(process.env.GEO_DATA_LOCAL_PATH)) ||
+    `${process.cwd()}/data/combined-geo-ip-data.json`,
+  // 远端主数据源（可通过环境变量覆盖）
+  DATA_URL:
+    (process.env.GEO_DATA_URL && String(process.env.GEO_DATA_URL)) ||
+    'https://raw.githubusercontent.com/Fog3211/geo-ip-generator/main/data/combined-geo-ip-data.json',
+  // 备用CDN URL（可通过环境变量覆盖）
+  BACKUP_URL:
+    (process.env.GEO_DATA_BACKUP_URL && String(process.env.GEO_DATA_BACKUP_URL)) ||
+    'https://cdn.jsdelivr.net/gh/Fog3211/geo-ip-generator@main/data/combined-geo-ip-data.json',
   // 缓存TTL (1小时)
   CACHE_TTL: 3600,
   // 数据缓存key
