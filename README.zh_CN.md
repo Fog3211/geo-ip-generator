@@ -203,11 +203,9 @@ pnpm run generate:data
 
 ### API 调用
 
-#### 生成随机 IP 地址
+#### 生成随机 IP 地址（仅 GET）
 
 **API 端点**: `/api/generate-ip`
-
-**方法 1: GET 请求**
 
 ```bash
 # 生成 1 个中国 IP
@@ -218,14 +216,6 @@ GET /api/generate-ip?country=US&count=3
 
 # 使用中文名称
 GET /api/generate-ip?country=中国&count=2
-```
-
-**方法 2: POST 请求**
-
-```bash
-curl -X POST http://localhost:3000/api/generate-ip \
-  -H "Content-Type: application/json" \
-  -d '{"country": "CN", "count": 3}'
 ```
 
 **响应格式**:
@@ -242,17 +232,13 @@ curl -X POST http://localhost:3000/api/generate-ip \
       "continent": "Asia",
       "region": "Eastern Asia"
     },
-    "ips": [
-      {
-        "ip": "1.2.3.4",
-        "location": {
-          "region": "Beijing",
-          "city": "Beijing",
-          "isp": "China Telecom"
-        }
-      }
-    ],
-    "totalRanges": 1250
+    "ips": [{
+      "ip": "1.2.3.4",
+      "location": { "region": "Beijing", "city": "Beijing", "isp": "China Telecom" },
+      "ipRange": { "startIp": "1.2.0.0", "endIp": "1.2.255.255" }
+    }],
+    "totalRanges": 1250,
+    "cached": false
   }
 }
 ```

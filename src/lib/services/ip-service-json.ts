@@ -282,8 +282,12 @@ export async function generateIpByCountry(input: z.infer<typeof generateIpSchema
     throw new Error(`No IP ranges available for ${country.nameEn} (${country.code2})`);
   }
 
-  // 生成指定数量的IP地址
-  const generatedIps = [];
+  // 生成指定数量的IP地址（与 DB 版返回结构对齐）
+  const generatedIps: Array<{
+    ip: string;
+    location: { region: string | null; city: string | null; isp: string | null };
+    ipRange: { startIp: string; endIp: string };
+  }> = [];
   
   for (let i = 0; i < count; i++) {
     // 随机选择一个IP段
@@ -300,39 +304,30 @@ export async function generateIpByCountry(input: z.infer<typeof generateIpSchema
     
     generatedIps.push({
       ip: randomIp,
-      country: {
-        code: country.code2,
-        code3: country.id,
-        name: country.nameEn,
-        nameZh: country.nameZh,
-        independent: country.independent,
+      location: {
+        region: null,
+        city: null,
+        isp: randomRange.isp ?? null,
       },
-      range: {
-        start: randomRange.startIp,
-        end: randomRange.endIp,
-        isp: randomRange.isp,
+      ipRange: {
+        startIp: randomRange.startIp,
+        endIp: randomRange.endIp,
       },
     });
   }
 
   return {
-    success: true,
-    results: generatedIps,
     country: {
-      code: country.code2,
-      code3: country.id,
-      name: country.nameEn,
-      nameZh: country.nameZh,
+      id: country.id,
+      code2: country.code2,
+      nameEn: country.nameEn,
+      nameZh: country.nameZh ?? undefined,
       continent: country.continent,
       region: country.region,
-      independent: country.independent,
-      unMember: country.unMember,
     },
-    metadata: {
-      totalIpRanges: country.ipRanges.length,
-      generatedCount: count,
-      timestamp: new Date().toISOString(),
-    },
+    ips: generatedIps,
+    totalRanges: country.ipRanges.length,
+    cached: false,
   };
 }
 

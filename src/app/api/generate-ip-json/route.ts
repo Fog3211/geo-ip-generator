@@ -37,7 +37,7 @@ async function handleGenerateIPJson(request: NextRequest) {
       );
     }
 
-    // Call JSON-based service function
+    // Call JSON-based service function (aligned with DB-based response shape)
     const response = await generateIpByCountry({
       country: result.data.country,
       count: result.data.count,
@@ -47,8 +47,7 @@ async function handleGenerateIPJson(request: NextRequest) {
     return NextResponse.json({
       success: true,
       data: response,
-      timestamp: new Date().toISOString(),
-      source: 'json-data'
+      timestamp: new Date().toISOString()
     });
 
   } catch (error) {

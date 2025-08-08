@@ -184,11 +184,9 @@ Dedicated data validation page providing:
 
 ### API Integration
 
-#### Generate Random IP Addresses
+#### Generate Random IP Addresses (GET-only)
 
 **API Endpoint**: `/api/generate-ip`
-
-**Method 1: GET Request**
 
 ```bash
 # Generate 1 China IP
@@ -199,14 +197,6 @@ GET /api/generate-ip?country=US&count=3
 
 # Using Chinese names
 GET /api/generate-ip?country=中国&count=2
-```
-
-**Method 2: POST Request**
-
-```bash
-curl -X POST http://localhost:3000/api/generate-ip \
-  -H "Content-Type: application/json" \
-  -d '{"country": "CN", "count": 3}'
 ```
 
 **Response Format**:
@@ -223,17 +213,13 @@ curl -X POST http://localhost:3000/api/generate-ip \
       "continent": "Asia",
       "region": "Eastern Asia"
     },
-    "ips": [
-      {
-        "ip": "1.2.3.4",
-        "location": {
-          "region": "Beijing",
-          "city": "Beijing",
-          "isp": "China Telecom"
-        }
-      }
-    ],
-    "totalRanges": 1250
+    "ips": [{
+      "ip": "1.2.3.4",
+      "location": { "region": "Beijing", "city": "Beijing", "isp": "China Telecom" },
+      "ipRange": { "startIp": "1.2.0.0", "endIp": "1.2.255.255" }
+    }],
+    "totalRanges": 1250,
+    "cached": false
   }
 }
 ```

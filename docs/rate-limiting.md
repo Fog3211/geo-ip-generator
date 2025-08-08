@@ -127,7 +127,7 @@ GET ipregion:ratelimit:192.168.1.100:generate-ip
 
 ### 修改限流参数
 
-在 `src/server/api/rate-limit-middleware.ts` 中修改 `RATE_LIMITS` 配置：
+在 `src/lib/middleware/rate-limit-middleware.ts` 中修改 `RATE_LIMITS` 配置：
 
 ```typescript
 export const RATE_LIMITS = {
