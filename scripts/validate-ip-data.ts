@@ -233,13 +233,13 @@ class IpDataValidator {
   }
 
   /**
-   * 调用ipapi.co API
+   * 调用 ipwho.is API（替换 ipapi.co，避免 429 频繁限流）
    */
-  async queryIpapiCo(ip: string): Promise<{ data: ApiResponse; responseTime: number }> {
+  async queryIpWhoIs(ip: string): Promise<{ data: ApiResponse; responseTime: number }> {
     const startTime = Date.now();
 
     try {
-      const response = await fetch(`https://ipapi.co/${ip}/json/`);
+      const response = await fetch(`https://ipwho.is/${ip}`);
 
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`);
@@ -247,21 +247,22 @@ class IpDataValidator {
 
       const data = await response.json();
 
-      if (data.error) {
-        throw new Error(data.reason || 'API returned error');
+      if (data && typeof data.success === 'boolean' && data.success === false) {
+        const reason = typeof data.message === 'string' ? data.message : 'API returned error';
+        throw new Error(reason);
       }
 
       return {
         data: {
           countryCode: data.country_code,
-          countryName: data.country_name,
-          region: data.region,
+          countryName: data.country,
+          region: data.region || data.region_name || undefined,
           city: data.city,
         },
         responseTime: Date.now() - startTime
       };
     } catch (error) {
-      throw new Error(`ipapi.co error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      throw new Error(`ipwho.is error: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   }
 
@@ -323,7 +324,7 @@ class IpDataValidator {
     const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
     const apiProviders = [
       { name: 'ip-api.com', fn: this.queryIpApi.bind(this) },
-      { name: 'ipapi.co', fn: this.queryIpapiCo.bind(this) },
+      { name: 'ipwho.is', fn: this.queryIpWhoIs.bind(this) },
       { name: 'geojs.io', fn: this.queryGeoJs.bind(this) },
     ];
 
