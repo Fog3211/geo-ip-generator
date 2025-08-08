@@ -18,6 +18,9 @@ on:
 env:
   NODE_VERSION: '18'
 
+permissions:
+  contents: write
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
@@ -114,8 +117,8 @@ jobs:
           - Data Size: $FILE_SIZE
           - Updated: $(date '+%Y-%m-%d %H:%M:%S UTC')"
           
-          # 推送到仓库
-          git push
+          # 推送到仓库（使用默认 GITHUB_TOKEN）
+          git push origin HEAD:${GITHUB_REF_NAME}
       
       - name: 📈 Create release (weekly)
         if: steps.changes.outputs.changes == 'true' && github.event.schedule == '0 2 * * 0'
