@@ -154,7 +154,7 @@ jobs:
 
           _This issue was created automatically by the validation workflow._`;
           
-          // 检查是否已存在类似的开放issue
+          // Check if there is an existing open issue with the same topic
           const existingIssues = await github.rest.issues.listForRepo({
             owner: context.repo.owner,
             repo: context.repo.repo,

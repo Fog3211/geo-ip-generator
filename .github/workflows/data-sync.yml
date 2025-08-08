@@ -2,9 +2,9 @@ name: Daily Data Sync
 
 on:
   schedule:
-    # 每天 UTC 02:00 (北京时间 10:00) 运行
+    # Run daily at 02:00 UTC (10:00 Beijing time)
     - cron: '0 2 * * *'
-  workflow_dispatch: # 允许手动触发
+  workflow_dispatch: # Allow manual trigger
     inputs:
       force_update:
         description: 'Force update even if data is unchanged'
@@ -99,10 +99,10 @@ jobs:
     - name: Commit and push changes
       if: steps.check_changes.outputs.changes == 'true'
       run: |
-        # 获取当前时间戳
+        # Get current timestamp
         TIMESTAMP=$(date '+%Y%m%d_%H%M%S')
         
-        # 添加所有数据文件
+        # Stage all data files
         git add data/
         
         # Commit changes (explicit author info)
@@ -178,5 +178,5 @@ jobs:
     - name: Notify on failure
       if: failure()
       run: |
-        echo "❌ 数据同步失败，已自动回退到备份版本"
-        echo "📧 请检查GitHub Actions日志获取详细信息" 
+        echo "❌ Data sync failed. Rollback to backup version has been performed."
+        echo "📧 Please check GitHub Actions logs for details."
