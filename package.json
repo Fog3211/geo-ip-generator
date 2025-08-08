@@ -23,11 +23,9 @@
     "export:excel": "tsx scripts/export-excel.ts",
     "validate:data": "tsx scripts/validate-ip-data.ts",
     "validate:sample": "tsx scripts/validate-ip-data.ts 50",
-    "validate:demo": "tsx scripts/test-validation-demo.ts",
     "postinstall": "prisma generate",
     "preview": "next build && next start",
     "start": "next start",
-    "test:rate-limit": "tsx scripts/test-rate-limit.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
