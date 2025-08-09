@@ -1,0 +1,165 @@
+[
+  {
+    "ip": "82.205.138.154",
+    "expected": {
+      "countryCode": "AF",
+      "countryName": "Afghanistan"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Bavaria",
+        "city": "Munich",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "45.128.197.132",
+    "expected": {
+      "countryCode": "AL",
+      "countryName": "Albania"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "XK",
+        "countryName": "Kosovo",
+        "region": "Gjakova",
+        "city": "Orahovac",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "172.225.226.224",
+    "expected": {
+      "countryCode": "BI",
+      "countryName": "Burundi"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "IQ",
+        "countryName": "Iraq",
+        "region": "Baghdad",
+        "city": "Baghdad",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "IQ",
+        "countryName": "Iraq",
+        "region": "Baghdad",
+        "city": "Baghdad",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.76.38",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Bourgogne-Franche-Comté",
+        "city": "Belfort",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.130.236",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "SE",
+        "countryName": "Sweden",
+        "region": "Stockholm County",
+        "city": "Stockholm",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "84.254.138.106",
+    "expected": {
+      "countryCode": "BF",
+      "countryName": "Burkina Faso"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "31.58.146.31",
+    "expected": {
+      "countryCode": "RS",
+      "countryName": "Serbia"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Texas",
+        "city": "Dallas",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
