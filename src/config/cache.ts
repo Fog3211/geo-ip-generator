@@ -30,6 +30,12 @@ export const RATE_LIMITS: Record<RateLimitEndpoint, RateLimitConfig> = {
     windowMs: 60 * 1000, // per minute
     ttl: CACHE_TTL.RATE_LIMIT,
   },
+  // Generate IPv6 endpoint - mirror IPv4 limits initially
+  'generate-ipv6': {
+    requests: 10,
+    windowMs: 60 * 1000,
+    ttl: CACHE_TTL.RATE_LIMIT,
+  },
   // Countries endpoint - less restrictive as it's mostly cached
   'countries': {
     requests: 30,       // 30 requests
