@@ -17,6 +17,12 @@ A professional geolocation IP address generation service built with [T3 Stack](h
 - **📱 Responsive Design**: Support for desktop and mobile devices
 - **🔗 API Support**: Provide RESTful API interface for external integration
 
+### IPv6 Support
+
+- New endpoint: `/api/generate-ipv6` (GET)
+- Parameters: `country` (CN/CHN/China/中国), `count` (1-10)
+- Response shape matches IPv4 endpoint
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: [Next.js 15](https://nextjs.org) with App Router
@@ -199,6 +205,15 @@ GET /api/generate-ip?country=US&count=3
 GET /api/generate-ip?country=中国&count=2
 ```
 
+#### Generate Random IPv6 Addresses (GET-only)
+
+API Endpoint: `/api/generate-ipv6`
+
+```
+# Generate 3 US IPv6
+GET /api/generate-ipv6?country=US&count=3
+```
+
 **Response Format**:
 
 ```json
@@ -272,7 +287,8 @@ GET /api/generate-ip?country=中国&count=2
 - **Random Generation**: < 200ms
 
 ### Storage Requirements
-- **JSON Data**: ~2-5MB (depending on IP range count)
+- **JSON Data (IPv4)**: ~2-5MB (depending on IP range count)
+- **JSON Data (IPv6)**: varies by provider snapshot
 - **CSV Data**: ~3-8MB (tabular format)
 - **Excel Data**: ~1-3MB (multi-worksheet)
 - **Complete Database**: ~500MB (3 million IP records)
