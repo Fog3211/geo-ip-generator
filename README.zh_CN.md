@@ -17,6 +17,12 @@
 - **📱 响应式设计**: 支持桌面端和移动端
 - **🔗 API 支持**: 提供 RESTful API 接口供外部调用
 
+### IPv6 支持
+
+- 新增端点：`/api/generate-ipv6`（GET）
+- 参数：`country`（CN/CHN/China/中国），`count`（1-10）
+- 响应结构与 IPv4 保持一致
+
 ## 🛠️ 技术栈
 
 - **前端**: [Next.js 15](https://nextjs.org) with App Router
@@ -218,6 +224,15 @@ GET /api/generate-ip?country=US&count=3
 GET /api/generate-ip?country=中国&count=2
 ```
 
+#### 生成随机 IPv6 地址（仅 GET）
+
+接口：`/api/generate-ipv6`
+
+```
+# 生成 3 个美国 IPv6 地址
+GET /api/generate-ipv6?country=US&count=3
+```
+
 **响应格式**:
 
 ```json
@@ -337,7 +352,8 @@ IpRange {
 
 ### 存储需求
 
-- **JSON 数据**: ~2-5MB（取决于 IP 段数量）
+- **JSON 数据（IPv4）**: ~2-5MB（取决于 IP 段数量）
+- **JSON 数据（IPv6）**: 视供应商快照而定
 - **CSV 数据**: ~3-8MB（表格格式）
 - **Excel 数据**: ~1-3MB（多工作表）
 - **完整数据库**: ~500MB（300 万 IP 记录）
