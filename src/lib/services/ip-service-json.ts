@@ -4,7 +4,7 @@
  */
 
 import { z } from 'zod';
-import { cache } from '~/lib/cache';
+import { cache as redisCache } from '~/lib/cache';
 
 // 简化的缓存接口，用于JSON服务
 interface SimpleCache {
@@ -37,8 +37,8 @@ class MemoryCache implements SimpleCache {
   }
 }
 
-// 使用内存缓存作为备用
-const cache: SimpleCache = new MemoryCache();
+// 使用内存缓存作为备用（用于在 Redis 不可用时仍能进行本地缓存）
+const memoryFallbackCache: SimpleCache = new MemoryCache();
 
 // 数据类型定义
 interface IpRange {
@@ -146,16 +146,22 @@ async function loadGeoIpData(): Promise<GeoIpData> {
     }
   }
 
-  // 尝试从Redis缓存获取
+  // 尝试从Redis缓存获取，失败时回退到内存缓存
   try {
-    const cached = await cache.get<GeoIpData>(DATA_CONFIG.CACHE_KEY, 'latest');
+    const cached = await redisCache.get<GeoIpData>(DATA_CONFIG.CACHE_KEY, 'latest');
     if (cached) {
       memoryCache.data = cached;
       memoryCache.timestamp = now;
       return cached;
     }
   } catch (error) {
-    console.warn('Failed to get data from cache:', error);
+    console.warn('Failed to get data from Redis cache:', error);
+    const cachedLocal = await memoryFallbackCache.get<GeoIpData>(DATA_CONFIG.CACHE_KEY, 'latest');
+    if (cachedLocal) {
+      memoryCache.data = cachedLocal;
+      memoryCache.timestamp = now;
+      return cachedLocal;
+    }
   }
 
   // 从远程URL获取数据
@@ -208,16 +214,20 @@ async function loadGeoIpData(): Promise<GeoIpData> {
 
   console.log(`✅ Loaded geo IP data: ${data.metadata.countries} countries, ${data.metadata.ipRanges} IP ranges`);
 
-  // 更新缓存
+  // 更新缓存（Redis 优先，内存回退）
   try {
-    await cache.set(DATA_CONFIG.CACHE_KEY, 'latest', data, DATA_CONFIG.CACHE_TTL);
-    // 同步缓存元信息，供前端显示最后更新时间
-    await cache.set('geo-ip-data', 'meta', {
+    await redisCache.set(DATA_CONFIG.CACHE_KEY, 'latest', data, DATA_CONFIG.CACHE_TTL);
+    await redisCache.set('geo-ip-data', 'meta', {
       lastUpdated: data.metadata.generatedAt,
       version: data.metadata.version,
     }, DATA_CONFIG.CACHE_TTL);
   } catch (error) {
-    console.warn('Failed to cache data:', error);
+    console.warn('Failed to cache data to Redis:', error);
+    await memoryFallbackCache.set(DATA_CONFIG.CACHE_KEY, 'latest', data, DATA_CONFIG.CACHE_TTL);
+    await memoryFallbackCache.set('geo-ip-data', 'meta', {
+      lastUpdated: data.metadata.generatedAt,
+      version: data.metadata.version,
+    }, DATA_CONFIG.CACHE_TTL);
   }
 
   // 更新内存缓存

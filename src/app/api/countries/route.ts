@@ -15,7 +15,8 @@ import { withRateLimit } from '~/lib/middleware/rate-limit-middleware';
 async function handleGetCountries(request: NextRequest) {
   try {
     // Try cached metadata first (last updated info)
-    const cachedMeta = await cache.get<{ lastUpdated?: string; version?: string }>('geo-ip-data:meta');
+    // Use two-part cache key: prefix + identifier to match cache API
+    const cachedMeta = await cache.get<{ lastUpdated?: string; version?: string }>('geo-ip-data', 'meta');
 
     // Call service to get countries list
     const countries = await getCountries();
