@@ -52,6 +52,7 @@ const ipCountOptions = Array.from({ length: 10 }, (_, i) => i + 1);
 export function IpRegionLookup() {
 	const [query, setQuery] = useState("");
 	const [generateCount, setGenerateCount] = useState(4);
+	const [ipVersion, setIpVersion] = useState<4 | 6>(4);
 	const [isClient, setIsClient] = useState(false);
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement>(null);
@@ -137,7 +138,8 @@ export function IpRegionLookup() {
 				count: generateCount.toString(),
 			});
 			
-			const response = await fetch(`/api/generate-ip?${params}`);
+			const endpoint = ipVersion === 6 ? '/api/generate-ipv6' : '/api/generate-ip';
+			const response = await fetch(`${endpoint}?${params}`);
 			
 			if (!response.ok) {
 				const errorData: ApiError = await response.json();
@@ -249,12 +251,30 @@ export function IpRegionLookup() {
 							)}
 						</div>
 
-						<button
+		<button
 							onClick={handleGenerate}
 							disabled={!query.trim() || generateLoading}
 							className="w-full sm:w-auto px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium text-base min-h-[48px]"
 						>
-							{generateLoading ? "Generating..." : "Generate IP"}
+						{generateLoading ? "Generating..." : `Generate IPv${ipVersion}`}
+						</button>
+					</div>
+
+					{/* IPv4/IPv6 Toggle */}
+					<div className="flex items-center gap-2">
+						<button
+							type="button"
+							onClick={() => setIpVersion(4)}
+							className={`px-3 py-2 rounded-lg text-sm font-medium border ${ipVersion === 4 ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-700 border-gray-300 hover:border-gray-400'}`}
+						>
+							IPv4
+						</button>
+						<button
+							type="button"
+							onClick={() => setIpVersion(6)}
+							className={`px-3 py-2 rounded-lg text-sm font-medium border ${ipVersion === 6 ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-700 border-gray-300 hover:border-gray-400'}`}
+						>
+							IPv6
 						</button>
 					</div>
 				</div>
