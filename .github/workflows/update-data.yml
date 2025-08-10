@@ -11,6 +11,7 @@ on:
     paths:
       - 'scripts/import-**'
       - 'scripts/generate-combined-data.ts'
+      - 'scripts/generate-combined-data-ipv6.ts'
       - '.github/workflows/update-data.yml'
 
 env:
@@ -73,6 +74,10 @@ jobs:
       - name: 🔄 Generate combined JSON data
         run: |
           pnpm exec tsx scripts/generate-combined-data.ts
+          # Optionally generate IPv6 dataset if script exists
+          if [ -f "scripts/generate-combined-data-ipv6.ts" ]; then
+            pnpm exec tsx scripts/generate-combined-data-ipv6.ts || echo "IPv6 generation skipped"
+          fi
       
       - name: 📊 Validate data quality
         run: |

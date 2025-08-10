@@ -16,6 +16,7 @@
     "import:ip2location": "tsx scripts/import-ip2location.ts",
     "import:territories": "tsx scripts/import-world-territories.ts",
     "generate:data": "tsx scripts/generate-combined-data.ts",
+    "generate:data:v6": "tsx scripts/generate-combined-data-ipv6.ts",
     "setup": "prisma migrate dev && pnpm run import:territories && pnpm run import:ip2location",
     "setup:json": "pnpm run generate:data",
     "sync:data": "tsx scripts/sync-data.ts",
