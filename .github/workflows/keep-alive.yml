@@ -2,55 +2,61 @@ name: Keep Render App Alive
 
 on:
   schedule:
-    # Run every 14 minutes to prevent Render free tier from sleeping
-    - cron: '*/14 * * * *'
+    # Run every 13 minutes to keep within Render free tier idle window
+    - cron: '*/13 * * * *'
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: keep-alive-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   ping:
     runs-on: ubuntu-latest
+    env:
+      # Comma-separated list of URLs to ping (supports multiple Render services / custom domains)
+      APP_URLS: ${{ secrets.RENDER_APP_URLS || vars.RENDER_APP_URLS || secrets.RENDER_APP_URL || 'https://ipregion.onrender.com' }}
     steps:
-      - name: Ping deployed app
+      - name: Show target URLs
         run: |
-          echo "Pinging app to prevent Render from sleeping..."
-          
-          # Use your Render app URL
-          APP_URL="${{ secrets.RENDER_APP_URL || 'https://ipregion.onrender.com' }}"
-          
-          # 1) Frontend homepage
-          echo "🏠 Pinging frontend homepage..."
-          frontend_response=$(curl -s -o /dev/null -w "%{http_code}" "$APP_URL" || echo "000")
-          
-          if [ "$frontend_response" -eq 200 ] || [ "$frontend_response" -eq 304 ]; then
-            echo "✅ Frontend is alive! HTTP status: $frontend_response"
-          else
-            echo "⚠️  Frontend responded with status: $frontend_response"
+          echo "Targets: $APP_URLS"
+
+      - name: Ping all targets with retry
+        run: |
+          IFS=',' read -ra URLS <<< "$APP_URLS"
+          UA="GeoIP-KeepAlive/1.0 (GitHub Actions)"
+          OK_COUNT=0
+          for raw in "${URLS[@]}"; do
+            url=$(echo "$raw" | xargs)
+            if [ -z "$url" ]; then continue; fi
+            echo "\n=== Pinging $url ==="
+            # homepage
+            for i in 1 2 3; do
+              code=$(curl -s -o /dev/null -w "%{http_code}" -H "User-Agent: $UA" -H "Cache-Control: no-cache" "$url" || echo "000")
+              echo "Attempt $i -> homepage: HTTP $code"
+              [ "$code" = "200" ] || [ "$code" = "304" ] && break
+              sleep 2
+            done
+            # health
+            for i in 1 2 3; do
+              hcode=$(curl -s -o /dev/null -w "%{http_code}" -H "User-Agent: $UA" -H "Cache-Control: no-cache" "$url/api/health" || echo "000")
+              echo "Attempt $i -> /api/health: HTTP $hcode"
+              [ "$hcode" = "200" ] || [ "$hcode" = "304" ] && break
+              sleep 2
+            done
+            if { [ "$code" = "200" ] || [ "$code" = "304" ]; } && { [ "$hcode" = "200" ] || [ "$hcode" = "304" ]; }; then
+              OK_COUNT=$((OK_COUNT+1))
+            fi
+          done
+          echo "OK targets: $OK_COUNT / ${#URLS[@]}"
+          if [ $OK_COUNT -eq 0 ]; then
+            echo "::warning::All keep-alive checks failed. Verify RENDER_APP_URLS (secrets/variables) and service status."
           fi
-          
-          # 2) Health check endpoint
-          echo "🏥 Pinging health check endpoint..."
-          health_response=$(curl -s -o /dev/null -w "%{http_code}" "$APP_URL/api/health" || echo "000")
-          
-          if [ "$health_response" -eq 200 ] || [ "$health_response" -eq 304 ]; then
-            echo "✅ Health check is alive! HTTP status: $health_response"
-          else
-            echo "⚠️  Health check responded with status: $health_response"
-          fi
-          
-          # 3) Summary
-          if ([ "$frontend_response" -eq 200 ] || [ "$frontend_response" -eq 304 ]) && ([ "$health_response" -eq 200 ] || [ "$health_response" -eq 304 ]); then
-            echo "🎉 Both frontend and backend are fully operational!"
-          elif [ "$frontend_response" -eq 200 ] || [ "$frontend_response" -eq 304 ]; then
-            echo "🟡 Frontend is working, but health check failed"
-          elif [ "$health_response" -eq 200 ] || [ "$health_response" -eq 304 ]; then
-            echo "🟡 Health check is working, but frontend failed"
-          else
-            echo "🔴 Both frontend and health check failed"
-          fi
-          
-          echo "Keep-alive ping completed at $(date)"
-      
+
       - name: Log activity
         run: |
-          echo "Keep-alive job executed successfully"
-          echo "Next scheduled run: $(date -d '+14 minutes')"
+          echo "Keep-alive job executed at $(date -u)"
+          echo "Next scheduled run in ~13 minutes (GitHub Actions cron, UTC)"
