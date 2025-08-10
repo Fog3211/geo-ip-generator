@@ -2,8 +2,8 @@ name: Keep Render App Alive
 
 on:
   schedule:
-    # Run every 13 minutes to keep within Render free tier idle window
-    - cron: '*/13 * * * *'
+    # Run every 14 minutes (per your preference)
+    - cron: '*/14 * * * *'
   workflow_dispatch:
 
 permissions:
