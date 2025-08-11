@@ -62,12 +62,12 @@ class DataSyncManager {
     }
 
     // 同时备份数据库
-    const dbPath = path.join(process.cwd(), 'prisma', 'dev.db');
+    const dbPath = path.join(process.cwd(), 'prisma', 'db.sqlite');
     if (fs.existsSync(dbPath)) {
-      const dbBackupPath = path.join(this.backupDir, `${this.currentTimestamp}_dev.db`);
+      const dbBackupPath = path.join(this.backupDir, `${this.currentTimestamp}_db.sqlite`);
       fs.copyFileSync(dbPath, dbBackupPath);
       this.backupPaths['database'] = dbBackupPath;
-      console.log(`🗄️ 数据库备份: dev.db → ${path.basename(dbBackupPath)}`);
+      console.log(`🗄️ 数据库备份: db.sqlite → ${path.basename(dbBackupPath)}`);
     }
 
     console.log('✅ 备份完成');
@@ -81,10 +81,10 @@ class DataSyncManager {
 
     for (const [filename, backupPath] of Object.entries(this.backupPaths)) {
       if (filename === 'database') {
-        const dbPath = path.join(process.cwd(), 'prisma', 'dev.db');
+        const dbPath = path.join(process.cwd(), 'prisma', 'db.sqlite');
         if (fs.existsSync(backupPath)) {
           fs.copyFileSync(backupPath, dbPath);
-          console.log(`🔄 数据库回退: ${path.basename(backupPath)} → dev.db`);
+          console.log(`🔄 数据库回退: ${path.basename(backupPath)} → db.sqlite`);
         }
       } else {
         const targetPath = path.join(this.dataDir, filename);
