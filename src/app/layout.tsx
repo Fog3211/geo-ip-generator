@@ -1,6 +1,6 @@
 import "~/styles/globals.css";
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import { GoogleAnalytics } from "~/app/_components/analytics";
 
@@ -47,7 +47,11 @@ export const metadata: Metadata = {
         title: 'Geo IP Generator - Generate Real IP Addresses by Country/Region',
         description: 'Generate real IPv4/IPv6 addresses by country or region. Free, fast, and reliable.'
     },
-    manifest: '/site.webmanifest',
+    manifest: '/site.webmanifest'
+};
+
+// Next.js 15: themeColor 应从 metadata 迁移到 viewport 导出，避免构建警告
+export const viewport: Viewport = {
     themeColor: '#ffffff'
 };
 
