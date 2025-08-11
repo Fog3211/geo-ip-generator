@@ -66,6 +66,8 @@ function getFileInfo(filename: string): DataFileInfo | null {
   };
 }
 
+export const viewport = { themeColor: '#ffffff' };
+
 export default function DownloadPage() {
   const availableFiles = [
     'combined-geo-ip-data.json',
