@@ -62,6 +62,8 @@ function getValidationHistory(): Array<{ filename: string; date: string; size: s
   }
 }
 
+export const viewport = { themeColor: '#ffffff' };
+
 export default function ValidationPage() {
   const summary = getValidationSummary();
   const history = getValidationHistory();
