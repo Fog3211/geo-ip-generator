@@ -9,7 +9,7 @@
 
 import { execSync } from 'child_process';
 import { silentDb as db } from '../src/server/db';
-import { seedFromLocalJson } from './seed-from-json';
+import { syncFromRemoteJson } from './sync-from-remote-json';
 
 function run(cmd: string) {
   execSync(cmd, { stdio: 'inherit', env: process.env });
@@ -19,26 +19,8 @@ async function main(): Promise<void> {
   // 1) Sync schema
   run('pnpm exec prisma db push');
 
-  // 2) Check if data exists
-  const countryCount = await db.country.count();
-  const ipRangeCount = await db.ipRange.count();
-  if (countryCount > 0 && ipRangeCount > 0) {
-    await db.$disconnect();
-    return;
-  }
-
-  // 3) Prefer local JSON seed
-  try {
-    await seedFromLocalJson();
-    await db.$disconnect();
-    return;
-  } catch (e) {
-    console.warn('Local JSON seed failed, trying online import...', e);
-  }
-
-  // 4) Fallback to online imports
-  run('pnpm run import:territories');
-  run('pnpm run import:ip2location');
+  // 2) Always sync from remote JSON (clear and refill)
+  await syncFromRemoteJson();
   await db.$disconnect();
 }
 
