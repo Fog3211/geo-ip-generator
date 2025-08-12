@@ -24,7 +24,7 @@
     "validate:data": "tsx scripts/validate-ip-data.ts",
     "validate:sample": "tsx scripts/validate-ip-data.ts 50",
     "postinstall": "prisma generate",
-    "prestart": "prisma db push",
+    "prestart": "tsx scripts/prestart.ts",
     "preview": "next build && next start",
     "start": "next start",
     "typecheck": "tsc --noEmit"
