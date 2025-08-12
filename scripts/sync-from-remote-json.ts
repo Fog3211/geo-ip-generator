@@ -29,7 +29,12 @@ interface CombinedJson {
   countries: JsonCountry[];
 }
 
-const DATA_URL = process.env.GEO_DATA_URL ?? 'https://raw.githubusercontent.com/Fog3211/geo-ip-generator/main/data/combined-geo-ip-data.json';
+// Primary / backup dataset URLs
+const DEFAULT_PRIMARY = 'https://github.com/Fog3211/geo-ip-generator/releases/latest/download/combined-geo-ip-data.json';
+const DEFAULT_BACKUP = 'https://raw.githubusercontent.com/Fog3211/geo-ip-generator/main/data/combined-geo-ip-data.json';
+
+const DATA_URL = process.env.GEO_DATA_URL ?? DEFAULT_PRIMARY;
+const BACKUP_URL = process.env.GEO_DATA_BACKUP_URL ?? DEFAULT_BACKUP;
 const MAX_RETRIES = 3;
 
 async function fetchWithRetry(url: string, retries = MAX_RETRIES): Promise<Response> {
@@ -60,8 +65,14 @@ async function loadCombinedJson(): Promise<CombinedJson> {
     return JSON.parse(content) as CombinedJson;
   }
 
-  const res = await fetchWithRetry(url);
-  return (await res.json()) as CombinedJson;
+  try {
+    const res = await fetchWithRetry(url);
+    return (await res.json()) as CombinedJson;
+  } catch (primaryErr) {
+    console.warn('Primary dataset fetch failed, trying backup:', primaryErr);
+    const res2 = await fetchWithRetry(BACKUP_URL);
+    return (await res2.json()) as CombinedJson;
+  }
 }
 
 async function importData(data: CombinedJson): Promise<void> {
