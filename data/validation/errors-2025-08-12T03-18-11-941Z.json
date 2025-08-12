@@ -1,0 +1,119 @@
+[
+  {
+    "ip": "208.66.48.143",
+    "expected": {
+      "countryCode": "AI",
+      "countryName": "Anguilla"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "KN",
+        "countryName": "St Kitts and Nevis",
+        "region": "Saint Paul Charlestown",
+        "city": "Charlestown",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "KN",
+        "countryName": "St Kitts and Nevis",
+        "region": "Saint Paul Charlestown",
+        "city": "Charlestown",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "23.131.185.195",
+    "expected": {
+      "countryCode": "AR",
+      "countryName": "Argentina"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Florida",
+        "city": "North Miami",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "45.15.128.33",
+    "expected": {
+      "countryCode": "AM",
+      "countryName": "Armenia"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "CY",
+        "countryName": "Cyprus",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.123.21",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.241.243",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "IT",
+        "countryName": "Italy",
+        "region": "Lombardy",
+        "city": "Milan",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
