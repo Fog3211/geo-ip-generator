@@ -58,27 +58,26 @@ DATABASE_URL="file:./db.sqlite"
 REDIS_URL="redis://localhost:6379"  # Optional, for caching acceleration
 ```
 
-### 3. Project Initialization 🚀
+### 3. Data Source & Environment 🚀
 
-**One-click completion of all initialization steps**:
+We recommend running from the prebuilt combined dataset (JSON) and importing it at service start.
 
-```bash
-pnpm run setup
+```env
+# Database
+DATABASE_URL="file:./prisma/db.sqlite"
+
+# Dataset (http/https, absolute/relative path, or file://)
+# Default: GitHub raw URL of this repo's combined data
+#GEO_DATA_URL=https://raw.githubusercontent.com/<your-org>/<repo>/main/data/combined-geo-ip-data.json
+GEO_DATA_URL=./data/combined-geo-ip-data.json
 ```
 
-This command will automatically complete:
+Start commands:
 
-1. **🏗️ Database Initialization** - Create table structure and indexes, enable performance optimization
-2. **🌍 Import World Territory Data** - Batch import 250+ countries and territories (~10 seconds)
-3. **📍 Import IP Address Data** - High-performance batch import of 450,000+ IP ranges (~2-3 minutes)
-
-Imported data includes:
-
-- ✅ **250+ Territories**: Including all ISO 3166-1 recognized countries and territories
-- ✅ **Sovereignty Status**: Distinguish sovereign countries (e.g., China, USA) and territories (e.g., Hong Kong, Taiwan, Macao)
-- ✅ **Multi-language Support**: English and Chinese names
-- ✅ **Real IP Data**: 450,000+ real IP address ranges
-- ✅ **Geographic Partitioning**: Continent and region information
+```bash
+pnpm run prestart   # prisma db push + import data from GEO_DATA_URL (clear & refill)
+pnpm run dev        # or pnpm run start
+```
 
 ### 🚀 **Performance Optimization**
 
@@ -103,17 +102,16 @@ Visit [http://localhost:3000](http://localhost:3000)
 The project is configured with GitHub Actions automated data synchronization:
 
 ```bash
-# Manual trigger complete data synchronization (includes backup, update, multi-format export)
-pnpm run sync:data
+# Manually trigger complete data sync (includes backup/update/multi-format export)
+pnpm run data:sync
 
 # Individual format exports
-pnpm run export:csv    # Export CSV format
-pnpm run export:excel  # Export Excel format
+pnpm run data:export:csv
+pnpm run data:export:excel
 
 # Data quality validation
-pnpm run validate:data    # Full validation (100 samples)
-pnpm run validate:sample  # Quick validation (50 samples)
-pnpm run validate:demo    # Demo validation (5 samples, for testing)
+pnpm run data:validate          # Full validation (100 samples)
+pnpm run data:validate:sample   # Quick validation (50 samples)
 ```
 
 **Automation Features**:
@@ -131,17 +129,17 @@ pnpm run validate:demo    # Demo validation (5 samples, for testing)
 3. Click "Run workflow" button
 4. Optionally choose force update (even if no data changes)
 
-### 📋 Manual Data Updates
+### 📋 Manual Data Updates (dev/CI only)
 
 ```bash
 # Re-fetch latest territory data
-pnpm run import:territories
+pnpm run data:import:territories
 
 # Re-download latest IP data
-pnpm run import:ip2location
+pnpm run data:import:ip2location
 
-# Generate data files
-pnpm run generate:data
+# Generate combined JSON
+pnpm run data:export:combined
 ```
 
 > 💡 **Tip**: Automated synchronization has configured optimal update strategies, usually no manual operation is required.
@@ -308,18 +306,18 @@ For custom configuration:
 ### Local Development
 
 ```bash
-# Test data synchronization
-pnpm run sync:data
+# Import dataset & start
+pnpm run prestart && pnpm run dev
 
 # Test individual exports
-pnpm run export:csv
-pnpm run export:excel
+pnpm run data:export:csv
+pnpm run data:export:excel
 
 # Check generated files
 ls -la data/
 
-# Test validation system
-pnpm run validate:demo
+# Test validation system (quick)
+pnpm run data:validate:sample
 ```
 
 ## 🗃️ Database Structure
