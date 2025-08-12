@@ -58,27 +58,26 @@ DATABASE_URL="file:./db.sqlite"
 REDIS_URL="redis://localhost:6379"  # 可选，用于缓存加速
 ```
 
-### 3. 项目初始化 🚀
+### 3. 数据源与环境 🚀
 
-**一键完成所有初始化步骤**：
+推荐使用预构建的合并 JSON 数据集，并在服务启动时导入数据库。
 
-```bash
-pnpm run setup
+```env
+# 数据库
+DATABASE_URL="file:./prisma/db.sqlite"
+
+# 数据集（支持 http/https、本地相对/绝对路径或 file://）
+# 默认读取仓库中的 combined JSON
+#GEO_DATA_URL=https://raw.githubusercontent.com/<your-org>/<repo>/main/data/combined-geo-ip-data.json
+GEO_DATA_URL=./data/combined-geo-ip-data.json
 ```
 
-这个命令会自动完成：
+启动命令：
 
-1. **🏗️ 数据库初始化** - 创建表结构和索引，启用性能优化
-2. **🌍 导入世界地区数据** - 批量导入 250+ 个国家和地区（约 10 秒）
-3. **📍 导入 IP 地址数据** - 高性能批量导入 450,000+ IP 范围（约 2-3 分钟）
-
-导入的数据包括：
-
-- ✅ **250+ 地区**: 包括所有 ISO 3166-1 认可的国家和地区
-- ✅ **主权状态**: 区分主权国家（如中国、美国）和地区/领土（如香港、台湾、澳门）
-- ✅ **多语言支持**: 英文和中文名称
-- ✅ **真实 IP 数据**: 450,000+ 真实 IP 地址范围
-- ✅ **地理分区**: 大洲和地区信息
+```bash
+pnpm run prestart   # prisma db push + 从 GEO_DATA_URL 导入（清库重导）
+pnpm run dev        # 或 pnpm run start
+```
 
 ### 🚀 **性能优化**
 
@@ -105,17 +104,16 @@ pnpm run dev
 项目已配置 GitHub Actions 自动化数据同步：
 
 ```bash
-# 手动触发完整数据同步（包含备份、更新、多格式导出）
-pnpm run sync:data
+# 手动触发完整数据同步（包含备份、更新与多格式导出）
+pnpm run data:sync
 
-# 单独导出不同格式
-pnpm run export:csv    # 导出CSV格式
-pnpm run export:excel  # 导出Excel格式
+# 单独导出
+pnpm run data:export:csv
+pnpm run data:export:excel
 
 # 数据质量验证
-pnpm run validate:data    # 完整验证（100个样本）
-pnpm run validate:sample  # 快速验证（50个样本）
-pnpm run validate:demo    # 演示验证（5个样本，用于测试）
+pnpm run data:validate         # 完整验证（100个样本）
+pnpm run data:validate:sample  # 快速验证（50个样本）
 ```
 
 **自动化特性**：
@@ -133,17 +131,17 @@ pnpm run validate:demo    # 演示验证（5个样本，用于测试）
 3. 点击 "Run workflow" 按钮
 4. 可选择强制更新（即使数据无变化）
 
-#### 📋 手动数据更新
+#### 📋 手动数据更新（本地/CI）
 
 ```bash
 # 重新获取最新的地区数据
-pnpm run import:territories
+pnpm run data:import:territories
 
 # 重新下载最新的 IP 数据
-pnpm run import:ip2location
+pnpm run data:import:ip2location
 
-# 生成数据文件
-pnpm run generate:data
+# 生成合并 JSON
+pnpm run data:export:combined
 ```
 
 > 💡 **提示**: 自动化同步已配置最佳更新策略，通常无需手动操作。
@@ -375,18 +373,18 @@ IpRange {
 ### 本地开发
 
 ```bash
-# 测试数据同步
-pnpm run sync:data
+# 导入数据并启动
+pnpm run prestart && pnpm run dev
 
-# 测试单独导出
-pnpm run export:csv
-pnpm run export:excel
+# 测试导出
+pnpm run data:export:csv
+pnpm run data:export:excel
 
-# 检查生成的文件
+# 检查生成文件
 ls -la data/
 
-# 测试验证系统
-pnpm run validate:demo
+# 快速验证
+pnpm run data:validate:sample
 ```
 
 ## 🤝 贡献指南
