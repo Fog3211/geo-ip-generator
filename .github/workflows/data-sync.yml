@@ -62,6 +62,7 @@ jobs:
     - name: Setup database
       run: |
         # Create a temporary database for data sync and persist env for next steps
+        export DATABASE_URL="file:./sync.db"
         echo "DATABASE_URL=file:./sync.db" >> $GITHUB_ENV
         pnpm run db:push
 
