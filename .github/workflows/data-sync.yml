@@ -61,13 +61,12 @@ jobs:
 
     - name: Setup database
       run: |
-        # Create a temporary database for data sync
-        export DATABASE_URL="file:./sync.db"
+        # Create a temporary database for data sync and persist env for next steps
+        echo "DATABASE_URL=file:./sync.db" >> $GITHUB_ENV
         pnpm run db:push
 
     - name: Run data synchronization
       env:
-        DATABASE_URL: "file:./sync.db"
         FORCE_UPDATE: ${{ github.event.inputs.force_update || 'false' }}
       run: |
         # Run the data sync script (backup/update/rollback included)

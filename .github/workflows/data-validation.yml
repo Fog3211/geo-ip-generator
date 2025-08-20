@@ -59,7 +59,7 @@ jobs:
       run: |
         # Use existing DB or create a temporary one for validation
         if [ ! -f "prisma/dev.db" ]; then
-          export DATABASE_URL="file:./validation.db"
+          echo "DATABASE_URL=file:./validation.db" >> $GITHUB_ENV
           pnpm run db:push
           pnpm run data:import:territories
           pnpm run data:import:ip2location

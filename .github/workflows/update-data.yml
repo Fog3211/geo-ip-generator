@@ -59,8 +59,9 @@ jobs:
       
       - name: 🗄️ Setup SQLite database
         run: |
-          # 创建临时数据库
-          pnpm exec prisma migrate dev --name init
+          # 创建临时数据库并在整个作业中共享连接串
+          echo "DATABASE_URL=file:./update.db" >> $GITHUB_ENV
+          pnpm run db:push
       
       - name: 🌍 Import territories data
         run: |
