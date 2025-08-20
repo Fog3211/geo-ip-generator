@@ -71,7 +71,7 @@ jobs:
         FORCE_UPDATE: ${{ github.event.inputs.force_update || 'false' }}
       run: |
         # Run the data sync script (backup/update/rollback included)
-        pnpm run sync:data
+        pnpm run data:sync
 
     - name: Check for changes
       id: check_changes

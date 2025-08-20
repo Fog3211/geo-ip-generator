@@ -105,7 +105,7 @@ class DataSyncManager {
     console.log('🌍 更新地区数据...');
     
     try {
-      execSync('pnpm run import:territories', { 
+      execSync('pnpm run data:import:territories', { 
         stdio: 'inherit',
         cwd: process.cwd()
       });
@@ -123,7 +123,7 @@ class DataSyncManager {
     console.log('🌐 更新IP数据...');
     
     try {
-      execSync('pnpm run import:ip2location', {
+      execSync('pnpm run data:import:ip2location', {
         stdio: 'inherit',
         cwd: process.cwd()
       });
@@ -141,7 +141,7 @@ class DataSyncManager {
     console.log('📄 导出JSON格式...');
     
     try {
-      execSync('pnpm run generate:data', {
+      execSync('pnpm run data:export:combined', {
         stdio: 'inherit',
         cwd: process.cwd()
       });
@@ -159,7 +159,7 @@ class DataSyncManager {
     console.log('📋 导出CSV格式...');
     
     try {
-      execSync('pnpm run export:csv', {
+      execSync('pnpm run data:export:csv', {
         stdio: 'inherit', 
         cwd: process.cwd()
       });
@@ -177,7 +177,7 @@ class DataSyncManager {
     console.log('📊 导出Excel格式...');
     
     try {
-      execSync('pnpm run export:excel', {
+      execSync('pnpm run data:export:excel', {
         stdio: 'inherit',
         cwd: process.cwd()
       });
@@ -195,7 +195,7 @@ class DataSyncManager {
     console.log('🔍 运行数据质量验证...');
     
     try {
-      execSync('pnpm run validate:sample', {
+      execSync('pnpm run data:validate:sample', {
         stdio: 'inherit',
         cwd: process.cwd()
       });

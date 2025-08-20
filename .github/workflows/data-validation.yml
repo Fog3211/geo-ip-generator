@@ -61,8 +61,8 @@ jobs:
         if [ ! -f "prisma/dev.db" ]; then
           export DATABASE_URL="file:./validation.db"
           pnpm run db:push
-          pnpm run import:territories
-          pnpm run import:ip2location
+          pnpm run data:import:territories
+          pnpm run data:import:ip2location
         fi
 
     - name: Run data validation
@@ -70,7 +70,7 @@ jobs:
         SAMPLE_SIZE: ${{ github.event.inputs.sample_size || '100' }}
       run: |
         echo "Start validating IP data quality..."
-        pnpm run validate:data $SAMPLE_SIZE
+        pnpm exec tsx scripts/validate-ip-data.ts $SAMPLE_SIZE
 
     - name: Check validation results
       id: check_results
