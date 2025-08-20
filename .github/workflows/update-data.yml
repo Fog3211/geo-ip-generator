@@ -64,15 +64,15 @@ jobs:
       
       - name: 🌍 Import territories data
         run: |
-          pnpm run import:territories
+          pnpm run data:import:territories
       
       - name: 📍 Import IP location data
         run: |
-          pnpm run import:ip2location
+          pnpm run data:import:ip2location
       
       - name: 🔄 Generate combined JSON data
         run: |
-          pnpm exec tsx scripts/generate-combined-data.ts
+          pnpm run data:export:combined
       
       - name: 📊 Validate data quality
         run: |
