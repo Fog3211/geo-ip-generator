@@ -60,6 +60,7 @@ jobs:
       - name: 🗄️ Setup SQLite database
         run: |
           # 创建临时数据库并在整个作业中共享连接串
+          export DATABASE_URL="file:./update.db"
           echo "DATABASE_URL=file:./update.db" >> $GITHUB_ENV
           pnpm run db:push
       
