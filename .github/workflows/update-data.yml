@@ -145,30 +145,7 @@ jobs:
           # 推送到仓库（使用默认 GITHUB_TOKEN）
           git push origin HEAD:${GITHUB_REF_NAME}
       
-      - name: 📈 Create release (weekly)
-        if: steps.changes.outputs.changes == 'true' && github.event.schedule == '0 2 * * 0'
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: data-v${{ github.run_number }}
-          release_name: Geo IP Data v${{ github.run_number }}
-          body: |
-            🌍 **自动更新的地理IP数据**
-            
-            📅 **更新时间**: ${{ steps.date.outputs.date }}
-            
-            📊 **数据统计**:
-            - 国家/地区数量: $(jq '.metadata.countries' data/combined-geo-ip-data.json)
-            - IP地址段数量: $(jq '.metadata.ipRanges' data/combined-geo-ip-data.json)
-            - 数据文件大小: $(jq -r '.metadata.dataSize' data/combined-geo-ip-data.json)
-            
-            🔗 **使用方式**:
-            ```
-            https://raw.githubusercontent.com/${{ github.repository }}/main/data/combined-geo-ip-data.json
-            ```
-          draft: false
-          prerelease: false
+
 
       - name: 🧹 Cleanup
         if: always()
