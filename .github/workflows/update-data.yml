@@ -6,12 +6,6 @@ on:
     - cron: '0 2 * * *'
   # Allow manual trigger
   workflow_dispatch:
-  # Run when data scripts change
-  push:
-    paths:
-      - 'scripts/import-**'
-      - 'scripts/generate-combined-data.ts'
-      - '.github/workflows/update-data.yml'
 
 env:
   NODE_VERSION: '20'
@@ -143,6 +137,7 @@ jobs:
           - Updated: $(date '+%Y-%m-%d %H:%M:%S UTC')"
           
           # 推送到仓库（使用默认 GITHUB_TOKEN）
+          git pull --rebase origin ${GITHUB_REF_NAME} || true
           git push origin HEAD:${GITHUB_REF_NAME}
       
 
