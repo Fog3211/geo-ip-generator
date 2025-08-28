@@ -107,10 +107,28 @@ jobs:
         # Stage all data files
         git add data/
         
-        # Extract stats from generated JSON using Node.js instead of jq (more robust on runners)
-        COUNTRIES=$(node -e "const fs=require('fs');const p='data/combined-geo-ip-data.json';try{if(fs.existsSync(p)){const txt=fs.readFileSync(p,'utf8');const j=JSON.parse(txt);const v=j&&j.metadata&&typeof j.metadata.countries==='number'?j.metadata.countries:'N/A';process.stdout.write(String(v));}else{process.stdout.write('N/A');}}catch{process.stdout.write('N/A');}")
-        RANGES=$(node -e "const fs=require('fs');const p='data/combined-geo-ip-data.json';try{if(fs.existsSync(p)){const txt=fs.readFileSync(p,'utf8');const j=JSON.parse(txt);const v=j&&j.metadata&&typeof j.metadata.ipRanges==='number'?j.metadata.ipRanges:'N/A';process.stdout.write(String(v));}else{process.stdout.write('N/A');}}catch{process.stdout.write('N/A');}")
-        SIZE=$(node -e "const fs=require('fs');const p='data/combined-geo-ip-data.json';try{if(fs.existsSync(p)){const txt=fs.readFileSync(p,'utf8');const j=JSON.parse(txt);const v=j&&j.metadata&&typeof j.metadata.dataSize==='string'?j.metadata.dataSize:'N/A';process.stdout.write(String(v));}else{process.stdout.write('N/A');}}catch{process.stdout.write('N/A');}")
+        # Extract stats using a heredoc Node script to avoid shell quoting/merge artifacts
+        eval "$(node - << 'NODE'
+        import fs from 'node:fs';
+        const p = 'data/combined-geo-ip-data.json';
+        let countries = 'N/A';
+        let ranges = 'N/A';
+        let size = 'N/A';
+        try {
+          if (fs.existsSync(p)) {
+            const txt = fs.readFileSync(p, 'utf8');
+            const j = JSON.parse(txt);
+            const m = (j && typeof j === 'object' && 'metadata' in j) ? (j as { metadata?: unknown }).metadata as Record<string, unknown> : {};
+            if (typeof m.countries === 'number') countries = String(m.countries);
+            if (typeof m.ipRanges === 'number') ranges = String(m.ipRanges);
+            if (typeof m.dataSize === 'string') size = String(m.dataSize);
+          }
+        } catch {}
+        console.log(`COUNTRIES=${countries}`);
+        console.log(`RANGES=${ranges}`);
+        console.log(`SIZE=${size}`);
+        NODE
+        )"
 
         # Commit changes (explicit author info)
         git commit --author="GeoIP Data Bot <41898282+github-actions[bot]@users.noreply.github.com>" -m "chore: update geo-ip data - ${TIMESTAMP}
@@ -135,18 +153,31 @@ jobs:
         echo "RELEASE_TAG=data-v${DATE_TAG}" >> $GITHUB_ENV
         echo "RELEASE_NAME=📊 Geo IP Data ${DATE_TAG}" >> $GITHUB_ENV
         
-        # Check if data files exist, if not use default values
-        if [ -f "data/combined-geo-ip-data.json" ]; then
-          COUNTRIES=$(node -e "const fs=require('fs');const p='data/combined-geo-ip-data.json';try{const txt=fs.readFileSync(p,'utf8');const j=JSON.parse(txt);const v=j&&j.metadata&&typeof j.metadata.countries==='number'?j.metadata.countries:'N/A';process.stdout.write(String(v));}catch{process.stdout.write('N/A');}")
-          RANGES=$(node -e "const fs=require('fs');const p='data/combined-geo-ip-data.json';try{const txt=fs.readFileSync(p,'utf8');const j=JSON.parse(txt);const v=j&&j.metadata&&typeof j.metadata.ipRanges==='number'?j.metadata.ipRanges:'N/A';process.stdout.write(String(v));}catch{process.stdout.write('N/A');}")
-          SIZE=$(node -e "const fs=require('fs');const p='data/combined-geo-ip-data.json';try{const txt=fs.readFileSync(p,'utf8');const j=JSON.parse(txt);const v=j&&j.metadata&&typeof j.metadata.dataSize==='string'?j.metadata.dataSize:'N/A';process.stdout.write(String(v));}catch{process.stdout.write('N/A');}")
-          DATA_STATUS="✅ Updated"
-        else
-          COUNTRIES="N/A"
-          RANGES="N/A"
-          SIZE="N/A"
-          DATA_STATUS="⚠️ No data changes"
-        fi
+        # Prepare numbers via heredoc Node script with robust parsing
+        eval "$(node - << 'NODE'
+        import fs from 'node:fs';
+        const p = 'data/combined-geo-ip-data.json';
+        let countries = 'N/A';
+        let ranges = 'N/A';
+        let size = 'N/A';
+        let status = '⚠️ No data changes';
+        try {
+          if (fs.existsSync(p)) {
+            const txt = fs.readFileSync(p, 'utf8');
+            const j = JSON.parse(txt);
+            const m = (j && typeof j === 'object' && 'metadata' in j) ? (j as { metadata?: unknown }).metadata as Record<string, unknown> : {};
+            if (typeof m.countries === 'number') countries = String(m.countries);
+            if (typeof m.ipRanges === 'number') ranges = String(m.ipRanges);
+            if (typeof m.dataSize === 'string') size = String(m.dataSize);
+            status = '✅ Updated';
+          }
+        } catch {}
+        console.log(`COUNTRIES=${countries}`);
+        console.log(`RANGES=${ranges}`);
+        console.log(`SIZE=${size}`);
+        console.log(`DATA_STATUS=${status}`);
+        NODE
+        )"
         
         HAS_CHANGES="${{ steps.check_changes.outputs.changes }}"
         
