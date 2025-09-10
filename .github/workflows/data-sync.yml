@@ -143,7 +143,7 @@ jobs:
         git commit --author="GeoIP Data Bot <41898282+github-actions[bot]@users.noreply.github.com>" -m "chore: update geo-ip data - ${TIMESTAMP}
 
         📊 Data sync summary:
-        - Updated at: $(date '+%Y-%m-%d %H:%M:%S UTC')
+        - Updated at: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
         - Territories: ${COUNTRIES}
         - IP ranges: ${RANGES}
         - Data size: ${SIZE}
