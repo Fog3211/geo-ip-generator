@@ -15,7 +15,8 @@ on:
 env:
   NODE_VERSION: '20'
   PNPM_VERSION: '9'
-  DATABASE_URL: 'file:./sync.db'
+  DATABASE_URL: 'file:./prisma/db.sqlite'
+  SKIP_ENV_VALIDATION: 'true'
 
 permissions:
   contents: write
@@ -62,10 +63,10 @@ jobs:
 
     - name: Setup database
       env:
-        DATABASE_URL: "file:./sync.db"
+        DATABASE_URL: "file:./prisma/db.sqlite"
       run: |
         # Create a temporary database for data sync and persist env for next steps
-        echo "DATABASE_URL=file:./sync.db" >> $GITHUB_ENV
+        echo "DATABASE_URL=file:./prisma/db.sqlite" >> $GITHUB_ENV
         pnpm run db:push
 
     - name: Run data synchronization
@@ -118,7 +119,13 @@ jobs:
           if (fs.existsSync(p)) {
             const txt = fs.readFileSync(p, 'utf8');
             const j = JSON.parse(txt);
-            const m = (j && typeof j === 'object' && 'metadata' in j) ? (j as { metadata?: unknown }).metadata as Record<string, unknown> : {};
+            let m = {};
+            if (j && typeof j === 'object' && Object.prototype.hasOwnProperty.call(j, 'metadata')) {
+              const md = j.metadata;
+              if (md && typeof md === 'object') {
+                m = md;
+              }
+            }
             if (typeof m.countries === 'number') countries = String(m.countries);
             if (typeof m.ipRanges === 'number') ranges = String(m.ipRanges);
             if (typeof m.dataSize === 'string') size = String(m.dataSize);
@@ -148,11 +155,13 @@ jobs:
     - name: Prepare daily release metadata
       if: steps.check_changes.outputs.changes == 'true'
       run: |
-        DATE_UTC="$(date '+%Y-%m-%d %H:%M:%S UTC')"
-        DATE_TAG="$(date '+%Y.%m.%d')"
+        DATE_UTC="$(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+        DATE_TAG="$(date -u '+%Y.%m.%d')"
+        DATE_SHORT="$(date -u '+%Y%m%d')"
         echo "DATE_UTC=${DATE_UTC}" >> $GITHUB_ENV
         echo "RELEASE_TAG=data-v${DATE_TAG}" >> $GITHUB_ENV
         echo "RELEASE_NAME=📊 Geo IP Data ${DATE_TAG}" >> $GITHUB_ENV
+        echo "DATE_SHORT=${DATE_SHORT}" >> $GITHUB_ENV
         
         # Prepare numbers via heredoc Node script with robust parsing
         eval "$(node - << 'NODE'
@@ -166,7 +175,13 @@ jobs:
           if (fs.existsSync(p)) {
             const txt = fs.readFileSync(p, 'utf8');
             const j = JSON.parse(txt);
-            const m = (j && typeof j === 'object' && 'metadata' in j) ? (j as { metadata?: unknown }).metadata as Record<string, unknown> : {};
+            let m = {};
+            if (j && typeof j === 'object' && Object.prototype.hasOwnProperty.call(j, 'metadata')) {
+              const md = j.metadata;
+              if (md && typeof md === 'object') {
+                m = md;
+              }
+            }
             if (typeof m.countries === 'number') countries = String(m.countries);
             if (typeof m.ipRanges === 'number') ranges = String(m.ipRanges);
             if (typeof m.dataSize === 'string') size = String(m.dataSize);
@@ -241,7 +256,7 @@ jobs:
       if: steps.check_changes.outputs.changes == 'true'
       uses: actions/upload-artifact@v4
       with:
-        name: geo-ip-data-$(date '+%Y%m%d')
+        name: geo-ip-data-${{ env.DATE_SHORT }}
         path: |
           data/combined-geo-ip-data.json
           data/combined-geo-ip-data.min.json
