@@ -112,7 +112,7 @@ jobs:
         
         # Extract stats using a heredoc Node script to avoid shell quoting/merge artifacts
         eval "$(node - << 'NODE'
-        import fs from 'node:fs';
+        const fs = require('fs');
         const p = 'data/combined-geo-ip-data.json';
         let countries = 'N/A';
         let ranges = 'N/A';
@@ -169,7 +169,7 @@ jobs:
         
         # Prepare numbers via heredoc Node script with robust parsing
         eval "$(node - << 'NODE'
-        import fs from 'node:fs';
+        const fs = require('fs');
         const p = 'data/combined-geo-ip-data.json';
         let countries = 'N/A';
         let ranges = 'N/A';
