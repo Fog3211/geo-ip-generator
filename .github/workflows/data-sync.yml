@@ -59,7 +59,9 @@ jobs:
           ${{ runner.os }}-pnpm-store-
 
     - name: Install dependencies
-      run: pnpm install --no-frozen-lockfile
+      env:
+        PNPM_LOG_LEVEL: error
+      run: pnpm install --no-frozen-lockfile --silent
 
     - name: Setup database
       env:
