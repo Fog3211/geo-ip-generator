@@ -19,6 +19,7 @@ env:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   validate-data:
@@ -132,51 +133,65 @@ jobs:
 
     - name: Create Issue for low accuracy
       if: steps.check_results.outputs.needs_attention == 'true'
-      uses: actions/github-script@v6
+      uses: actions/github-script@v7
       with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const accuracy = parseFloat('${{ steps.check_results.outputs.accuracy }}');
-          const errorCount = parseInt('${{ steps.check_results.outputs.error_count }}');
-          const runUrl = `https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}`;
-          
-          const title = `🚨 Data Validation Alert: Low Accuracy Detected`;
-          
-          const body = `# Data Validation Alert
+          try {
+            const accuracy = parseFloat('${{ steps.check_results.outputs.accuracy }}');
+            const errorCount = parseInt('${{ steps.check_results.outputs.error_count }}');
+            const runUrl = `https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}`;
+            
+            const title = `🚨 Data Validation Alert: Low Accuracy Detected`;
+            
+            const body = `# Data Validation Alert
 
-          Accuracy is below the threshold.
+            Accuracy is below the threshold.
 
-          ## Results
-          - Accuracy: ${(accuracy * 100).toFixed(1)}%
-          - Errors: ${errorCount}
-          - Sample size: ${{ github.event.inputs.sample_size || '100' }}
+            ## Results
+            - Accuracy: ${(accuracy * 100).toFixed(1)}%
+            - Errors: ${errorCount}
+            - Sample size: ${{ github.event.inputs.sample_size || '100' }}
 
-          ## Suggested actions
-          - Check the run logs: ${runUrl}
-          - Download validation artifacts for details
-          - Check upstream data sources and API providers
+            ## Suggested actions
+            - Check the run logs: ${runUrl}
+            - Download validation artifacts for details
+            - Check upstream data sources and API providers
 
-          _This issue was created automatically by the validation workflow._`;
-          
-          // Check if there is an existing open issue with the same topic
-          const existingIssues = await github.rest.issues.listForRepo({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            state: 'open',
-            labels: ['data-validation', 'automated']
-          });
-          
-          const hasOpenValidationIssue = existingIssues.data.some(issue => 
-            issue.title.includes('Data Validation Alert')
-          );
-          
-          if (!hasOpenValidationIssue) {
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: title,
-              body: body,
-              labels: ['data-validation', 'automated', 'needs-investigation']
-            });
+            _This issue was created automatically by the validation workflow._`;
+            
+            // Check if there is an existing open issue with the same topic
+            try {
+              const existingIssues = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'data-validation'
+              });
+              
+              const hasOpenValidationIssue = existingIssues.data.some(issue => 
+                issue.title.includes('Data Validation Alert')
+              );
+              
+              if (!hasOpenValidationIssue) {
+                await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: title,
+                  body: body,
+                  labels: ['data-validation', 'automated', 'needs-investigation']
+                });
+                console.log('Created new validation issue');
+              } else {
+                console.log('Validation issue already exists, skipping creation');
+              }
+            } catch (issueError) {
+              console.error('Failed to check or create issue:', issueError.message);
+              // Continue execution without failing the workflow
+            }
+          } catch (error) {
+            console.error('Script execution failed:', error.message);
+            // Don't fail the workflow for issue creation problems
           }
 
     - name: Post success summary
