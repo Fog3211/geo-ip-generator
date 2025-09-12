@@ -125,11 +125,24 @@ class DataSyncManager {
     try {
       execSync('pnpm run data:import:ip2location', {
         stdio: 'inherit',
-        cwd: process.cwd()
+        cwd: process.cwd(),
+        timeout: 300000, // 5 minute timeout
       });
       console.log('✅ IP数据更新完成');
     } catch (error) {
       console.error('❌ IP数据更新失败:', error);
+      
+      // Try to provide more helpful error information
+      if (error instanceof Error) {
+        if (error.message.includes('timeout')) {
+          console.log('💡 数据下载超时，请检查网络连接或稍后重试');
+        } else if (error.message.includes('ENOTFOUND') || error.message.includes('getaddrinfo')) {
+          console.log('💡 网络连接失败，请检查网络设置');
+        } else if (error.message.includes('unzip')) {
+          console.log('💡 解压缩失败，可能需要手动安装 unzip 工具');
+        }
+      }
+      
       throw error;
     }
   }

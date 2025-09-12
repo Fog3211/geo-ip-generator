@@ -9,8 +9,11 @@ import { silentDb as db, optimizeSQLiteForBulkOps } from '../src/server/db';
 
 const streamPipeline = promisify(pipeline);
 
-// IP2Location LITE download URL (free version)
-const IP2LOCATION_URL = 'https://download.ip2location.com/lite/IP2LOCATION-LITE-DB1.CSV.ZIP';
+// IP2Location LITE download URLs (free version) - with fallback mirrors
+const IP2LOCATION_URLS = [
+  'https://download.ip2location.com/lite/IP2LOCATION-LITE-DB1.CSV.ZIP',
+  // Add backup URLs if needed in the future
+] as const;
 const DATA_DIR = path.join(process.cwd(), 'scripts', 'data');
 const ZIP_FILE = path.join(DATA_DIR, 'IP2LOCATION-LITE-DB1.CSV.ZIP');
 const CSV_FILE = path.join(DATA_DIR, 'IP2LOCATION-LITE-DB1.CSV');
@@ -81,21 +84,74 @@ async function downloadIPData(): Promise<void> {
   console.log('📍 Data source: IP2Location LITE DB1 (Country only, Free version)');
   console.log('🔗 More info: https://lite.ip2location.com/');
   
-  try {
-    const response = await fetch(IP2LOCATION_URL);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+  const maxRetries = 3;
+  let attempt = 1;
+  
+  while (attempt <= maxRetries) {
+    try {
+      console.log(`🔄 Download attempt ${attempt}/${maxRetries}...`);
+      
+      // Try each URL until one succeeds
+      let response: Response | null = null;
+      let lastError: Error | null = null;
+      
+      for (const url of IP2LOCATION_URLS) {
+        try {
+          console.log(`🔗 Trying URL: ${url}`);
+          response = await fetch(url, {
+            timeout: 60000, // 60 second timeout
+            headers: {
+              'User-Agent': 'geo-ip-generator/1.0 (+https://github.com/Fog3211/geo-ip-generator)'
+            }
+          });
+          
+          if (response.ok) {
+            console.log(`✅ Successfully connected to: ${url}`);
+            break;
+          } else {
+            console.log(`⚠️ URL returned ${response.status}: ${url}`);
+            lastError = new Error(`HTTP ${response.status} ${response.statusText}`);
+            response = null;
+          }
+        } catch (urlError) {
+          console.log(`❌ Failed to connect to: ${url}`, urlError);
+          lastError = urlError as Error;
+          response = null;
+        }
+      }
+      
+      if (!response) {
+        throw lastError || new Error('All download URLs failed');
+      }
+      
+      const fileStream = createWriteStream(ZIP_FILE);
+      if (response.body) {
+        await streamPipeline(response.body as any, fileStream);
+      }
+      
+      // Verify file was downloaded successfully
+      const stats = fs.statSync(ZIP_FILE);
+      if (stats.size < 1000) { // Less than 1KB probably means an error
+        throw new Error('Downloaded file is too small, likely corrupted');
+      }
+      
+      console.log(`✅ Download completed (${Math.round(stats.size / 1024 / 1024 * 100) / 100} MB)`);
+      return;
+      
+    } catch (error) {
+      console.error(`❌ Download attempt ${attempt} failed:`, error);
+      
+      if (attempt === maxRetries) {
+        console.error('🚫 All download attempts failed');
+        throw new Error(`Failed to download after ${maxRetries} attempts: ${error}`);
+      }
+      
+      // Wait before retry (exponential backoff)
+      const waitTime = Math.pow(2, attempt) * 1000;
+      console.log(`⏳ Waiting ${waitTime}ms before retry...`);
+      await new Promise(resolve => setTimeout(resolve, waitTime));
+      attempt++;
     }
-    
-    const fileStream = createWriteStream(ZIP_FILE);
-    if (response.body) {
-      await streamPipeline(response.body as any, fileStream);
-    }
-    
-    console.log('✅ Download completed');
-  } catch (error) {
-    console.error('❌ Download failed:', error);
-    throw error;
   }
 }
 
@@ -103,16 +159,57 @@ async function extractZipFile(): Promise<void> {
   console.log('📂 Extracting ZIP file...');
   
   try {
-    // Use unzip command (available on macOS/Linux)
+    // Check if unzip is available
     const { exec } = await import('child_process');
     const { promisify } = await import('util');
     const execAsync = promisify(exec);
     
-    await execAsync(`cd "${DATA_DIR}" && unzip -o "${ZIP_FILE}"`);
-    console.log('✅ ZIP file extracted');
+    // Try to check if unzip is available
+    try {
+      await execAsync('which unzip');
+    } catch {
+      console.log('⚠️ unzip command not found, trying alternative extraction...');
+      
+      // Try using Node.js built-in extraction (if available)
+      try {
+        const AdmZip = await import('adm-zip').catch(() => null);
+        if (AdmZip) {
+          const zip = new AdmZip.default(ZIP_FILE);
+          zip.extractAllTo(DATA_DIR, true);
+          console.log('✅ ZIP file extracted using Node.js');
+          return;
+        }
+      } catch (nodeZipError) {
+        console.log('⚠️ Node.js ZIP extraction also failed:', nodeZipError);
+      }
+      
+      throw new Error('No extraction method available. Please install unzip or extract manually.');
+    }
+    
+    // Use unzip command
+    const extractCommand = `cd "${DATA_DIR}" && unzip -o "${ZIP_FILE}"`;
+    console.log(`🔧 Running: ${extractCommand}`);
+    
+    const { stdout, stderr } = await execAsync(extractCommand);
+    if (stderr && !stderr.includes('inflating:')) {
+      console.warn('⚠️ Extraction warnings:', stderr);
+    }
+    if (stdout) {
+      console.log('📋 Extraction output:', stdout);
+    }
+    
+    // Verify extraction succeeded
+    if (!fs.existsSync(CSV_FILE)) {
+      throw new Error(`CSV file not found after extraction: ${CSV_FILE}`);
+    }
+    
+    console.log('✅ ZIP file extracted successfully');
   } catch (error) {
     console.error('❌ ZIP extraction failed:', error);
-    console.log('💡 Please manually extract the ZIP file to continue');
+    console.log('💡 Manual extraction steps:');
+    console.log(`1. Extract ${ZIP_FILE} to ${DATA_DIR}`);
+    console.log(`2. Ensure ${CSV_FILE} exists`);
+    console.log('3. Run this script again');
     throw error;
   }
 }
