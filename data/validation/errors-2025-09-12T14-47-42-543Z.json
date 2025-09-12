@@ -1,0 +1,127 @@
+[
+  {
+    "ip": "82.205.181.219",
+    "expected": {
+      "countryCode": "AF",
+      "countryName": "Afghanistan"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Bavaria",
+        "city": "Munich",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Bavaria",
+        "city": "Munich",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "134.238.59.59",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "JO",
+        "countryName": "Jordan",
+        "region": "Amman Governorate",
+        "city": "Amman",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "JO",
+        "countryName": "Hashemite Kingdom of Jordan",
+        "region": "Amman",
+        "city": "Amman",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "45.15.128.69",
+    "expected": {
+      "countryCode": "AM",
+      "countryName": "Armenia"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.44.99",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "SE",
+        "countryName": "Sweden",
+        "region": "Stockholm County",
+        "city": "Stockholm",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "IT",
+        "countryName": "Italy",
+        "region": "Lombardy",
+        "city": "Milan",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "3.165.48.95",
+    "expected": {
+      "countryCode": "SG",
+      "countryName": "Singapore"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "VN",
+        "countryName": "Vietnam",
+        "region": "Ho Chi Minh",
+        "city": "Ho Chi Minh City",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
