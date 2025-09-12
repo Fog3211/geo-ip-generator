@@ -174,114 +174,12 @@ jobs:
         
         # Push changes
         git push origin HEAD:${GITHUB_REF_NAME}
-
-    - name: Prepare daily release metadata
-      if: steps.check_changes.outputs.changes == 'true'
-      run: |
-        DATE_UTC="$(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-        DATE_TAG="$(date -u '+%Y.%m.%d')"
-        DATE_SHORT="$(date -u '+%Y%m%d')"
-        echo "DATE_UTC=${DATE_UTC}" >> $GITHUB_ENV
-        echo "RELEASE_TAG=data-v${DATE_TAG}" >> $GITHUB_ENV
-        echo "RELEASE_NAME=📊 Geo IP Data ${DATE_TAG}" >> $GITHUB_ENV
-        echo "DATE_SHORT=${DATE_SHORT}" >> $GITHUB_ENV
         
-        # Prepare numbers via Node script and source variables (avoid eval word-splitting)
-        node - << 'NODE' > meta.env
-        const fs = require('fs');
-        const p = 'data/combined-geo-ip-data.json';
-        let countries = 'N/A';
-        let ranges = 'N/A';
-        let size = 'N/A';
-        let status = '⚠️ No data changes';
-        try {
-          if (fs.existsSync(p)) {
-            const txt = fs.readFileSync(p, 'utf8');
-            const j = JSON.parse(txt);
-            let m = {};
-            if (j && typeof j === 'object' && Object.prototype.hasOwnProperty.call(j, 'metadata')) {
-              const md = j.metadata;
-              if (md && typeof md === 'object') {
-                m = md;
-              }
-            }
-            if (typeof m.countries === 'number') countries = String(m.countries);
-            if (typeof m.ipRanges === 'number') ranges = String(m.ipRanges);
-            if (typeof m.dataSize === 'string') size = String(m.dataSize);
-            status = '✅ Updated';
-          }
-        } catch {}
-        console.log(`COUNTRIES=${countries}`);
-        console.log(`RANGES=${ranges}`);
-        console.log(`SIZE=${size}`);
-        console.log(`DATA_STATUS=${status}`);
-        NODE
-        set -a
-        . ./meta.env
-        set +a
-        
-        HAS_CHANGES="${{ steps.check_changes.outputs.changes }}"
-        
-        cat > release_body.md << EOF
-        # 🌍 Daily Geo IP Data Release
-        
-        **Release Date**: ${DATE_UTC}  
-        **Status**: ${DATA_STATUS}  
-        **Data Changes**: ${HAS_CHANGES}
-        
-        ## 📊 Data Statistics
-        - **Countries/Regions**: ${COUNTRIES}
-        - **IP Ranges**: ${RANGES}
-        - **Data Size**: ${SIZE}
-        
-        ## 📥 Download Links
-        - [JSON Format](https://github.com/${{ github.repository }}/releases/download/${{ env.RELEASE_TAG }}/combined-geo-ip-data.json)
-        - [Minified JSON](https://github.com/${{ github.repository }}/releases/download/${{ env.RELEASE_TAG }}/combined-geo-ip-data.min.json)
-        - [CSV Format](https://github.com/${{ github.repository }}/releases/download/${{ env.RELEASE_TAG }}/combined-geo-ip-data.csv)
-        - [Excel Format](https://github.com/${{ github.repository }}/releases/download/${{ env.RELEASE_TAG }}/combined-geo-ip-data.xlsx)
-        
-        ## 🔗 API Access
-        \`\`\`
-        # Latest data (raw.githubusercontent.com)
-        https://raw.githubusercontent.com/${{ github.repository }}/main/data/combined-geo-ip-data.json
-        
-        # This release (GitHub Releases)
-        https://github.com/${{ github.repository }}/releases/download/${RELEASE_TAG}/combined-geo-ip-data.json
-        \`\`\`
-        
-        ## 📚 Data Sources
-        - **Territories**: [mledoze/countries](https://github.com/mledoze/countries)
-        - **IP Ranges**: [IP2Location LITE](https://www.ip2location.com/)
-        
-        ---
-        🤖 **Auto-generated daily release by GitHub Actions**
-        EOF
-
-    - name: Create daily release
-      if: steps.check_changes.outputs.changes == 'true'
-      uses: softprops/action-gh-release@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ env.RELEASE_TAG }}
-        name: ${{ env.RELEASE_NAME }}
-        body_path: release_body.md
-        files: |
-          data/combined-geo-ip-data.json
-          data/combined-geo-ip-data.min.json
-          data/combined-geo-ip-data.csv
-          data/combined-geo-ip-data.xlsx
-        draft: false
-        prerelease: false
-        make_latest: true
-        allow_updates: true
-        fail_on_unmatched_files: false
-
     - name: Upload daily artifacts
       if: steps.check_changes.outputs.changes == 'true'
       uses: actions/upload-artifact@v4
       with:
-        name: geo-ip-data-${{ env.DATE_SHORT }}
+        name: geo-ip-data-$(date -u '+%Y%m%d')
         path: |
           data/combined-geo-ip-data.json
           data/combined-geo-ip-data.min.json
