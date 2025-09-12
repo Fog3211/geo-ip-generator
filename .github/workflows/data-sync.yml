@@ -71,9 +71,16 @@ jobs:
         echo "DATABASE_URL=file:./prisma/db.sqlite" >> $GITHUB_ENV
         pnpm run db:push
 
+    - name: Install system dependencies
+      run: |
+        # Install required system packages for data processing
+        sudo apt-get update
+        sudo apt-get install -y unzip curl wget
+
     - name: Run data synchronization
       env:
         FORCE_UPDATE: ${{ github.event.inputs.force_update || 'false' }}
+        NODE_OPTIONS: '--max-old-space-size=4096'
       run: |
         # Run the data sync script (backup/update/rollback included)
         pnpm run data:sync
