@@ -117,8 +117,8 @@ jobs:
         # Stage all data files
         git add data/
         
-        # Extract stats using a heredoc Node script to avoid shell quoting/merge artifacts
-        eval "$(node - << 'NODE'
+        # Extract stats using Node and source into current shell without eval
+        node - << 'NODE' > meta.env
         const fs = require('fs');
         const p = 'data/combined-geo-ip-data.json';
         let countries = 'N/A';
@@ -144,7 +144,9 @@ jobs:
         console.log(`RANGES=${ranges}`);
         console.log(`SIZE=${size}`);
         NODE
-        )"
+        set -a
+        . ./meta.env
+        set +a
 
         # Commit changes (explicit author info)
         git commit --author="GeoIP Data Bot <41898282+github-actions[bot]@users.noreply.github.com>" -m "chore: update geo-ip data - ${TIMESTAMP}
@@ -184,8 +186,8 @@ jobs:
         echo "RELEASE_NAME=📊 Geo IP Data ${DATE_TAG}" >> $GITHUB_ENV
         echo "DATE_SHORT=${DATE_SHORT}" >> $GITHUB_ENV
         
-        # Prepare numbers via heredoc Node script with robust parsing
-        eval "$(node - << 'NODE'
+        # Prepare numbers via Node script and source variables (avoid eval word-splitting)
+        node - << 'NODE' > meta.env
         const fs = require('fs');
         const p = 'data/combined-geo-ip-data.json';
         let countries = 'N/A';
@@ -214,7 +216,9 @@ jobs:
         console.log(`SIZE=${size}`);
         console.log(`DATA_STATUS=${status}`);
         NODE
-        )"
+        set -a
+        . ./meta.env
+        set +a
         
         HAS_CHANGES="${{ steps.check_changes.outputs.changes }}"
         
