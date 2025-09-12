@@ -192,6 +192,7 @@ jobs:
         let ranges = 'N/A';
         let size = 'N/A';
         let status = '⚠️ No data changes';
+        const shQuote = (s) => String(s).replace(/'/g, "'\\''");
         try {
           if (fs.existsSync(p)) {
             const txt = fs.readFileSync(p, 'utf8');
@@ -212,7 +213,8 @@ jobs:
         console.log(`COUNTRIES=${countries}`);
         console.log(`RANGES=${ranges}`);
         console.log(`SIZE=${size}`);
-        console.log(`DATA_STATUS=${status}`);
+        // Quote value to be safe for eval with spaces/emoji
+        console.log(`DATA_STATUS='${shQuote(status)}'`);
         NODE
         )"
         

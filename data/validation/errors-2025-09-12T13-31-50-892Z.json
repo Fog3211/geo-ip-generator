@@ -1,0 +1,127 @@
+[
+  {
+    "ip": "204.212.121.209",
+    "expected": {
+      "countryCode": "AW",
+      "countryName": "Aruba"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Illinois",
+        "city": "Chicago",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Ohio",
+        "city": "Cleveland",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "82.205.204.1",
+    "expected": {
+      "countryCode": "AF",
+      "countryName": "Afghanistan"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Bavaria",
+        "city": "Munich",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates",
+        "region": "Abu Dhabi Emirate",
+        "city": "Abu Dhabi",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "13.34.34.49",
+    "expected": {
+      "countryCode": "AE",
+      "countryName": "United Arab Emirates"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "SE",
+        "countryName": "Sweden",
+        "region": "Stockholm County",
+        "city": "Stockholm",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "SE",
+        "countryName": "Sweden",
+        "region": "Stockholm County",
+        "city": "Stockholm",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.65.162",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.94.174",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hamburg",
+        "city": "Hamburg",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "CN",
+        "countryName": "China",
+        "region": "Altay Prefecture",
+        "city": "Altay",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
