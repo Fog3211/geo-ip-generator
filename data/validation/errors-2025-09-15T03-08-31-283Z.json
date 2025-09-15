@@ -1,0 +1,127 @@
+[
+  {
+    "ip": "82.205.151.90",
+    "expected": {
+      "countryCode": "AF",
+      "countryName": "Afghanistan"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Bavaria",
+        "city": "Munich",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Bavaria",
+        "city": "Munich",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "45.88.89.112",
+    "expected": {
+      "countryCode": "AL",
+      "countryName": "Albania"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "BG",
+        "countryName": "Bulgaria",
+        "region": "Sofia-Capital",
+        "city": "Sofia",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "BG",
+        "countryName": "Bulgaria",
+        "region": "Sofia-city",
+        "city": "Sofia",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "203.193.117.183",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "region": "Eastern",
+        "city": "Taikoo Shing",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "region": "Hong Kong",
+        "city": "Sai Ying Pun",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.123.162",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "5.157.169.103",
+    "expected": {
+      "countryCode": "RO",
+      "countryName": "Romania"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Frankfurt am Main",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Frankfurt",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
