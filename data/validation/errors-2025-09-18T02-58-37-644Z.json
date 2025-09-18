@@ -1,0 +1,177 @@
+[
+  {
+    "ip": "199.0.84.40",
+    "expected": {
+      "countryCode": "AW",
+      "countryName": "Aruba"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Ohio",
+        "city": "Cleveland",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Ohio",
+        "city": "Cleveland",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "5.56.133.158",
+    "expected": {
+      "countryCode": "AE",
+      "countryName": "United Arab Emirates"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "Drenthe",
+        "city": "Meppel",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "region": "Drenthe",
+        "city": "Meppel",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "38.44.25.189",
+    "expected": {
+      "countryCode": "AZ",
+      "countryName": "Azerbaijan"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.36.112",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "CN",
+        "countryName": "China",
+        "region": "Xinjiang",
+        "city": "Altay",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.36.55",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "CN",
+        "countryName": "China",
+        "region": "Xinjiang",
+        "city": "Altay",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "15.248.155.242",
+    "expected": {
+      "countryCode": "IL",
+      "countryName": "Israel"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "SA",
+        "countryName": "Saudi Arabia",
+        "region": "Riyadh Region",
+        "city": "Riyadh",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "SA",
+        "countryName": "Saudi Arabia",
+        "region": "Riyadh Region",
+        "city": "Riyadh",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "31.41.34.100",
+    "expected": {
+      "countryCode": "LT",
+      "countryName": "Lithuania"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "California",
+        "city": "San Jose",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "California",
+        "city": "San Jose",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
