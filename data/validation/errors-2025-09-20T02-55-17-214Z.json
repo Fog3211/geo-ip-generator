@@ -1,0 +1,119 @@
+[
+  {
+    "ip": "204.212.120.137",
+    "expected": {
+      "countryCode": "AW",
+      "countryName": "Aruba"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Ohio",
+        "city": "Cleveland",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "212.17.189.137",
+    "expected": {
+      "countryCode": "AX",
+      "countryName": "Åland Islands"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "FI",
+        "countryName": "Finland",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FI",
+        "countryName": "Finland",
+        "region": "Uusimaa",
+        "city": "Helsinki",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "203.193.117.187",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "region": "Eastern",
+        "city": "Taikoo Shing",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "region": "Eastern",
+        "city": "Taikoo Shing",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.25.73",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "CN",
+        "countryName": "China",
+        "region": "Xinjiang",
+        "city": "Altay",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.13.40",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "PE",
+        "countryName": "Peru",
+        "region": "Lambayeque",
+        "city": "Chiclayo",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
