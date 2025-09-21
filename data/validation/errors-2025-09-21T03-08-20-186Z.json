@@ -1,0 +1,102 @@
+[
+  {
+    "ip": "37.35.67.2",
+    "expected": {
+      "countryCode": "AL",
+      "countryName": "Albania"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "XK",
+        "countryName": "Kosovo",
+        "region": "Mitrovica",
+        "city": "Mitrovica",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "XK",
+        "countryName": "Kosovo",
+        "region": "Municipality of Pristina",
+        "city": "Prishtina",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "38.44.24.208",
+    "expected": {
+      "countryCode": "AZ",
+      "countryName": "Azerbaijan"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.28.117",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Newfoundland and Labrador",
+        "city": "St. John's",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hamburg",
+        "city": "Hamburg",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "185.223.71.225",
+    "expected": {
+      "countryCode": "GL",
+      "countryName": "Greenland"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "GB",
+        "countryName": "United Kingdom",
+        "region": "Scotland",
+        "city": "Glasgow",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "GB",
+        "countryName": "United Kingdom",
+        "region": "Scotland",
+        "city": "Glasgow",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
