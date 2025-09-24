@@ -1,0 +1,127 @@
+[
+  {
+    "ip": "41.109.117.13",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Boumerdes",
+        "city": "Boumerdes",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Boumerdes",
+        "city": "Boumerdes",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.28.69",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Newfoundland and Labrador",
+        "city": "St. John's",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hamburg",
+        "city": "Hamburg",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.9.217",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "CN",
+        "countryName": "China",
+        "region": "Xinjiang",
+        "city": "Altay",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "DK",
+        "countryName": "Denmark",
+        "region": "Denmark",
+        "city": "Copenhagen",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "41.175.99.95",
+    "expected": {
+      "countryCode": "ZM",
+      "countryName": "Zambia"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "ZW",
+        "countryName": "Zimbabwe",
+        "region": "Harare",
+        "city": "Harare",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "ZW",
+        "countryName": "Zimbabwe",
+        "region": "Harare",
+        "city": "Harare",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "14.1.88.76",
+    "expected": {
+      "countryCode": "UM",
+      "countryName": "United States Minor Outlying Islands"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "AU",
+        "countryName": "Australia",
+        "region": "New South Wales",
+        "city": "Sydney",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "AU",
+        "countryName": "Australia",
+        "region": "New South Wales",
+        "city": "Sydney",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
