@@ -1,0 +1,173 @@
+[
+  {
+    "ip": "144.125.134.113",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "EC",
+        "countryName": "Ecuador",
+        "region": "Guayas",
+        "city": "Guayaquil",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "EC",
+        "countryName": "Ecuador",
+        "region": "Guayas",
+        "city": "Guayaquil",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "5.56.133.57",
+    "expected": {
+      "countryCode": "AE",
+      "countryName": "United Arab Emirates"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "region": "Drenthe",
+        "city": "Meppel",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "Drenthe",
+        "city": "Meppel",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "203.193.117.214",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "region": "Hong Kong",
+        "city": "Hong Kong",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "region": "Eastern",
+        "city": "Taikoo Shing",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "38.44.25.192",
+    "expected": {
+      "countryCode": "AZ",
+      "countryName": "Azerbaijan"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.94.192",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "CN",
+        "countryName": "China",
+        "region": "Altay Prefecture",
+        "city": "Altay",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.229.46",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "CN",
+        "countryName": "China",
+        "region": "Altay Prefecture",
+        "city": "Altay",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "13.32.249.191",
+    "expected": {
+      "countryCode": "IN",
+      "countryName": "India"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "New York",
+        "city": "New York",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
