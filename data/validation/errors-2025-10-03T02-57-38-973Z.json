@@ -1,0 +1,127 @@
+[
+  {
+    "ip": "102.204.192.98",
+    "expected": {
+      "countryCode": "AO",
+      "countryName": "Angola"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "MU",
+        "countryName": "Mauritius",
+        "region": "Plaines Wilhems District",
+        "city": "Quatre Bornes",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "MU",
+        "countryName": "Mauritius",
+        "region": "Plaines Wilhems",
+        "city": "Quatre Bornes",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "23.131.185.206",
+    "expected": {
+      "countryCode": "AR",
+      "countryName": "Argentina"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Florida",
+        "city": "North Miami",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Florida",
+        "city": "North Miami",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "41.109.117.19",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Boumerdes",
+        "city": "Boumerdes",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Boumerdes",
+        "city": "Boumerdes",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.115.36",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "CN",
+        "countryName": "China",
+        "region": "Xinjiang",
+        "city": "Altay",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "GB",
+        "countryName": "United Kingdom",
+        "region": "England",
+        "city": "London",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.156.114",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "CN",
+        "countryName": "China",
+        "region": "Xinjiang",
+        "city": "Altay",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "CN",
+        "countryName": "China",
+        "region": "Altay Prefecture",
+        "city": "Altay",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
