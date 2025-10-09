@@ -1,0 +1,52 @@
+[
+  {
+    "ip": "2.17.12.15",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Madrid",
+        "city": "Madrid",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Madrid",
+        "city": "Madrid",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "164.137.27.101",
+    "expected": {
+      "countryCode": "MF",
+      "countryName": "Saint Martin"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "SX",
+        "countryName": "Sint Maarten",
+        "region": "Sint Maarten",
+        "city": "Philipsburg",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "SX",
+        "countryName": "Sint Maarten",
+        "region": "Sint Maarten",
+        "city": "Philipsburg",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
