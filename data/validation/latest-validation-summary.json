@@ -1,20 +1,20 @@
 {
-  "timestamp": "2025-10-10T03:01:39.407Z",
+  "timestamp": "2025-10-11T02:54:52.357Z",
   "summary": {
     "totalSamples": 50,
     "correctCount": 45,
     "incorrectCount": 5,
     "errorCount": 0,
     "accuracyRate": 0.9,
-    "averageConfidence": 0.87
+    "averageConfidence": 0.82
   },
   "providerStats": {
-    "ipwho.is": {
+    "geojs.io": {
       "successRate": 1,
-      "accuracyRate": 0.88,
+      "accuracyRate": 0.78,
       "responseTime": 0
     },
-    "geojs.io": {
+    "ip-api.com": {
       "successRate": 1,
       "accuracyRate": 0.86,
       "responseTime": 0
