@@ -1,0 +1,77 @@
+[
+  {
+    "ip": "2.16.130.45",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "SE",
+        "countryName": "Sweden",
+        "region": "Stockholm County",
+        "city": "Stockholm",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "SE",
+        "countryName": "Sweden",
+        "region": "Stockholm County",
+        "city": "Stockholm",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.85.211",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "14.1.88.205",
+    "expected": {
+      "countryCode": "UM",
+      "countryName": "United States Minor Outlying Islands"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "AU",
+        "countryName": "Australia",
+        "region": "New South Wales",
+        "city": "Sydney",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
