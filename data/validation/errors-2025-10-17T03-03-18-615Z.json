@@ -1,0 +1,144 @@
+[
+  {
+    "ip": "185.230.54.215",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Catalonia",
+        "city": "Barcelona",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Catalonia",
+        "city": "Barcelona",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "8.51.63.255",
+    "expected": {
+      "countryCode": "AR",
+      "countryName": "Argentina"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "CO",
+        "countryName": "Colombia",
+        "region": "Bogota D.C.",
+        "city": "Bogotá",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "130.12.92.31",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Ontario",
+        "city": "Kingston",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.164.28",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "IT",
+        "countryName": "Italy",
+        "region": "Lombardy",
+        "city": "Milan",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.4.95",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "IT",
+        "countryName": "Italy",
+        "region": "Lombardy",
+        "city": "Milan",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "41.203.79.139",
+    "expected": {
+      "countryCode": "BJ",
+      "countryName": "Benin"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NG",
+        "countryName": "Nigeria",
+        "region": "Oyo State",
+        "city": "Ibadan",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "NG",
+        "countryName": "Nigeria",
+        "region": "Oyo State",
+        "city": "Ibadan",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
