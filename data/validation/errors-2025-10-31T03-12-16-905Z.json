@@ -1,0 +1,188 @@
+[
+  {
+    "ip": "203.193.117.145",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "California",
+        "city": "Los Angeles",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "41.109.117.152",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Boumerdes",
+        "city": "Boumerdes",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Boumerdes",
+        "city": "Boumerdes",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "130.12.92.47",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Ontario",
+        "city": "Kingston",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "130.12.92.174",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Ontario",
+        "city": "Kingston",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "207.139.21.130",
+    "expected": {
+      "countryCode": "AG",
+      "countryName": "Antigua and Barbuda"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Illinois",
+        "city": "Chicago",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "3.163.41.117",
+    "expected": {
+      "countryCode": "AU",
+      "countryName": "Australia"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.18.132",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "163.181.196.54",
+    "expected": {
+      "countryCode": "MO",
+      "countryName": "Macau"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "region": "Hong Kong",
+        "city": "Hong Kong",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
