@@ -1,0 +1,234 @@
+[
+  {
+    "ip": "199.2.114.60",
+    "expected": {
+      "countryCode": "AW",
+      "countryName": "Aruba"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Ohio",
+        "city": "Cleveland",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "45.38.170.133",
+    "expected": {
+      "countryCode": "AL",
+      "countryName": "Albania"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "FI",
+        "countryName": "Finland",
+        "region": "Mainland Finland",
+        "city": "Helsinki",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "FI",
+        "countryName": "Finland",
+        "region": "Uusimaa",
+        "city": "Helsinki",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "5.178.18.55",
+    "expected": {
+      "countryCode": "AE",
+      "countryName": "United Arab Emirates"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "California",
+        "city": "San Jose",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "41.207.112.219",
+    "expected": {
+      "countryCode": "BI",
+      "countryName": "Burundi"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "KE",
+        "countryName": "Kenya",
+        "region": "Nairobi",
+        "city": "Nairobi",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "KE",
+        "countryName": "Kenya",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.19.207",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.195.39",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "California",
+        "city": "San Jose",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "102.64.104.144",
+    "expected": {
+      "countryCode": "BF",
+      "countryName": "Burkina Faso"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "ZA",
+        "countryName": "South Africa",
+        "region": "Gauteng",
+        "city": "Johannesburg",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "ZA",
+        "countryName": "South Africa",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "27.124.33.199",
+    "expected": {
+      "countryCode": "KH",
+      "countryName": "Cambodia"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "region": "Hong Kong",
+        "city": "Sheung Wan",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "SG",
+        "countryName": "Singapore",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "45.93.166.141",
+    "expected": {
+      "countryCode": "SC",
+      "countryName": "Seychelles"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "216.147.159.198",
+    "expected": {
+      "countryCode": "GW",
+      "countryName": "Guinea-Bissau"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Maryland",
+        "city": "Laurel",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
