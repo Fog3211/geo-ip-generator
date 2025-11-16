@@ -1,0 +1,1340 @@
+{
+  "timestamp": "2025-11-16T03:19:43.979Z",
+  "summary": {
+    "totalSamples": 50,
+    "correctCount": 45,
+    "incorrectCount": 5,
+    "errorCount": 0,
+    "accuracyRate": 0.9,
+    "averageConfidence": 0.81
+  },
+  "providerStats": {
+    "geojs.io": {
+      "successRate": 1,
+      "accuracyRate": 0.74,
+      "responseTime": 0
+    },
+    "ip-api.com": {
+      "successRate": 1,
+      "accuracyRate": 0.88,
+      "responseTime": 0
+    }
+  },
+  "results": [
+    {
+      "ip": "186.96.207.19",
+      "expected": {
+        "countryCode": "AW",
+        "countryName": "Aruba"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AW",
+          "countryName": "Aruba",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AW",
+          "countryName": "Aruba",
+          "region": "",
+          "city": "Oranjestad",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "186.96.205.75",
+      "expected": {
+        "countryCode": "AW",
+        "countryName": "Aruba"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AW",
+          "countryName": "Aruba",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AW",
+          "countryName": "Aruba",
+          "region": "",
+          "city": "Oranjestad",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "58.147.149.240",
+      "expected": {
+        "countryCode": "AF",
+        "countryName": "Afghanistan"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AF",
+          "countryName": "Afghanistan",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AF",
+          "countryName": "Afghanistan",
+          "region": "Kabul",
+          "city": "Kabul",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "103.87.88.205",
+      "expected": {
+        "countryCode": "AF",
+        "countryName": "Afghanistan"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AF",
+          "countryName": "Afghanistan",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AF",
+          "countryName": "Afghanistan",
+          "region": "Kabul",
+          "city": "Kabul",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "84.22.72.95",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Île-de-France",
+          "city": "Cergy",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Île-de-France",
+          "city": "Cergy",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "41.205.40.143",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AO",
+          "countryName": "Angola",
+          "region": "Luanda Province",
+          "city": "Luanda",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AO",
+          "countryName": "Angola",
+          "region": "Luanda Province",
+          "city": "Luanda",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "69.57.248.175",
+      "expected": {
+        "countryCode": "AI",
+        "countryName": "Anguilla"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AI",
+          "countryName": "Anguilla",
+          "city": "The Valley",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AI",
+          "countryName": "Anguilla",
+          "region": "The Valley",
+          "city": "The Valley",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "199.195.223.218",
+      "expected": {
+        "countryCode": "AI",
+        "countryName": "Anguilla"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AI",
+          "countryName": "Anguilla",
+          "city": "The Valley",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AI",
+          "countryName": "Anguilla",
+          "region": "The Valley",
+          "city": "The Valley",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "213.204.63.53",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AX",
+          "countryName": "Åland Islands",
+          "city": "Hammarland",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AX",
+          "countryName": "Aland Islands",
+          "region": "Mariehamns stad",
+          "city": "Mariehamn",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "217.29.235.56",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AX",
+          "countryName": "Åland Islands",
+          "city": "Saltvik",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "FI",
+          "countryName": "Finland",
+          "region": "Southwest Finland",
+          "city": "Houtskär",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 0.5
+    },
+    {
+      "ip": "77.247.195.253",
+      "expected": {
+        "countryCode": "AL",
+        "countryName": "Albania"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AL",
+          "countryName": "Albania",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AL",
+          "countryName": "Albania",
+          "region": "Tirana",
+          "city": "Tirana",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "62.75.66.153",
+      "expected": {
+        "countryCode": "AL",
+        "countryName": "Albania"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "GR",
+          "countryName": "Greece",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AL",
+          "countryName": "Albania",
+          "region": "Tirana",
+          "city": "Kashar",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 0.5
+    },
+    {
+      "ip": "102.38.225.244",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AD",
+          "countryName": "Andorra",
+          "region": "Andorra la Vella",
+          "city": "Andorra la Vella",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AD",
+          "countryName": "Andorra",
+          "region": "Andorra la Vella",
+          "city": "Andorra la Vella",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "57.79.240.108",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "IE",
+          "countryName": "Ireland",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AD",
+          "countryName": "Andorra",
+          "region": "Andorra la Vella",
+          "city": "Andorra la Vella",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 0.5
+    },
+    {
+      "ip": "8.209.49.101",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AE",
+          "countryName": "United Arab Emirates",
+          "region": "Dubai",
+          "city": "Dubai",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AE",
+          "countryName": "United Arab Emirates",
+          "region": "Dubai",
+          "city": "Dubai",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "13.224.107.242",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "ES",
+          "countryName": "Spain",
+          "region": "Madrid",
+          "city": "Madrid",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "23.49.203.193",
+      "expected": {
+        "countryCode": "AR",
+        "countryName": "Argentina"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AR",
+          "countryName": "Argentina",
+          "region": "Buenos Aires F.D.",
+          "city": "Buenos Aires",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AR",
+          "countryName": "Argentina",
+          "region": "Buenos Aires F.D.",
+          "city": "Buenos Aires",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "23.12.155.93",
+      "expected": {
+        "countryCode": "AR",
+        "countryName": "Argentina"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AR",
+          "countryName": "Argentina",
+          "region": "Buenos Aires F.D.",
+          "city": "Buenos Aires",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AR",
+          "countryName": "Argentina",
+          "region": "Buenos Aires F.D.",
+          "city": "Buenos Aires",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "45.83.143.251",
+      "expected": {
+        "countryCode": "AM",
+        "countryName": "Armenia"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AM",
+          "countryName": "Armenia",
+          "region": "Yerevan",
+          "city": "Yerevan",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AM",
+          "countryName": "Armenia",
+          "region": "Yerevan",
+          "city": "Yerevan",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "31.47.197.212",
+      "expected": {
+        "countryCode": "AM",
+        "countryName": "Armenia"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AM",
+          "countryName": "Armenia",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AM",
+          "countryName": "Armenia",
+          "region": "Kotayk",
+          "city": "Abovyan",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "198.77.67.253",
+      "expected": {
+        "countryCode": "AS",
+        "countryName": "American Samoa"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AS",
+          "countryName": "American Samoa",
+          "region": "Eastern District",
+          "city": "Pago Pago",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 0.5
+    },
+    {
+      "ip": "198.77.75.167",
+      "expected": {
+        "countryCode": "AS",
+        "countryName": "American Samoa"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AS",
+          "countryName": "American Samoa",
+          "region": "Eastern District",
+          "city": "Pago Pago",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 0.5
+    },
+    {
+      "ip": "89.39.210.79",
+      "expected": {
+        "countryCode": "AQ",
+        "countryName": "Antarctica"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AQ",
+          "countryName": "Antarctica",
+          "region": "",
+          "city": "McMurdo",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 0.5
+    },
+    {
+      "ip": "89.39.210.49",
+      "expected": {
+        "countryCode": "AQ",
+        "countryName": "Antarctica"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AQ",
+          "countryName": "Antarctica",
+          "region": "",
+          "city": "McMurdo",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 0.5
+    },
+    {
+      "ip": "199.48.207.18",
+      "expected": {
+        "countryCode": "AG",
+        "countryName": "Antigua and Barbuda"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AG",
+          "countryName": "Antigua and Barbuda",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AG",
+          "countryName": "Antigua and Barbuda",
+          "region": "Saint John Parish",
+          "city": "St John's",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "205.138.16.149",
+      "expected": {
+        "countryCode": "AG",
+        "countryName": "Antigua and Barbuda"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AG",
+          "countryName": "Antigua and Barbuda",
+          "region": "Saint Philip Parish",
+          "city": "Freetown",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AG",
+          "countryName": "Antigua and Barbuda",
+          "region": "Saint Philip Parish",
+          "city": "Freetown",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "3.44.86.22",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "region": "New South Wales",
+          "city": "Sydney",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "region": "New South Wales",
+          "city": "Sydney",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "4.200.149.234",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "region": "Victoria",
+          "city": "Melbourne",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "region": "Victoria",
+          "city": "Melbourne",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.18.38.196",
+      "expected": {
+        "countryCode": "AT",
+        "countryName": "Austria"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AT",
+          "countryName": "Austria",
+          "region": "Vienna",
+          "city": "Vienna",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AT",
+          "countryName": "Austria",
+          "region": "Vienna",
+          "city": "Vienna",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.56.4.120",
+      "expected": {
+        "countryCode": "AT",
+        "countryName": "Austria"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "DK",
+          "countryName": "Denmark",
+          "region": "South Denmark",
+          "city": "Esbjerg",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AT",
+          "countryName": "Austria",
+          "region": "Vienna",
+          "city": "Vienna",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 0.5
+    },
+    {
+      "ip": "31.170.232.76",
+      "expected": {
+        "countryCode": "AZ",
+        "countryName": "Azerbaijan"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AZ",
+          "countryName": "Azerbaijan",
+          "region": "Baku City",
+          "city": "Baku",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AZ",
+          "countryName": "Azerbaijan",
+          "region": "Baku City",
+          "city": "Baku",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "31.222.225.0",
+      "expected": {
+        "countryCode": "AZ",
+        "countryName": "Azerbaijan"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "AZ",
+          "countryName": "Azerbaijan",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "AZ",
+          "countryName": "Azerbaijan",
+          "region": "Baku City",
+          "city": "Baku",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "154.73.105.159",
+      "expected": {
+        "countryCode": "BI",
+        "countryName": "Burundi"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "BI",
+          "countryName": "Burundi",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "BI",
+          "countryName": "Burundi",
+          "region": "Bujumbura Mairie Province",
+          "city": "Bujumbura",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "41.79.227.90",
+      "expected": {
+        "countryCode": "BI",
+        "countryName": "Burundi"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "BI",
+          "countryName": "Burundi",
+          "region": "Cankuzo Province",
+          "city": "Cankuzo",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "BI",
+          "countryName": "Burundi",
+          "region": "Cankuzo Province",
+          "city": "Cankuzo",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.18.29.245",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "The Netherlands",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "PL",
+          "countryName": "Poland",
+          "region": "Mazovia",
+          "city": "Warsaw",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.16.161.211",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "The Netherlands",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Île-de-France",
+          "city": "Paris",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "196.192.21.150",
+      "expected": {
+        "countryCode": "BJ",
+        "countryName": "Benin"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "BJ",
+          "countryName": "Benin",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "BJ",
+          "countryName": "Benin",
+          "region": "Littoral",
+          "city": "Cotonou",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "196.223.40.143",
+      "expected": {
+        "countryCode": "BJ",
+        "countryName": "Benin"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "BJ",
+          "countryName": "Benin",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "BJ",
+          "countryName": "Benin",
+          "region": "Littoral",
+          "city": "Cotonou",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "102.214.65.14",
+      "expected": {
+        "countryCode": "BF",
+        "countryName": "Burkina Faso"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "BF",
+          "countryName": "Burkina Faso",
+          "region": "Centre",
+          "city": "Ouagadougou",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "BF",
+          "countryName": "Burkina Faso",
+          "region": "Centre",
+          "city": "Ouagadougou",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "154.65.60.41",
+      "expected": {
+        "countryCode": "BF",
+        "countryName": "Burkina Faso"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "BF",
+          "countryName": "Burkina Faso",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "BF",
+          "countryName": "Burkina Faso",
+          "region": "Centre",
+          "city": "Ouagadougou",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "77.42.160.88",
+      "expected": {
+        "countryCode": "LB",
+        "countryName": "Lebanon"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "LB",
+          "countryName": "Lebanon",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "LB",
+          "countryName": "Lebanon",
+          "region": "Beyrouth",
+          "city": "Beirut",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "34.99.176.138",
+      "expected": {
+        "countryCode": "PT",
+        "countryName": "Portugal"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "PT",
+          "countryName": "Portugal",
+          "region": "Lisbon",
+          "city": "Lisbon",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "PT",
+          "countryName": "Portugal",
+          "region": "Lisbon",
+          "city": "Lisbon",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "45.163.18.146",
+      "expected": {
+        "countryCode": "BO",
+        "countryName": "Bolivia"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "BO",
+          "countryName": "Bolivia",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "BO",
+          "countryName": "Bolivia",
+          "region": "La Paz Department",
+          "city": "La Paz",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "40.123.148.192",
+      "expected": {
+        "countryCode": "QA",
+        "countryName": "Qatar"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "QA",
+          "countryName": "Qatar",
+          "region": "Baladīyat ad Dawḩah",
+          "city": "Doha",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "QA",
+          "countryName": "Qatar",
+          "region": "Baladiyat ad Dawhah",
+          "city": "Doha",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "190.6.76.240",
+      "expected": {
+        "countryCode": "CU",
+        "countryName": "Cuba"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "CU",
+          "countryName": "Cuba",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "CU",
+          "countryName": "Cuba",
+          "region": "Ciego de Ávila Province",
+          "city": "Ciego de Ávila",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "217.8.117.27",
+      "expected": {
+        "countryCode": "TM",
+        "countryName": "Turkmenistan"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "TM",
+          "countryName": "Turkmenistan",
+          "region": "Ahal",
+          "city": "Tejen",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "TM",
+          "countryName": "Turkmenistan",
+          "region": "Ahal",
+          "city": "Tejen",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "194.57.237.167",
+      "expected": {
+        "countryCode": "GP",
+        "countryName": "Guadeloupe"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Hauts-de-France",
+          "city": "Lille",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Hauts-de-France",
+          "city": "Lille",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "190.124.219.58",
+      "expected": {
+        "countryCode": "SX",
+        "countryName": "Sint Maarten"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "SX",
+          "countryName": "Sint Maarten",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "SX",
+          "countryName": "Sint Maarten",
+          "region": "Sint Maarten",
+          "city": "Lower Prince’s Quarter",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "110.5.115.128",
+      "expected": {
+        "countryCode": "WS",
+        "countryName": "Samoa"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "WS",
+          "countryName": "Samoa",
+          "region": "Tuamasaga",
+          "city": "Apia",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "WS",
+          "countryName": "Samoa",
+          "region": "Tuamasaga",
+          "city": "Apia",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "18.239.128.36",
+      "expected": {
+        "countryCode": "TH",
+        "countryName": "Thailand"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "TH",
+          "countryName": "Thailand",
+          "region": "Bangkok",
+          "city": "Bangkok",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 0.5
+    }
+  ],
+  "errors": [
+    {
+      "ip": "84.22.72.95",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Île-de-France",
+          "city": "Cergy",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Île-de-France",
+          "city": "Cergy",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "13.224.107.242",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "ES",
+          "countryName": "Spain",
+          "region": "Madrid",
+          "city": "Madrid",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.18.29.245",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "The Netherlands",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "PL",
+          "countryName": "Poland",
+          "region": "Mazovia",
+          "city": "Warsaw",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.16.161.211",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "The Netherlands",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Île-de-France",
+          "city": "Paris",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "194.57.237.167",
+      "expected": {
+        "countryCode": "GP",
+        "countryName": "Guadeloupe"
+      },
+      "actual": {
+        "geojs.io": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Hauts-de-France",
+          "city": "Lille",
+          "success": true
+        },
+        "ip-api.com": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Hauts-de-France",
+          "city": "Lille",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    }
+  ]
+}

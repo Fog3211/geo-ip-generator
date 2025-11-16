@@ -1,0 +1,121 @@
+[
+  {
+    "ip": "84.22.72.95",
+    "expected": {
+      "countryCode": "AO",
+      "countryName": "Angola"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Cergy",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Cergy",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "13.224.107.242",
+    "expected": {
+      "countryCode": "AE",
+      "countryName": "United Arab Emirates"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Madrid",
+        "city": "Madrid",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.29.245",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "PL",
+        "countryName": "Poland",
+        "region": "Mazovia",
+        "city": "Warsaw",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.161.211",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "194.57.237.167",
+    "expected": {
+      "countryCode": "GP",
+      "countryName": "Guadeloupe"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Hauts-de-France",
+        "city": "Lille",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Hauts-de-France",
+        "city": "Lille",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
