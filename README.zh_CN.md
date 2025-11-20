@@ -7,12 +7,14 @@
 ## ✨ 特性
 
 - **🎲 随机 IP 生成**: 通过输入地区代码或名称生成真实 IP 地址
+- **🤖 AI 智能识别**: 使用 AI 技术识别多语言国家名称（支持中文、英文、德文等多种语言）
 - **📊 批量生成**: 支持一次生成 1-10 个 IP 地址
 - **🌍 全球覆盖**: 支持 250+ 个国家和地区（包括主权国家和领土）
 - **🏛️ 地区区分**: 清晰区分主权国家和地区/领土（如香港、台湾、澳门）
+- **🔍 智能搜索**: 实时搜索建议，支持键盘导航（方向键、回车、ESC）
 - **📋 一键复制**: 支持单个或批量复制生成的 IP 地址
 - **📍 详细信息**: 显示 IP 地理位置、ISP 等详细信息
-- **🔍 数据验证**: 多API交叉验证的自动化质量保证系统
+- **✅ 数据验证**: 多API交叉验证的自动化质量保证系统
 - **🚀 现代技术栈**: Next.js + TypeScript + Prisma + Tailwind CSS
 - **📱 响应式设计**: 支持桌面端和移动端
 - **🔗 API 支持**: 提供 RESTful API 接口供外部调用
@@ -54,9 +56,15 @@ cp .env.example .env
 编辑 `.env` 文件，设置数据库路径：
 
 ```env
-DATABASE_URL="file:./db.sqlite"
+DATABASE_URL="file:./prisma/db.sqlite"
 REDIS_URL="redis://localhost:6379"  # 可选，用于缓存加速
+GROQ_API_KEY="your-groq-api-key"    # 可选，用于 AI 国家识别（免费额度：30次/分钟，14400次/天）
 ```
+
+> 💡 **AI 识别功能（可选）**: 
+> - 如果不配置 `GROQ_API_KEY`，系统会自动使用增强的模糊匹配算法
+> - 配置后可以识别更多语言格式，如 "Deutschland" → "DE", "日本" → "JP"
+> - 免费获取 API Key: https://console.groq.com/
 
 ### 3. 数据源与环境 🚀
 
@@ -171,6 +179,13 @@ pnpm run data:export:combined
    - 地区代码: CN, US, JP, HK, TW, MO
    - 中文名称: 中国, 美国, 日本, 香港, 台湾, 澳门
    - 英文名称: China, America, Japan, Hong Kong, Taiwan, Macao
+   - 其他语言: Deutschland (德国), 日本 (Japan), United States (美国)
+   - **智能搜索**: 输入时会显示搜索建议，支持键盘导航（↑↓选择，Enter确认，ESC关闭）
+
+2. **搜索建议**: 
+   - 实时显示匹配的国家/地区列表
+   - 支持键盘导航（方向键上下选择，回车确认，ESC关闭）
+   - 显示国家代码和中文/英文名称
 
 2. **批量生成**: 选择生成数量（1-10）
 
@@ -201,20 +216,57 @@ pnpm run data:export:combined
 
 ### API 调用
 
-#### 生成随机 IP 地址（仅 GET）
+#### 标准接口：快速生成（推荐用于标准格式）
 
 **API 端点**: `/api/generate-ip`
 
+**特点**：
+- ⚡ 快速响应（无 AI 处理）
+- ✅ 支持国家代码：`CN`, `US`, `CHN`, `USA`（2位或3位 ISO 代码）
+- ✅ 支持精确名称：`China`, `中国`, `United States`
+- ✅ 基础模糊匹配：部分名称匹配
+- 📊 速率限制：10 次/分钟
+
+**适用场景**：已知标准格式的输入，需要快速响应
+
 ```bash
-# 生成 1 个中国 IP
+# 生成 1 个中国 IP（使用国家代码）
 GET /api/generate-ip?country=CN
 
-# 生成 3 个美国 IP
+# 生成 3 个美国 IP（使用国家代码）
 GET /api/generate-ip?country=US&count=3
 
-# 使用中文名称
-GET /api/generate-ip?country=中国&count=2
+# 使用精确名称
+GET /api/generate-ip?country=China&count=2
+GET /api/generate-ip?country=中国&count=1
 ```
+
+#### AI 接口：智能识别（支持自然语言）
+
+**API 端点**: `/api/generate-ip-ai`
+
+**特点**：
+- 🤖 AI 智能识别多语言输入
+- ✅ 支持自然语言：`Deutschland`（德国）, `日本`（Japan）, `United States`
+- ✅ 支持各种格式和变体
+- ✅ 自动降级到模糊匹配（如果 AI 不可用）
+- 📊 速率限制：5 次/分钟（由于 AI 处理成本）
+
+**适用场景**：用户输入格式不统一，需要智能识别
+
+```bash
+# 使用其他语言
+GET /api/generate-ip-ai?country=Deutschland&count=3
+GET /api/generate-ip-ai?country=日本&count=2
+
+# 使用各种格式
+GET /api/generate-ip-ai?country=United States&count=1
+GET /api/generate-ip-ai?country=America&count=1
+```
+
+> 💡 **选择建议**：
+> - 如果输入是标准格式（代码或精确名称），使用 `/api/generate-ip` 获得更快响应
+> - 如果输入是自然语言或不确定格式，使用 `/api/generate-ip-ai` 获得更好的识别效果
 
 **响应格式**:
 
@@ -295,8 +347,12 @@ IpRange {
 
 ## 📊 项目状态
 
-### 最新更新 (v2.1)
+### 最新更新 (v2.2)
 
+- ✅ **AI 智能识别**: 集成 Groq API，支持多语言国家名称识别（中文、英文、德文等）
+- ✅ **智能搜索建议**: 实时搜索建议，支持键盘导航，提升用户体验
+- ✅ **界面优化**: 全新的现代化 UI 设计，更好的视觉效果和交互体验
+- ✅ **增强匹配算法**: 改进的模糊匹配算法，即使没有 AI 也能识别更多格式
 - ✅ **自动化同步**: GitHub Actions 每日自动数据同步
 - ✅ **备份机制**: 自动备份和失败回退，确保数据安全
 - ✅ **多格式导出**: 新增 CSV 和 Excel 格式支持

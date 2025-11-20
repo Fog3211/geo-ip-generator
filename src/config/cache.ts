@@ -24,9 +24,21 @@ export const CACHE_TTL = {
 
 // Rate limit configuration per endpoint
 export const RATE_LIMITS: Record<RateLimitEndpoint, RateLimitConfig> = {
-  // Generate IP endpoint - more restrictive as it's computationally expensive
+  // Generate IP endpoint (standard) - fast, supports codes and exact names
   'generate-ip': {
     requests: 10,       // 10 requests
+    windowMs: 60 * 1000, // per minute
+    ttl: CACHE_TTL.RATE_LIMIT,
+  },
+  // Generate IP endpoint (AI-powered) - more restrictive due to AI processing
+  'generate-ip-ai': {
+    requests: 5,        // 5 requests (lower due to AI processing cost)
+    windowMs: 60 * 1000, // per minute
+    ttl: CACHE_TTL.RATE_LIMIT,
+  },
+  // Normalize country endpoint - for AI country recognition
+  'normalize-country': {
+    requests: 20,       // 20 requests
     windowMs: 60 * 1000, // per minute
     ttl: CACHE_TTL.RATE_LIMIT,
   },

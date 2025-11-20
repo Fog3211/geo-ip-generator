@@ -30,4 +30,4 @@ export type CacheKey = {
   identifier: string;
 };
 
-export type RateLimitEndpoint = 'generate-ip' | 'countries' | 'health' | 'default'; 
+export type RateLimitEndpoint = 'generate-ip' | 'generate-ip-ai' | 'normalize-country' | 'countries' | 'health' | 'default'; 

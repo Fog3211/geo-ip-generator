@@ -1,33 +1,33 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { generateIpByCountryStandard, generateIpSchema } from '~/lib/services/ip-service';
+import { generateIpByCountryAI, generateIpSchema } from '~/lib/services/ip-service';
 import { withRateLimit } from '~/lib/middleware/rate-limit-middleware';
 
 /**
- * Generate random IP addresses by country/region (Standard API - Fast)
+ * Generate random IP addresses by country/region (AI-powered API)
  * 
- * This endpoint supports standard formats only:
- * - Country codes: CN, US, CHN, USA (2-letter or 3-letter ISO codes)
- * - Exact country names: China, 中国, United States
- * - Basic fuzzy matching for partial names
+ * This endpoint uses AI to recognize country names in various formats:
+ * - Multiple languages: "Deutschland", "日本", "United States"
+ * - Natural language: "I want IPs from Germany"
+ * - Various formats: "USA", "US", "United States", "America"
  * 
- * For natural language input (e.g., "Deutschland", "日本"), use /api/generate-ip-ai
+ * For standard formats (codes, exact names), use /api/generate-ip for better performance
  * 
  * Security measures:
- * - IP rate limiting (10 requests per minute)
+ * - IP rate limiting (5 requests per minute - lower due to AI processing)
  * - Parameter validation with regex patterns
  * - Count limited to 1-10 (matches frontend)
  * - Input sanitization and length limits
  * 
  * Query parameters:
- * - country: Country code or exact name (required)
+ * - country: Country name in any language or format (required)
  * - count: Number of IPs to generate (1-10, default: 1)
  * 
  * Examples:
- * GET /api/generate-ip?country=CN&count=3
- * GET /api/generate-ip?country=China&count=1
- * GET /api/generate-ip?country=CHN&count=2
+ * GET /api/generate-ip-ai?country=Deutschland&count=3
+ * GET /api/generate-ip-ai?country=日本&count=1
+ * GET /api/generate-ip-ai?country=United States&count=2
  */
-async function handleGenerateIP(request: NextRequest) {
+async function handleGenerateIPAI(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
 
@@ -62,8 +62,8 @@ async function handleGenerateIP(request: NextRequest) {
       );
     }
 
-    // Call standard service function (no AI)
-    const response = await generateIpByCountryStandard({
+    // Call AI-powered service function
+    const response = await generateIpByCountryAI({
       country: result.data.country,
       count: result.data.count,
     });
@@ -76,7 +76,7 @@ async function handleGenerateIP(request: NextRequest) {
     });
 
   } catch (error) {
-    console.error('Generate IP API error:', error);
+    console.error('Generate IP AI API error:', error);
 
     return NextResponse.json(
       {
@@ -89,6 +89,6 @@ async function handleGenerateIP(request: NextRequest) {
   }
 }
 
-// Export the rate-limited handler
-export const GET = withRateLimit(handleGenerateIP, 'generate-ip');
+// Export the rate-limited handler (lower rate limit for AI endpoint)
+export const GET = withRateLimit(handleGenerateIPAI, 'generate-ip-ai');
 
