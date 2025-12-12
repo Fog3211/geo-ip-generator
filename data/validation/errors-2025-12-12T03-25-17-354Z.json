@@ -1,0 +1,98 @@
+[
+  {
+    "ip": "144.125.134.133",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "PA",
+        "countryName": "Panama",
+        "region": "Panama",
+        "city": "Panama City",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "PA",
+        "countryName": "Panama",
+        "region": "Provincia de Panamá",
+        "city": "Panama City",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "41.109.117.189",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Boumerdes",
+        "city": "Boumerdes",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Blida",
+        "city": "Blida",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "31.43.191.145",
+    "expected": {
+      "countryCode": "AZ",
+      "countryName": "Azerbaijan"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "ZA",
+        "countryName": "South Africa",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.45.5",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "GB",
+        "countryName": "United Kingdom",
+        "region": "England",
+        "city": "London",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
