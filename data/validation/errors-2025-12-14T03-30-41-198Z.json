@@ -1,0 +1,152 @@
+[
+  {
+    "ip": "199.0.87.215",
+    "expected": {
+      "countryCode": "AW",
+      "countryName": "Aruba"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Ohio",
+        "city": "Cleveland",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Ohio",
+        "city": "Cleveland",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "17.79.38.22",
+    "expected": {
+      "countryCode": "AE",
+      "countryName": "United Arab Emirates"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "HU",
+        "countryName": "Hungary",
+        "region": "Budapest",
+        "city": "Budapest",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "HU",
+        "countryName": "Hungary",
+        "region": "Central Hungary",
+        "city": "Budapest",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "13.34.35.213",
+    "expected": {
+      "countryCode": "AE",
+      "countryName": "United Arab Emirates"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "ID",
+        "countryName": "Indonesia",
+        "region": "Jakarta",
+        "city": "Jakarta",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "ID",
+        "countryName": "Indonesia",
+        "region": "Special Capital Region of Jakarta",
+        "city": "West Jakarta City",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.156.141",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "SE",
+        "countryName": "Sweden",
+        "region": "Stockholm County",
+        "city": "Stockholm",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "SE",
+        "countryName": "Sweden",
+        "region": "Stockholm County",
+        "city": "Stockholm",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.105.94",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "SE",
+        "countryName": "Sweden",
+        "region": "Stockholm County",
+        "city": "Stockholm",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "SE",
+        "countryName": "Sweden",
+        "region": "Stockholm County",
+        "city": "Stockholm",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "208.26.89.150",
+    "expected": {
+      "countryCode": "BM",
+      "countryName": "Bermuda"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "KY",
+        "countryName": "Cayman Islands",
+        "region": "",
+        "city": "Prospect",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "KY",
+        "countryName": "Cayman Islands",
+        "region": "George Town",
+        "city": "Patricks Island",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
