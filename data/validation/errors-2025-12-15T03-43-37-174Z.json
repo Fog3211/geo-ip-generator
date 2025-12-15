@@ -1,0 +1,216 @@
+[
+  {
+    "ip": "34.103.254.145",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "MC",
+        "countryName": "Monaco",
+        "city": "Monaco-Ville",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "MC",
+        "countryName": "Monaco",
+        "city": "Monaco",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "8.51.63.168",
+    "expected": {
+      "countryCode": "AR",
+      "countryName": "Argentina"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "5.253.42.103",
+    "expected": {
+      "countryCode": "AU",
+      "countryName": "Australia"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.36.241",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.135.138",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "IT",
+        "countryName": "Italy",
+        "region": "Lombardy",
+        "city": "Milan",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "45.112.182.78",
+    "expected": {
+      "countryCode": "ET",
+      "countryName": "Ethiopia"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "NG",
+        "countryName": "Nigeria",
+        "region": "Lagos",
+        "city": "Lagos",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NG",
+        "countryName": "Nigeria",
+        "region": "Anambra",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "172.225.182.205",
+    "expected": {
+      "countryCode": "GL",
+      "countryName": "Greenland"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "LV",
+        "countryName": "Latvia",
+        "region": "Vidzeme",
+        "city": "Riga",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "LV",
+        "countryName": "Latvia",
+        "region": "Rīga",
+        "city": "Riga",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "37.1.187.233",
+    "expected": {
+      "countryCode": "PT",
+      "countryName": "Portugal"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "AT",
+        "countryName": "Austria",
+        "region": "Vienna",
+        "city": "Vienna",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "AT",
+        "countryName": "Austria",
+        "region": "Vienna",
+        "city": "Vienna",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "63.246.46.222",
+    "expected": {
+      "countryCode": "LA",
+      "countryName": "Laos"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "California",
+        "city": "Berkeley",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
