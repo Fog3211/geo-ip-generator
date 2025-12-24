@@ -1,0 +1,213 @@
+[
+  {
+    "ip": "199.0.85.73",
+    "expected": {
+      "countryCode": "AW",
+      "countryName": "Aruba"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Ohio",
+        "city": "Cleveland",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "82.205.204.240",
+    "expected": {
+      "countryCode": "AF",
+      "countryName": "Afghanistan"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates",
+        "region": "Abu Dhabi Emirate",
+        "city": "Abu Dhabi",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "69.84.202.201",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "UY",
+        "countryName": "Uruguay",
+        "region": "Montevideo",
+        "city": "Montevideo",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "UY",
+        "countryName": "Uruguay",
+        "region": "Montevideo Department",
+        "city": "Montevideo",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "13.227.93.135",
+    "expected": {
+      "countryCode": "AR",
+      "countryName": "Argentina"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "41.109.117.131",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Boumerdes",
+        "city": "Boumerdes",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Blida",
+        "city": "Blida",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "162.222.84.61",
+    "expected": {
+      "countryCode": "AG",
+      "countryName": "Antigua and Barbuda"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "GD",
+        "countryName": "Grenada",
+        "region": "Saint George",
+        "city": "Saint George's",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "GD",
+        "countryName": "Grenada",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "80.191.241.196",
+    "expected": {
+      "countryCode": "AG",
+      "countryName": "Antigua and Barbuda"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "IR",
+        "countryName": "Iran",
+        "region": "Tehran Province",
+        "city": "Tehran",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "IR",
+        "countryName": "Iran",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.57.28",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Frankfurt",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "102.64.105.249",
+    "expected": {
+      "countryCode": "BF",
+      "countryName": "Burkina Faso"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "ZA",
+        "countryName": "South Africa",
+        "region": "Western Cape",
+        "city": "Cape Town",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "ZA",
+        "countryName": "South Africa",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
