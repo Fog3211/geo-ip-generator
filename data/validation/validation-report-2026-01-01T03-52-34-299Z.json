@@ -1,0 +1,1386 @@
+{
+  "timestamp": "2026-01-01T03:52:34.299Z",
+  "summary": {
+    "totalSamples": 50,
+    "correctCount": 34,
+    "incorrectCount": 16,
+    "errorCount": 0,
+    "accuracyRate": 0.68,
+    "averageConfidence": 0.68
+  },
+  "providerStats": {
+    "ipwho.is": {
+      "successRate": 0,
+      "accuracyRate": 0,
+      "responseTime": 0
+    },
+    "geojs.io": {
+      "successRate": 1,
+      "accuracyRate": 0.68,
+      "responseTime": 0
+    }
+  },
+  "results": [
+    {
+      "ip": "204.212.127.124",
+      "expected": {
+        "countryCode": "AW",
+        "countryName": "Aruba"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "190.12.231.146",
+      "expected": {
+        "countryCode": "AW",
+        "countryName": "Aruba"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AW",
+          "countryName": "Aruba",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "45.65.57.240",
+      "expected": {
+        "countryCode": "AF",
+        "countryName": "Afghanistan"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AF",
+          "countryName": "Afghanistan",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "43.250.136.207",
+      "expected": {
+        "countryCode": "AF",
+        "countryName": "Afghanistan"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AF",
+          "countryName": "Afghanistan",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "41.210.199.182",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AO",
+          "countryName": "Angola",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "41.70.182.42",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AO",
+          "countryName": "Angola",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "76.76.186.44",
+      "expected": {
+        "countryCode": "AI",
+        "countryName": "Anguilla"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AI",
+          "countryName": "Anguilla",
+          "city": "The Valley",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "69.57.226.165",
+      "expected": {
+        "countryCode": "AI",
+        "countryName": "Anguilla"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AI",
+          "countryName": "Anguilla",
+          "city": "The Valley",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "82.199.191.214",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AX",
+          "countryName": "Åland Islands",
+          "city": "Mariehamn",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "212.17.190.12",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "FI",
+          "countryName": "Finland",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "45.66.230.94",
+      "expected": {
+        "countryCode": "AL",
+        "countryName": "Albania"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AL",
+          "countryName": "Albania",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "37.252.221.73",
+      "expected": {
+        "countryCode": "AL",
+        "countryName": "Albania"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AL",
+          "countryName": "Albania",
+          "region": "Dibër County",
+          "city": "Peshkopi",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "130.41.17.240",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "GR",
+          "countryName": "Greece",
+          "region": "Attica",
+          "city": "Athens",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "208.127.27.155",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "GR",
+          "countryName": "Greece",
+          "region": "Attica",
+          "city": "Athens",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "13.104.151.72",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AE",
+          "countryName": "United Arab Emirates",
+          "region": "Dubai",
+          "city": "Dubai",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "15.230.219.232",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "23.175.41.104",
+      "expected": {
+        "countryCode": "AR",
+        "countryName": "Argentina"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AR",
+          "countryName": "Argentina",
+          "region": "Buenos Aires",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "23.36.151.237",
+      "expected": {
+        "countryCode": "AR",
+        "countryName": "Argentina"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AR",
+          "countryName": "Argentina",
+          "region": "Buenos Aires F.D.",
+          "city": "Buenos Aires",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "57.90.146.189",
+      "expected": {
+        "countryCode": "AM",
+        "countryName": "Armenia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AM",
+          "countryName": "Armenia",
+          "region": "Yerevan",
+          "city": "Yerevan",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "46.19.99.65",
+      "expected": {
+        "countryCode": "AM",
+        "countryName": "Armenia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AM",
+          "countryName": "Armenia",
+          "region": "Yerevan",
+          "city": "Yerevan",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "198.77.67.143",
+      "expected": {
+        "countryCode": "AS",
+        "countryName": "American Samoa"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "198.77.67.14",
+      "expected": {
+        "countryCode": "AS",
+        "countryName": "American Samoa"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "91.108.40.175",
+      "expected": {
+        "countryCode": "AG",
+        "countryName": "Antigua and Barbuda"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AG",
+          "countryName": "Antigua and Barbuda",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "149.112.100.19",
+      "expected": {
+        "countryCode": "AG",
+        "countryName": "Antigua and Barbuda"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AG",
+          "countryName": "Antigua and Barbuda",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "1.179.63.155",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "1.0.0.205",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.19.197.220",
+      "expected": {
+        "countryCode": "AT",
+        "countryName": "Austria"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AT",
+          "countryName": "Austria",
+          "region": "Vienna",
+          "city": "Vienna",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "5.187.28.254",
+      "expected": {
+        "countryCode": "AT",
+        "countryName": "Austria"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "GB",
+          "countryName": "United Kingdom",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "23.27.110.80",
+      "expected": {
+        "countryCode": "AZ",
+        "countryName": "Azerbaijan"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AZ",
+          "countryName": "Azerbaijan",
+          "region": "Baku City",
+          "city": "Baku",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "37.26.29.134",
+      "expected": {
+        "countryCode": "AZ",
+        "countryName": "Azerbaijan"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AZ",
+          "countryName": "Azerbaijan",
+          "region": "Baku City",
+          "city": "Baku",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "102.134.106.228",
+      "expected": {
+        "countryCode": "BI",
+        "countryName": "Burundi"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "BI",
+          "countryName": "Burundi",
+          "region": "Bujumbura Mairie Province",
+          "city": "Bujumbura",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "57.82.124.84",
+      "expected": {
+        "countryCode": "BI",
+        "countryName": "Burundi"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "BI",
+          "countryName": "Burundi",
+          "region": "Bujumbura Mairie Province",
+          "city": "Bujumbura",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.16.135.107",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "The Netherlands",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.16.135.42",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "The Netherlands",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "156.0.213.207",
+      "expected": {
+        "countryCode": "BJ",
+        "countryName": "Benin"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "BJ",
+          "countryName": "Benin",
+          "region": "Littoral",
+          "city": "Cotonou",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "196.60.118.95",
+      "expected": {
+        "countryCode": "BJ",
+        "countryName": "Benin"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "BJ",
+          "countryName": "Benin",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "102.132.127.70",
+      "expected": {
+        "countryCode": "BF",
+        "countryName": "Burkina Faso"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "ZA",
+          "countryName": "South Africa",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "102.207.227.109",
+      "expected": {
+        "countryCode": "BF",
+        "countryName": "Burkina Faso"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "BF",
+          "countryName": "Burkina Faso",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "43.228.210.87",
+      "expected": {
+        "countryCode": "BD",
+        "countryName": "Bangladesh"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "BD",
+          "countryName": "Bangladesh",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "43.228.209.70",
+      "expected": {
+        "countryCode": "BD",
+        "countryName": "Bangladesh"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "BD",
+          "countryName": "Bangladesh",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "103.251.132.167",
+      "expected": {
+        "countryCode": "PW",
+        "countryName": "Palau"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "PW",
+          "countryName": "Palau",
+          "region": "Ngeremlengui",
+          "city": "Imeong Hamlet",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "5.23.0.149",
+      "expected": {
+        "countryCode": "TR",
+        "countryName": "Türkiye"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "CA",
+          "countryName": "Canada",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "37.111.187.151",
+      "expected": {
+        "countryCode": "PK",
+        "countryName": "Pakistan"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "PK",
+          "countryName": "Pakistan",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "102.210.176.127",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AO",
+          "countryName": "Angola",
+          "region": "Luanda Province",
+          "city": "Luanda",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "3.175.115.241",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "89.47.253.105",
+      "expected": {
+        "countryCode": "IM",
+        "countryName": "Isle of Man"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "IM",
+          "countryName": "Isle of Man",
+          "city": "Douglas",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "213.16.26.3",
+      "expected": {
+        "countryCode": "GF",
+        "countryName": "French Guiana"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "MQ",
+          "countryName": "Martinique",
+          "city": "Fort-de-France",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "202.2.117.47",
+      "expected": {
+        "countryCode": "TV",
+        "countryName": "Tuvalu"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "TV",
+          "countryName": "Tuvalu",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "45.146.38.135",
+      "expected": {
+        "countryCode": "AM",
+        "countryName": "Armenia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "AM",
+          "countryName": "Armenia",
+          "region": "Kotayk",
+          "city": "Abovyan",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "3.174.232.34",
+      "expected": {
+        "countryCode": "PL",
+        "countryName": "Poland"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    }
+  ],
+  "errors": [
+    {
+      "ip": "204.212.127.124",
+      "expected": {
+        "countryCode": "AW",
+        "countryName": "Aruba"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "212.17.190.12",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "FI",
+          "countryName": "Finland",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "130.41.17.240",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "GR",
+          "countryName": "Greece",
+          "region": "Attica",
+          "city": "Athens",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "208.127.27.155",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "GR",
+          "countryName": "Greece",
+          "region": "Attica",
+          "city": "Athens",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "15.230.219.232",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "198.77.67.143",
+      "expected": {
+        "countryCode": "AS",
+        "countryName": "American Samoa"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "198.77.67.14",
+      "expected": {
+        "countryCode": "AS",
+        "countryName": "American Samoa"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "1.0.0.205",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "5.187.28.254",
+      "expected": {
+        "countryCode": "AT",
+        "countryName": "Austria"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "GB",
+          "countryName": "United Kingdom",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.16.135.107",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "The Netherlands",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.16.135.42",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "The Netherlands",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "102.132.127.70",
+      "expected": {
+        "countryCode": "BF",
+        "countryName": "Burkina Faso"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "ZA",
+          "countryName": "South Africa",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "5.23.0.149",
+      "expected": {
+        "countryCode": "TR",
+        "countryName": "Türkiye"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "CA",
+          "countryName": "Canada",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "3.175.115.241",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "213.16.26.3",
+      "expected": {
+        "countryCode": "GF",
+        "countryName": "French Guiana"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "MQ",
+          "countryName": "Martinique",
+          "city": "Fort-de-France",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "3.174.232.34",
+      "expected": {
+        "countryCode": "PL",
+        "countryName": "Poland"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    }
+  ]
+}
