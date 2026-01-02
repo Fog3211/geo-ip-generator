@@ -1,0 +1,98 @@
+[
+  {
+    "ip": "185.230.54.36",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Catalonia",
+        "city": "Barcelona",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Catalonia",
+        "city": "Barcelona",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "205.217.252.151",
+    "expected": {
+      "countryCode": "AG",
+      "countryName": "Antigua and Barbuda"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "DM",
+        "countryName": "Dominica",
+        "region": "Saint George Parish",
+        "city": "Roseau",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "DM",
+        "countryName": "Dominica",
+        "region": "Saint George Parish",
+        "city": "Roseau",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.117.63",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Frankfurt am Main",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.13.141",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Madrid",
+        "city": "Madrid",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
