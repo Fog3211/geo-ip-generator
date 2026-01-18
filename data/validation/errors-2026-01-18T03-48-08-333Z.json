@@ -1,0 +1,127 @@
+[
+  {
+    "ip": "41.109.117.29",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Blida",
+        "city": "Blida",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Blida",
+        "city": "Blida",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "41.109.117.36",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Blida",
+        "city": "Blida",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Blida",
+        "city": "Blida",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "5.230.5.98",
+    "expected": {
+      "countryCode": "AT",
+      "countryName": "Austria"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Colorado",
+        "city": "Denver",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Bad Soden",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "196.201.159.176",
+    "expected": {
+      "countryCode": "CF",
+      "countryName": "Central African Republic"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "ZA",
+        "countryName": "South Africa",
+        "region": "Gauteng",
+        "city": "Johannesburg",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "ZA",
+        "countryName": "South Africa",
+        "region": "Gauteng",
+        "city": "Johannesburg",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "31.148.159.151",
+    "expected": {
+      "countryCode": "MD",
+      "countryName": "Moldova"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "CZ",
+        "countryName": "Czechia",
+        "region": "Prague",
+        "city": "Vestec",
+        "success": true
+      },
+      "ipwho.is": {
+        "countryCode": "SY",
+        "countryName": "Syria",
+        "region": "Rif Dimashq Governorate",
+        "city": "Sahnaya",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
