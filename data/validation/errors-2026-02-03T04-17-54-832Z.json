@@ -1,0 +1,305 @@
+[
+  {
+    "ip": "199.2.112.124",
+    "expected": {
+      "countryCode": "AW",
+      "countryName": "Aruba"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "204.155.30.3",
+    "expected": {
+      "countryCode": "AI",
+      "countryName": "Anguilla"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "194.112.9.128",
+    "expected": {
+      "countryCode": "AX",
+      "countryName": "Åland Islands"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "FI",
+        "countryName": "Finland",
+        "region": "Mainland Finland",
+        "city": "Helsinki",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "FI",
+        "countryName": "Finland",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "45.195.129.137",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "New York",
+        "city": "New York",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "SC",
+        "countryName": "Seychelles",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "5.236.155.78",
+    "expected": {
+      "countryCode": "AE",
+      "countryName": "United Arab Emirates"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "IR",
+        "countryName": "Iran",
+        "region": "Tehran Province",
+        "city": "Tehran",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "IR",
+        "countryName": "Iran",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "13.35.171.170",
+    "expected": {
+      "countryCode": "AE",
+      "countryName": "United Arab Emirates"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "District of Columbia",
+        "city": "Washington",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.139.10",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Madrid",
+        "city": "Madrid",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.50.195",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "IT",
+        "countryName": "Italy",
+        "region": "Lombardy",
+        "city": "Milan",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "88.202.1.183",
+    "expected": {
+      "countryCode": "BJ",
+      "countryName": "Benin"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "88.202.1.164",
+    "expected": {
+      "countryCode": "BJ",
+      "countryName": "Benin"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "15.248.158.128",
+    "expected": {
+      "countryCode": "IL",
+      "countryName": "Israel"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "SA",
+        "countryName": "Saudi Arabia",
+        "region": "Riyadh Region",
+        "city": "Riyadh",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "SA",
+        "countryName": "Saudi Arabia",
+        "region": "Riyadh Region",
+        "city": "Riyadh",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "17.43.41.126",
+    "expected": {
+      "countryCode": "MX",
+      "countryName": "Mexico"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "California",
+        "city": "Los Angeles",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "California",
+        "city": "Los Angeles",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "185.193.126.177",
+    "expected": {
+      "countryCode": "BV",
+      "countryName": "Bouvet Island"
+    },
+    "actual": {
+      "ipwho.is": {
+        "countryCode": "FI",
+        "countryName": "Finland",
+        "region": "Mainland Finland",
+        "city": "Helsinki",
+        "success": true
+      },
+      "geojs.io": {
+        "countryCode": "FI",
+        "countryName": "Finland",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
