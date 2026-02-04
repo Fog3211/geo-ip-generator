@@ -1,0 +1,144 @@
+[
+  {
+    "ip": "209.59.119.236",
+    "expected": {
+      "countryCode": "AI",
+      "countryName": "Anguilla"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "KN",
+        "countryName": "St Kitts and Nevis",
+        "region": "Saint George Basseterre",
+        "city": "Basseterre",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "KN",
+        "countryName": "St Kitts and Nevis",
+        "region": "Saint George Basseterre",
+        "city": "Basseterre",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "203.193.117.174",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "KR",
+        "countryName": "South Korea",
+        "region": "Gyeonggi-do",
+        "city": "Icheon-si",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.40.147",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Frankfurt am Main",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.82.16",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "87.249.79.43",
+    "expected": {
+      "countryCode": "GH",
+      "countryName": "Ghana"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "GB",
+        "countryName": "United Kingdom",
+        "region": "England",
+        "city": "Nottingham",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "GB",
+        "countryName": "United Kingdom",
+        "region": "England",
+        "city": "Nottingham",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "37.128.201.59",
+    "expected": {
+      "countryCode": "SC",
+      "countryName": "Seychelles"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "AZ",
+        "countryName": "Azerbaijan",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "South Holland",
+        "city": "Brielle",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
