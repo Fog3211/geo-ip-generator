@@ -1,0 +1,1325 @@
+{
+  "timestamp": "2026-02-05T04:16:54.858Z",
+  "summary": {
+    "totalSamples": 50,
+    "correctCount": 41,
+    "incorrectCount": 9,
+    "errorCount": 0,
+    "accuracyRate": 0.82,
+    "averageConfidence": 0.82
+  },
+  "providerStats": {
+    "ip-api.com": {
+      "successRate": 1,
+      "accuracyRate": 0.82,
+      "responseTime": 0
+    },
+    "ipwho.is": {
+      "successRate": 0,
+      "accuracyRate": 0,
+      "responseTime": 0
+    }
+  },
+  "results": [
+    {
+      "ip": "201.229.13.150",
+      "expected": {
+        "countryCode": "AW",
+        "countryName": "Aruba"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AW",
+          "countryName": "Aruba",
+          "region": "",
+          "city": "Oranjestad",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "186.148.218.18",
+      "expected": {
+        "countryCode": "AW",
+        "countryName": "Aruba"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AW",
+          "countryName": "Aruba",
+          "region": "",
+          "city": "Oranjestad",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "103.87.88.112",
+      "expected": {
+        "countryCode": "AF",
+        "countryName": "Afghanistan"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AF",
+          "countryName": "Afghanistan",
+          "region": "Kabul",
+          "city": "Kabul",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "74.118.83.102",
+      "expected": {
+        "countryCode": "AF",
+        "countryName": "Afghanistan"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AF",
+          "countryName": "Afghanistan",
+          "region": "Helmand",
+          "city": "Gereshk",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "41.223.101.44",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AO",
+          "countryName": "Angola",
+          "region": "Luanda Province",
+          "city": "Luanda",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "41.222.255.100",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AO",
+          "countryName": "Angola",
+          "region": "Benguela",
+          "city": "Lobito",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "69.57.234.194",
+      "expected": {
+        "countryCode": "AI",
+        "countryName": "Anguilla"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AI",
+          "countryName": "Anguilla",
+          "region": "The Valley",
+          "city": "The Valley",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "157.167.112.215",
+      "expected": {
+        "countryCode": "AI",
+        "countryName": "Anguilla"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AI",
+          "countryName": "Anguilla",
+          "region": "The Valley",
+          "city": "The Valley",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "185.190.24.20",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AX",
+          "countryName": "Aland Islands",
+          "region": "Mariehamns stad",
+          "city": "Mariehamn",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "216.128.16.199",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AX",
+          "countryName": "Åland",
+          "region": "Mariehamns stad",
+          "city": "Mariehamn",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "37.139.114.159",
+      "expected": {
+        "countryCode": "AL",
+        "countryName": "Albania"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AL",
+          "countryName": "Albania",
+          "region": "Tirana",
+          "city": "Tirana",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "46.19.224.57",
+      "expected": {
+        "countryCode": "AL",
+        "countryName": "Albania"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AL",
+          "countryName": "Albania",
+          "region": "Tirana",
+          "city": "Linzë",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "185.230.54.239",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "ES",
+          "countryName": "Spain",
+          "region": "Catalonia",
+          "city": "Barcelona",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "185.87.37.112",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AD",
+          "countryName": "Andorra",
+          "region": "Andorra la Vella",
+          "city": "Andorra la Vella",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "5.107.45.116",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AE",
+          "countryName": "United Arab Emirates",
+          "region": "Emirate of Sharjah",
+          "city": "Sharjah",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "13.224.108.193",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AE",
+          "countryName": "United Arab Emirates",
+          "region": "Dubai",
+          "city": "Dubai",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "8.51.8.118",
+      "expected": {
+        "countryCode": "AR",
+        "countryName": "Argentina"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "CO",
+          "countryName": "Colombia",
+          "region": "Bogota D.C.",
+          "city": "Bogotá",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "23.40.188.212",
+      "expected": {
+        "countryCode": "AR",
+        "countryName": "Argentina"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AR",
+          "countryName": "Argentina",
+          "region": "Buenos Aires F.D.",
+          "city": "Buenos Aires",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "45.142.195.45",
+      "expected": {
+        "countryCode": "AM",
+        "countryName": "Armenia"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AM",
+          "countryName": "Armenia",
+          "region": "Yerevan",
+          "city": "Yerevan",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.17.249.22",
+      "expected": {
+        "countryCode": "AM",
+        "countryName": "Armenia"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AM",
+          "countryName": "Armenia",
+          "region": "Yerevan",
+          "city": "Yerevan",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "164.137.25.155",
+      "expected": {
+        "countryCode": "AS",
+        "countryName": "American Samoa"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AS",
+          "countryName": "American Samoa",
+          "region": "Eastern District",
+          "city": "Pago Pago",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "198.52.31.45",
+      "expected": {
+        "countryCode": "AS",
+        "countryName": "American Samoa"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AS",
+          "countryName": "American Samoa",
+          "region": "Eastern District",
+          "city": "Pago Pago",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "130.12.92.197",
+      "expected": {
+        "countryCode": "AQ",
+        "countryName": "Antarctica"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AQ",
+          "countryName": "Antarctica",
+          "region": "",
+          "city": "McMurdo",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "69.57.231.48",
+      "expected": {
+        "countryCode": "AG",
+        "countryName": "Antigua and Barbuda"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AG",
+          "countryName": "Antigua and Barbuda",
+          "region": "Saint Paul Parish",
+          "city": "English Harbour Town",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "199.189.112.26",
+      "expected": {
+        "countryCode": "AG",
+        "countryName": "Antigua and Barbuda"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AG",
+          "countryName": "Antigua and Barbuda",
+          "region": "Saint Philip Parish",
+          "city": "Freetown",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.18.225.158",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "region": "New South Wales",
+          "city": "Sydney",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "1.178.177.161",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "region": "Queensland",
+          "city": "Woolloongabba",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.59.116.135",
+      "expected": {
+        "countryCode": "AT",
+        "countryName": "Austria"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AT",
+          "countryName": "Austria",
+          "region": "Carinthia",
+          "city": "Klagenfurt",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.17.96.244",
+      "expected": {
+        "countryCode": "AT",
+        "countryName": "Austria"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AT",
+          "countryName": "Austria",
+          "region": "Vienna",
+          "city": "Vienna",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "62.217.144.104",
+      "expected": {
+        "countryCode": "AZ",
+        "countryName": "Azerbaijan"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AZ",
+          "countryName": "Azerbaijan",
+          "region": "Baku City",
+          "city": "Baku",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "31.43.191.201",
+      "expected": {
+        "countryCode": "AZ",
+        "countryName": "Azerbaijan"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AZ",
+          "countryName": "Azerbaijan",
+          "region": "Baku City",
+          "city": "Baku",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "57.82.125.185",
+      "expected": {
+        "countryCode": "BI",
+        "countryName": "Burundi"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BI",
+          "countryName": "Burundi",
+          "region": "Bujumbura Mairie Province",
+          "city": "Bujumbura",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "196.2.9.94",
+      "expected": {
+        "countryCode": "BI",
+        "countryName": "Burundi"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BI",
+          "countryName": "Burundi",
+          "region": "Bujumbura Mairie Province",
+          "city": "Bujumbura",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.16.229.189",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "CA",
+          "countryName": "Canada",
+          "region": "Ontario",
+          "city": "Toronto",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.17.109.134",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Île-de-France",
+          "city": "Paris",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "45.221.247.102",
+      "expected": {
+        "countryCode": "BJ",
+        "countryName": "Benin"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BJ",
+          "countryName": "Benin",
+          "region": "Littoral",
+          "city": "Cotonou",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "41.216.35.223",
+      "expected": {
+        "countryCode": "BJ",
+        "countryName": "Benin"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BJ",
+          "countryName": "Benin",
+          "region": "Littoral",
+          "city": "Cotonou",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "102.212.160.239",
+      "expected": {
+        "countryCode": "BF",
+        "countryName": "Burkina Faso"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BF",
+          "countryName": "Burkina Faso",
+          "region": "Centre",
+          "city": "Ouagadougou",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "63.246.45.61",
+      "expected": {
+        "countryCode": "BF",
+        "countryName": "Burkina Faso"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "TD",
+          "countryName": "Chad",
+          "region": "N’Djaména",
+          "city": "N'Djamena",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "20.38.120.197",
+      "expected": {
+        "countryCode": "NO",
+        "countryName": "Norway"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "NO",
+          "countryName": "Norway",
+          "region": "Viken",
+          "city": "Lorenskog",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "41.72.119.150",
+      "expected": {
+        "countryCode": "ZM",
+        "countryName": "Zambia"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "ZM",
+          "countryName": "Zambia",
+          "region": "Lusaka Province",
+          "city": "Lusaka",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "5.159.194.58",
+      "expected": {
+        "countryCode": "CH",
+        "countryName": "Switzerland"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "NL",
+          "countryName": "The Netherlands",
+          "region": "South Holland",
+          "city": "Capelle aan den IJssel",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "149.112.20.184",
+      "expected": {
+        "countryCode": "BL",
+        "countryName": "Saint Barthélemy"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BL",
+          "countryName": "Saint Barthelemy",
+          "region": "",
+          "city": "Gustavia",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "4.71.153.149",
+      "expected": {
+        "countryCode": "CA",
+        "countryName": "Canada"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "region": "Louisiana",
+          "city": "Monroe",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.20.145.225",
+      "expected": {
+        "countryCode": "CL",
+        "countryName": "Chile"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "CL",
+          "countryName": "Chile",
+          "region": "Santiago Metropolitan",
+          "city": "Santiago",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "43.168.189.9",
+      "expected": {
+        "countryCode": "DJ",
+        "countryName": "Djibouti"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "CN",
+          "countryName": "China",
+          "region": "Beijing",
+          "city": "Haidian",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "45.225.75.221",
+      "expected": {
+        "countryCode": "BO",
+        "countryName": "Bolivia"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BO",
+          "countryName": "Bolivia",
+          "region": "Santa Cruz Department",
+          "city": "Santa Cruz de la Sierra",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "45.8.73.120",
+      "expected": {
+        "countryCode": "IQ",
+        "countryName": "Iraq"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "region": "Virginia",
+          "city": "Ashburn",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "102.219.47.197",
+      "expected": {
+        "countryCode": "CM",
+        "countryName": "Cameroon"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "CM",
+          "countryName": "Cameroon",
+          "region": "Centre",
+          "city": "Yaoundé",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "102.222.36.109",
+      "expected": {
+        "countryCode": "SS",
+        "countryName": "South Sudan"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "SS",
+          "countryName": "South Sudan",
+          "region": "Central Equatoria",
+          "city": "Juba",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    }
+  ],
+  "errors": [
+    {
+      "ip": "185.230.54.239",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "ES",
+          "countryName": "Spain",
+          "region": "Catalonia",
+          "city": "Barcelona",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "8.51.8.118",
+      "expected": {
+        "countryCode": "AR",
+        "countryName": "Argentina"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "CO",
+          "countryName": "Colombia",
+          "region": "Bogota D.C.",
+          "city": "Bogotá",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.16.229.189",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "CA",
+          "countryName": "Canada",
+          "region": "Ontario",
+          "city": "Toronto",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.17.109.134",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Île-de-France",
+          "city": "Paris",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "63.246.45.61",
+      "expected": {
+        "countryCode": "BF",
+        "countryName": "Burkina Faso"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "TD",
+          "countryName": "Chad",
+          "region": "N’Djaména",
+          "city": "N'Djamena",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "5.159.194.58",
+      "expected": {
+        "countryCode": "CH",
+        "countryName": "Switzerland"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "NL",
+          "countryName": "The Netherlands",
+          "region": "South Holland",
+          "city": "Capelle aan den IJssel",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "4.71.153.149",
+      "expected": {
+        "countryCode": "CA",
+        "countryName": "Canada"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "region": "Louisiana",
+          "city": "Monroe",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "43.168.189.9",
+      "expected": {
+        "countryCode": "DJ",
+        "countryName": "Djibouti"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "CN",
+          "countryName": "China",
+          "region": "Beijing",
+          "city": "Haidian",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "45.8.73.120",
+      "expected": {
+        "countryCode": "IQ",
+        "countryName": "Iraq"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "region": "Virginia",
+          "city": "Ashburn",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: You've hit the monthly limit"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    }
+  ]
+}
