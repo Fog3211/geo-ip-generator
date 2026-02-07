@@ -1,0 +1,144 @@
+[
+  {
+    "ip": "104.192.95.217",
+    "expected": {
+      "countryCode": "AI",
+      "countryName": "Anguilla"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "RU",
+        "countryName": "Russia",
+        "region": "Moscow",
+        "city": "Moscow",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "SG",
+        "countryName": "Singapore",
+        "region": "North West",
+        "city": "Singapore",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "45.128.58.199",
+    "expected": {
+      "countryCode": "AL",
+      "countryName": "Albania"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "CY",
+        "countryName": "Cyprus",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "CY",
+        "countryName": "Cyprus",
+        "region": "Nicosia",
+        "city": "Nicosia",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "45.148.10.190",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "45.128.51.68",
+    "expected": {
+      "countryCode": "AZ",
+      "countryName": "Azerbaijan"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "CY",
+        "countryName": "Cyprus",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "CY",
+        "countryName": "Cyprus",
+        "region": "Nicosia",
+        "city": "Nicosia",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.26.59",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Frankfurt am Main",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.180.82",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "IN",
+        "countryName": "India",
+        "region": "West Bengal",
+        "city": "Kolkata",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
