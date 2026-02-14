@@ -1,0 +1,156 @@
+[
+  {
+    "ip": "199.0.84.76",
+    "expected": {
+      "countryCode": "AW",
+      "countryName": "Aruba"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Ohio",
+        "city": "Cleveland",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "66.96.123.72",
+    "expected": {
+      "countryCode": "AO",
+      "countryName": "Angola"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "NA",
+        "countryName": "Namibia",
+        "region": "Khomas Region",
+        "city": "Windhoek",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "46.183.20.57",
+    "expected": {
+      "countryCode": "AL",
+      "countryName": "Albania"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "GR",
+        "countryName": "Greece",
+        "region": "Attica",
+        "city": "Athens",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "41.109.117.210",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Blida",
+        "city": "Blida",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "5.83.213.63",
+    "expected": {
+      "countryCode": "AZ",
+      "countryName": "Azerbaijan"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "GB",
+        "countryName": "United Kingdom",
+        "region": "England",
+        "city": "Guildford",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.36.96",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.35.165",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Frankfurt am Main",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
