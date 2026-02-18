@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-17T04:23:03.009Z",
+  "timestamp": "2026-02-18T04:24:31.192Z",
   "summary": {
     "totalSamples": 50,
     "correctCount": 40,
@@ -9,14 +9,14 @@
     "averageConfidence": 0.8
   },
   "providerStats": {
-    "ip-api.com": {
-      "successRate": 1,
-      "accuracyRate": 0.8,
-      "responseTime": 0
-    },
     "ipwho.is": {
       "successRate": 0,
       "accuracyRate": 0,
+      "responseTime": 0
+    },
+    "geojs.io": {
+      "successRate": 1,
+      "accuracyRate": 0.8,
       "responseTime": 0
     }
   },
