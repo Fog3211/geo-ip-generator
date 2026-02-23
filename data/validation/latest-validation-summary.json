@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-02-23T04:27:10.209Z",
+  "timestamp": "2026-02-23T05:00:37.666Z",
   "summary": {
-    "totalSamples": 50,
-    "correctCount": 41,
-    "incorrectCount": 9,
+    "totalSamples": 100,
+    "correctCount": 80,
+    "incorrectCount": 20,
     "errorCount": 0,
-    "accuracyRate": 0.82,
-    "averageConfidence": 0.82
+    "accuracyRate": 0.8,
+    "averageConfidence": 0.8
   },
   "providerStats": {
     "ip-api.com": {
       "successRate": 1,
-      "accuracyRate": 0.82,
+      "accuracyRate": 0.8,
       "responseTime": 0
     },
     "ipwho.is": {
@@ -20,5 +20,5 @@
       "responseTime": 0
     }
   },
-  "errorCount": 9
+  "errorCount": 20
 }
