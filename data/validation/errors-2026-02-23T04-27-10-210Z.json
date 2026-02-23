@@ -1,0 +1,200 @@
+[
+  {
+    "ip": "80.247.139.112",
+    "expected": {
+      "countryCode": "AF",
+      "countryName": "Afghanistan"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "New York",
+        "city": "New York",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "213.236.9.52",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Andalusia",
+        "city": "Seville",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "13.128.59.182",
+    "expected": {
+      "countryCode": "AR",
+      "countryName": "Argentina"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Virginia",
+        "city": "Ashburn",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "154.30.31.185",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "KI",
+        "countryName": "Kiribati",
+        "region": "Gilbert Islands",
+        "city": "Tarawa",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "154.30.31.157",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "KI",
+        "countryName": "Kiribati",
+        "region": "Gilbert Islands",
+        "city": "Tarawa",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.14.179",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "ZA",
+        "countryName": "South Africa",
+        "region": "Gauteng",
+        "city": "Johannesburg",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.122.99",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "GB",
+        "countryName": "United Kingdom",
+        "region": "England",
+        "city": "London",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "45.221.70.69",
+    "expected": {
+      "countryCode": "SC",
+      "countryName": "Seychelles"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "156.229.125.197",
+    "expected": {
+      "countryCode": "TC",
+      "countryName": "Turks and Caicos Islands"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Frankfurt am Main",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
