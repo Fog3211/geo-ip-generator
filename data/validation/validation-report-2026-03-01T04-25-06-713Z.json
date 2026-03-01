@@ -1,0 +1,1237 @@
+{
+  "timestamp": "2026-03-01T04:25:06.712Z",
+  "summary": {
+    "totalSamples": 50,
+    "correctCount": 45,
+    "incorrectCount": 5,
+    "errorCount": 0,
+    "accuracyRate": 0.9,
+    "averageConfidence": 0.9
+  },
+  "providerStats": {
+    "ip-api.com": {
+      "successRate": 1,
+      "accuracyRate": 0.9,
+      "responseTime": 0
+    },
+    "ipwho.is": {
+      "successRate": 0,
+      "accuracyRate": 0,
+      "responseTime": 0
+    }
+  },
+  "results": [
+    {
+      "ip": "186.96.204.95",
+      "expected": {
+        "countryCode": "AW",
+        "countryName": "Aruba"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AW",
+          "countryName": "Aruba",
+          "region": "",
+          "city": "Oranjestad",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "186.190.232.1",
+      "expected": {
+        "countryCode": "AW",
+        "countryName": "Aruba"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AW",
+          "countryName": "Aruba",
+          "region": "",
+          "city": "Oranjestad",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "103.102.220.158",
+      "expected": {
+        "countryCode": "AF",
+        "countryName": "Afghanistan"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AF",
+          "countryName": "Afghanistan",
+          "region": "Kabul",
+          "city": "Kabul",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "45.65.59.4",
+      "expected": {
+        "countryCode": "AF",
+        "countryName": "Afghanistan"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AF",
+          "countryName": "Afghanistan",
+          "region": "Kabul",
+          "city": "Kabul",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "102.130.64.12",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AO",
+          "countryName": "Angola",
+          "region": "Luanda Province",
+          "city": "Luanda",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "41.223.158.161",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AO",
+          "countryName": "Angola",
+          "region": "Luanda Province",
+          "city": "Luanda",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "204.14.255.140",
+      "expected": {
+        "countryCode": "AI",
+        "countryName": "Anguilla"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AI",
+          "countryName": "Anguilla",
+          "region": "The Valley",
+          "city": "The Valley",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "76.76.186.249",
+      "expected": {
+        "countryCode": "AI",
+        "countryName": "Anguilla"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AI",
+          "countryName": "Anguilla",
+          "region": "The Valley",
+          "city": "The Valley",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "194.110.188.199",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AX",
+          "countryName": "Aland Islands",
+          "region": "Mariehamns stad",
+          "city": "Mariehamn",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "194.112.6.240",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AX",
+          "countryName": "Aland Islands",
+          "region": "Mariehamns stad",
+          "city": "Mariehamn",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "38.190.108.74",
+      "expected": {
+        "countryCode": "AL",
+        "countryName": "Albania"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AL",
+          "countryName": "Albania",
+          "region": "Tirana",
+          "city": "Tirana",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "46.19.224.20",
+      "expected": {
+        "countryCode": "AL",
+        "countryName": "Albania"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "XK",
+          "countryName": "Kosovo",
+          "region": "Gjakova",
+          "city": "Orahovac",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "136.234.207.150",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AD",
+          "countryName": "Andorra",
+          "region": "Sant Julià de Loria",
+          "city": "Sant Julià de Lòria",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "80.80.95.32",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AD",
+          "countryName": "Andorra",
+          "region": "Andorra la Vella",
+          "city": "Andorra la Vella",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "5.38.3.108",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AE",
+          "countryName": "United Arab Emirates",
+          "region": "Emirate of Sharjah",
+          "city": "Sharjah",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "5.192.168.91",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AE",
+          "countryName": "United Arab Emirates",
+          "region": "Dubai",
+          "city": "Dubai",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.23.164.16",
+      "expected": {
+        "countryCode": "AR",
+        "countryName": "Argentina"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AR",
+          "countryName": "Argentina",
+          "region": "Buenos Aires F.D.",
+          "city": "Buenos Aires",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "1.178.63.225",
+      "expected": {
+        "countryCode": "AR",
+        "countryName": "Argentina"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AR",
+          "countryName": "Argentina",
+          "region": "Buenos Aires",
+          "city": "Buenos Aires",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "45.129.185.208",
+      "expected": {
+        "countryCode": "AM",
+        "countryName": "Armenia"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AM",
+          "countryName": "Armenia",
+          "region": "Gegharkunik",
+          "city": "Gavar Municipality",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "45.143.206.111",
+      "expected": {
+        "countryCode": "AM",
+        "countryName": "Armenia"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AM",
+          "countryName": "Armenia",
+          "region": "Syunik",
+          "city": "Meghri",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "164.137.25.125",
+      "expected": {
+        "countryCode": "AS",
+        "countryName": "American Samoa"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AS",
+          "countryName": "American Samoa",
+          "region": "Eastern District",
+          "city": "Pago Pago",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "164.137.50.200",
+      "expected": {
+        "countryCode": "AS",
+        "countryName": "American Samoa"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AS",
+          "countryName": "American Samoa",
+          "region": "Eastern District",
+          "city": "Pago Pago",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "154.30.31.157",
+      "expected": {
+        "countryCode": "AQ",
+        "countryName": "Antarctica"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "KI",
+          "countryName": "Kiribati",
+          "region": "Gilbert Islands",
+          "city": "Tarawa",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "130.12.92.119",
+      "expected": {
+        "countryCode": "AQ",
+        "countryName": "Antarctica"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AQ",
+          "countryName": "Antarctica",
+          "region": "",
+          "city": "McMurdo",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "162.252.191.148",
+      "expected": {
+        "countryCode": "AG",
+        "countryName": "Antigua and Barbuda"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AG",
+          "countryName": "Antigua and Barbuda",
+          "region": "Saint John Parish",
+          "city": "St John's",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "66.249.146.241",
+      "expected": {
+        "countryCode": "AG",
+        "countryName": "Antigua and Barbuda"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AG",
+          "countryName": "Antigua and Barbuda",
+          "region": "Saint John Parish",
+          "city": "St John's",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "1.178.67.87",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "region": "New South Wales",
+          "city": "Zetland",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "1.0.4.12",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "region": "Victoria",
+          "city": "Narre Warren",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.17.98.254",
+      "expected": {
+        "countryCode": "AT",
+        "countryName": "Austria"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AT",
+          "countryName": "Austria",
+          "region": "Vienna",
+          "city": "Vienna",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "5.23.22.49",
+      "expected": {
+        "countryCode": "AT",
+        "countryName": "Austria"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AT",
+          "countryName": "Austria",
+          "region": "Vienna",
+          "city": "Vienna",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "62.217.158.27",
+      "expected": {
+        "countryCode": "AZ",
+        "countryName": "Azerbaijan"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AZ",
+          "countryName": "Azerbaijan",
+          "region": "Yevlax City",
+          "city": "Yevlakh",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "46.28.237.99",
+      "expected": {
+        "countryCode": "AZ",
+        "countryName": "Azerbaijan"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AZ",
+          "countryName": "Azerbaijan",
+          "region": "Baku City",
+          "city": "Baku",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "41.79.44.199",
+      "expected": {
+        "countryCode": "BI",
+        "countryName": "Burundi"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BI",
+          "countryName": "Burundi",
+          "region": "Bujumbura Mairie Province",
+          "city": "Bujumbura",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "41.79.226.53",
+      "expected": {
+        "countryCode": "BI",
+        "countryName": "Burundi"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BI",
+          "countryName": "Burundi",
+          "region": "Bubanza Province",
+          "city": "Bubanza",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.16.40.111",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "DE",
+          "countryName": "Germany",
+          "region": "Hesse",
+          "city": "Frankfurt am Main",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.17.36.36",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Île-de-France",
+          "city": "Paris",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "41.222.194.183",
+      "expected": {
+        "countryCode": "BJ",
+        "countryName": "Benin"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BJ",
+          "countryName": "Benin",
+          "region": "Littoral",
+          "city": "Cotonou",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "196.60.118.41",
+      "expected": {
+        "countryCode": "BJ",
+        "countryName": "Benin"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BJ",
+          "countryName": "Benin",
+          "region": "Ouémé",
+          "city": "Porto-Novo",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "102.214.42.76",
+      "expected": {
+        "countryCode": "BF",
+        "countryName": "Burkina Faso"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BF",
+          "countryName": "Burkina Faso",
+          "region": "Centre",
+          "city": "Ouagadougou",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "154.65.61.40",
+      "expected": {
+        "countryCode": "BF",
+        "countryName": "Burkina Faso"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BF",
+          "countryName": "Burkina Faso",
+          "region": "Centre",
+          "city": "Ouagadougou",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "200.50.71.0",
+      "expected": {
+        "countryCode": "GD",
+        "countryName": "Grenada"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "GD",
+          "countryName": "Grenada",
+          "region": "Carriacou and Petite Martinique",
+          "city": "Hillsborough",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "31.14.90.34",
+      "expected": {
+        "countryCode": "IR",
+        "countryName": "Iran"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "IR",
+          "countryName": "Iran",
+          "region": "Razavi Khorasan",
+          "city": "Mashhad",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.22.48.150",
+      "expected": {
+        "countryCode": "FR",
+        "countryName": "France"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Île-de-France",
+          "city": "Paris",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "185.113.15.103",
+      "expected": {
+        "countryCode": "JE",
+        "countryName": "Jersey"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "JE",
+          "countryName": "Jersey",
+          "region": "St Helier",
+          "city": "Saint Helier",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "5.149.241.139",
+      "expected": {
+        "countryCode": "HU",
+        "countryName": "Hungary"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "HU",
+          "countryName": "Hungary",
+          "region": "Csongrád megye",
+          "city": "Szeged",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "1.178.141.228",
+      "expected": {
+        "countryCode": "PS",
+        "countryName": "Palestine"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "PS",
+          "countryName": "Palestinian Territory",
+          "region": "West Bank",
+          "city": "Nablus",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "209.128.25.239",
+      "expected": {
+        "countryCode": "PM",
+        "countryName": "Saint Pierre and Miquelon"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "CA",
+          "countryName": "Canada",
+          "region": "Newfoundland and Labrador",
+          "city": "St. John's",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "45.83.147.47",
+      "expected": {
+        "countryCode": "BY",
+        "countryName": "Belarus"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BY",
+          "countryName": "Belarus",
+          "region": "Minsk City",
+          "city": "Minsk",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "23.176.240.201",
+      "expected": {
+        "countryCode": "AG",
+        "countryName": "Antigua and Barbuda"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "AG",
+          "countryName": "Antigua and Barbuda",
+          "region": "Saint John Parish",
+          "city": "St John's",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "102.208.193.54",
+      "expected": {
+        "countryCode": "BW",
+        "countryName": "Botswana"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "BW",
+          "countryName": "Botswana",
+          "region": "Kweneng District",
+          "city": "Mogoditshane",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    }
+  ],
+  "errors": [
+    {
+      "ip": "46.19.224.20",
+      "expected": {
+        "countryCode": "AL",
+        "countryName": "Albania"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "XK",
+          "countryName": "Kosovo",
+          "region": "Gjakova",
+          "city": "Orahovac",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "154.30.31.157",
+      "expected": {
+        "countryCode": "AQ",
+        "countryName": "Antarctica"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "KI",
+          "countryName": "Kiribati",
+          "region": "Gilbert Islands",
+          "city": "Tarawa",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.16.40.111",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "DE",
+          "countryName": "Germany",
+          "region": "Hesse",
+          "city": "Frankfurt am Main",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.17.36.36",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "FR",
+          "countryName": "France",
+          "region": "Île-de-France",
+          "city": "Paris",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "209.128.25.239",
+      "expected": {
+        "countryCode": "PM",
+        "countryName": "Saint Pierre and Miquelon"
+      },
+      "actual": {
+        "ip-api.com": {
+          "countryCode": "CA",
+          "countryName": "Canada",
+          "region": "Newfoundland and Labrador",
+          "city": "St. John's",
+          "success": true
+        },
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    }
+  ]
+}
