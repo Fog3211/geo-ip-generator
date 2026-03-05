@@ -1,0 +1,1423 @@
+{
+  "timestamp": "2026-03-05T04:15:01.098Z",
+  "summary": {
+    "totalSamples": 50,
+    "correctCount": 33,
+    "incorrectCount": 17,
+    "errorCount": 0,
+    "accuracyRate": 0.66,
+    "averageConfidence": 0.66
+  },
+  "providerStats": {
+    "ipwho.is": {
+      "successRate": 0,
+      "accuracyRate": 0,
+      "responseTime": 0
+    },
+    "geojs.io": {
+      "successRate": 1,
+      "accuracyRate": 0.66,
+      "responseTime": 0
+    }
+  },
+  "results": [
+    {
+      "ip": "190.104.100.57",
+      "expected": {
+        "countryCode": "AW",
+        "countryName": "Aruba"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AW",
+          "countryName": "Aruba",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "157.167.113.111",
+      "expected": {
+        "countryCode": "AW",
+        "countryName": "Aruba"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AW",
+          "countryName": "Aruba",
+          "city": "Oranjestad",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "103.87.88.177",
+      "expected": {
+        "countryCode": "AF",
+        "countryName": "Afghanistan"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AF",
+          "countryName": "Afghanistan",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "80.247.139.185",
+      "expected": {
+        "countryCode": "AF",
+        "countryName": "Afghanistan"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "region": "New York",
+          "city": "New York",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "41.205.34.22",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AO",
+          "countryName": "Angola",
+          "region": "Luanda Province",
+          "city": "Luanda",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "41.194.72.10",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "ZA",
+          "countryName": "South Africa",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "76.76.186.162",
+      "expected": {
+        "countryCode": "AI",
+        "countryName": "Anguilla"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AI",
+          "countryName": "Anguilla",
+          "city": "The Valley",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "204.14.255.168",
+      "expected": {
+        "countryCode": "AI",
+        "countryName": "Anguilla"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AI",
+          "countryName": "Anguilla",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "82.199.179.141",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "FI",
+          "countryName": "Finland",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "212.17.160.76",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "FI",
+          "countryName": "Finland",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "46.19.231.181",
+      "expected": {
+        "countryCode": "AL",
+        "countryName": "Albania"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AL",
+          "countryName": "Albania",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "45.38.194.162",
+      "expected": {
+        "countryCode": "AL",
+        "countryName": "Albania"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AL",
+          "countryName": "Albania",
+          "region": "Tirana",
+          "city": "Tirana",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "80.80.92.48",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AD",
+          "countryName": "Andorra",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "185.4.54.63",
+      "expected": {
+        "countryCode": "AD",
+        "countryName": "Andorra"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AD",
+          "countryName": "Andorra",
+          "region": "Andorra la Vella",
+          "city": "Andorra la Vella",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.50.43.46",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AE",
+          "countryName": "United Arab Emirates",
+          "region": "Dubai",
+          "city": "Dubai",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "15.230.219.222",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "23.1.209.158",
+      "expected": {
+        "countryCode": "AR",
+        "countryName": "Argentina"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AR",
+          "countryName": "Argentina",
+          "region": "Buenos Aires F.D.",
+          "city": "Buenos Aires",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.56.187.144",
+      "expected": {
+        "countryCode": "AR",
+        "countryName": "Argentina"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AR",
+          "countryName": "Argentina",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "43.175.190.112",
+      "expected": {
+        "countryCode": "AM",
+        "countryName": "Armenia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "SG",
+          "countryName": "Singapore",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "31.128.60.129",
+      "expected": {
+        "countryCode": "AM",
+        "countryName": "Armenia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AM",
+          "countryName": "Armenia",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "150.228.214.246",
+      "expected": {
+        "countryCode": "AS",
+        "countryName": "American Samoa"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AS",
+          "countryName": "American Samoa",
+          "region": "Eastern District",
+          "city": "Pago Pago",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "164.137.50.172",
+      "expected": {
+        "countryCode": "AS",
+        "countryName": "American Samoa"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AS",
+          "countryName": "American Samoa",
+          "region": "Eastern District",
+          "city": "Pago Pago",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "130.12.92.108",
+      "expected": {
+        "countryCode": "AQ",
+        "countryName": "Antarctica"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "149.57.28.96",
+      "expected": {
+        "countryCode": "AQ",
+        "countryName": "Antarctica"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "CA",
+          "countryName": "Canada",
+          "region": "Ontario",
+          "city": "Toronto",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "66.249.146.50",
+      "expected": {
+        "countryCode": "AG",
+        "countryName": "Antigua and Barbuda"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "JM",
+          "countryName": "Jamaica",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "91.108.40.78",
+      "expected": {
+        "countryCode": "AG",
+        "countryName": "Antigua and Barbuda"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AG",
+          "countryName": "Antigua and Barbuda",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.18.110.78",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "region": "New South Wales",
+          "city": "Sydney",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.18.52.42",
+      "expected": {
+        "countryCode": "AU",
+        "countryName": "Australia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "5.180.114.7",
+      "expected": {
+        "countryCode": "AT",
+        "countryName": "Austria"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AT",
+          "countryName": "Austria",
+          "region": "Styria",
+          "city": "Graz",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "5.183.174.114",
+      "expected": {
+        "countryCode": "AT",
+        "countryName": "Austria"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AT",
+          "countryName": "Austria",
+          "region": "Vienna",
+          "city": "Vienna",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "46.18.69.95",
+      "expected": {
+        "countryCode": "AZ",
+        "countryName": "Azerbaijan"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AZ",
+          "countryName": "Azerbaijan",
+          "region": "Baku City",
+          "city": "Baku",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "5.134.58.31",
+      "expected": {
+        "countryCode": "AZ",
+        "countryName": "Azerbaijan"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "AZ",
+          "countryName": "Azerbaijan",
+          "region": "Baku City",
+          "city": "Baku",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "164.137.224.172",
+      "expected": {
+        "countryCode": "BI",
+        "countryName": "Burundi"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "BI",
+          "countryName": "Burundi",
+          "region": "Bujumbura Mairie Province",
+          "city": "Bujumbura",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "154.117.254.5",
+      "expected": {
+        "countryCode": "BI",
+        "countryName": "Burundi"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "BI",
+          "countryName": "Burundi",
+          "region": "Bujumbura Mairie Province",
+          "city": "Bujumbura",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.16.255.132",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "Netherlands",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.17.123.171",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "Netherlands",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "41.223.251.17",
+      "expected": {
+        "countryCode": "BJ",
+        "countryName": "Benin"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "BJ",
+          "countryName": "Benin",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "196.49.8.141",
+      "expected": {
+        "countryCode": "BJ",
+        "countryName": "Benin"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "BJ",
+          "countryName": "Benin",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "154.65.63.10",
+      "expected": {
+        "countryCode": "BF",
+        "countryName": "Burkina Faso"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "BF",
+          "countryName": "Burkina Faso",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "153.67.34.203",
+      "expected": {
+        "countryCode": "BF",
+        "countryName": "Burkina Faso"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "BF",
+          "countryName": "Burkina Faso",
+          "region": "Centre",
+          "city": "Ouagadougou",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "49.156.50.166",
+      "expected": {
+        "countryCode": "NU",
+        "countryName": "Niue"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "NZ",
+          "countryName": "New Zealand",
+          "region": "Auckland",
+          "city": "Auckland",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "197.157.233.14",
+      "expected": {
+        "countryCode": "SL",
+        "countryName": "Sierra Leone"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "SL",
+          "countryName": "Sierra Leone",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "196.44.250.68",
+      "expected": {
+        "countryCode": "RW",
+        "countryName": "Rwanda"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "RW",
+          "countryName": "Rwanda",
+          "region": "Kigali",
+          "city": "Gasabo",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "2.20.187.229",
+      "expected": {
+        "countryCode": "ES",
+        "countryName": "Spain"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "ES",
+          "countryName": "Spain",
+          "region": "Catalonia",
+          "city": "Barcelona",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    },
+    {
+      "ip": "185.193.126.118",
+      "expected": {
+        "countryCode": "BV",
+        "countryName": "Bouvet Island"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "RO",
+          "countryName": "Romania",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "45.83.144.174",
+      "expected": {
+        "countryCode": "SN",
+        "countryName": "Senegal"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "CZ",
+          "countryName": "Czechia",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.18.94.246",
+      "expected": {
+        "countryCode": "GR",
+        "countryName": "Greece"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "Netherlands",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "74.112.233.219",
+      "expected": {
+        "countryCode": "MF",
+        "countryName": "Saint Martin"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "GP",
+          "countryName": "Guadeloupe",
+          "city": "Marigot",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "62.146.69.29",
+      "expected": {
+        "countryCode": "LI",
+        "countryName": "Liechtenstein"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "DE",
+          "countryName": "Germany",
+          "region": "Bavaria",
+          "city": "Burgthann",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "38.44.234.183",
+      "expected": {
+        "countryCode": "EC",
+        "countryName": "Ecuador"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "EC",
+          "countryName": "Ecuador",
+          "region": "El Oro",
+          "city": "Huaquillas",
+          "success": true
+        }
+      },
+      "isCorrect": true,
+      "confidence": 1
+    }
+  ],
+  "errors": [
+    {
+      "ip": "80.247.139.185",
+      "expected": {
+        "countryCode": "AF",
+        "countryName": "Afghanistan"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "region": "New York",
+          "city": "New York",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "41.194.72.10",
+      "expected": {
+        "countryCode": "AO",
+        "countryName": "Angola"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "ZA",
+          "countryName": "South Africa",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "82.199.179.141",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "FI",
+          "countryName": "Finland",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "212.17.160.76",
+      "expected": {
+        "countryCode": "AX",
+        "countryName": "Åland Islands"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "FI",
+          "countryName": "Finland",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "15.230.219.222",
+      "expected": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "43.175.190.112",
+      "expected": {
+        "countryCode": "AM",
+        "countryName": "Armenia"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "SG",
+          "countryName": "Singapore",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "130.12.92.108",
+      "expected": {
+        "countryCode": "AQ",
+        "countryName": "Antarctica"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "149.57.28.96",
+      "expected": {
+        "countryCode": "AQ",
+        "countryName": "Antarctica"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "CA",
+          "countryName": "Canada",
+          "region": "Ontario",
+          "city": "Toronto",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "66.249.146.50",
+      "expected": {
+        "countryCode": "AG",
+        "countryName": "Antigua and Barbuda"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "JM",
+          "countryName": "Jamaica",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.16.255.132",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "Netherlands",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.17.123.171",
+      "expected": {
+        "countryCode": "BE",
+        "countryName": "Belgium"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "Netherlands",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "49.156.50.166",
+      "expected": {
+        "countryCode": "NU",
+        "countryName": "Niue"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "NZ",
+          "countryName": "New Zealand",
+          "region": "Auckland",
+          "city": "Auckland",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "185.193.126.118",
+      "expected": {
+        "countryCode": "BV",
+        "countryName": "Bouvet Island"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "RO",
+          "countryName": "Romania",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "45.83.144.174",
+      "expected": {
+        "countryCode": "SN",
+        "countryName": "Senegal"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "CZ",
+          "countryName": "Czechia",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "2.18.94.246",
+      "expected": {
+        "countryCode": "GR",
+        "countryName": "Greece"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "NL",
+          "countryName": "Netherlands",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "74.112.233.219",
+      "expected": {
+        "countryCode": "MF",
+        "countryName": "Saint Martin"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "GP",
+          "countryName": "Guadeloupe",
+          "city": "Marigot",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    },
+    {
+      "ip": "62.146.69.29",
+      "expected": {
+        "countryCode": "LI",
+        "countryName": "Liechtenstein"
+      },
+      "actual": {
+        "ipwho.is": {
+          "success": false,
+          "error": "ipwho.is error: HTTP 403"
+        },
+        "geojs.io": {
+          "countryCode": "DE",
+          "countryName": "Germany",
+          "region": "Bavaria",
+          "city": "Burgthann",
+          "success": true
+        }
+      },
+      "isCorrect": false,
+      "confidence": 0
+    }
+  ]
+}
