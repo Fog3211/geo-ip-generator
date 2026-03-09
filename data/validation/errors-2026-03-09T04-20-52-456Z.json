@@ -1,0 +1,146 @@
+[
+  {
+    "ip": "34.103.254.139",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "LI",
+        "countryName": "Liechtenstein",
+        "region": "Schaan",
+        "city": "Schaan",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "LI",
+        "countryName": "Liechtenstein",
+        "region": "Schaan",
+        "city": "Schaan",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "203.193.117.238",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "region": "Kowloon",
+        "city": "Hong Kong",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "154.30.31.112",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "TL",
+        "countryName": "Timor-Leste",
+        "region": "Dili Municipality",
+        "city": "Dili",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "TL",
+        "countryName": "Timor-Leste",
+        "region": "Dili Municipality",
+        "city": "Dili",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "149.57.28.20",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.5.134",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "IT",
+        "countryName": "Italy",
+        "region": "Lombardy",
+        "city": "Milan",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.104.168",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "SE",
+        "countryName": "Sweden",
+        "region": "Stockholm County",
+        "city": "Kista",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
