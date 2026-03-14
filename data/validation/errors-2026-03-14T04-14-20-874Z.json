@@ -1,0 +1,286 @@
+[
+  {
+    "ip": "82.205.138.100",
+    "expected": {
+      "countryCode": "AF",
+      "countryName": "Afghanistan"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "209.59.119.120",
+    "expected": {
+      "countryCode": "AI",
+      "countryName": "Anguilla"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "KN",
+        "countryName": "Saint Kitts and Nevis",
+        "region": "Saint George Basseterre",
+        "city": "Basseterre",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "212.17.188.70",
+    "expected": {
+      "countryCode": "AX",
+      "countryName": "Åland Islands"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "FI",
+        "countryName": "Finland",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "23.131.185.53",
+    "expected": {
+      "countryCode": "AR",
+      "countryName": "Argentina"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "154.30.31.109",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "TL",
+        "countryName": "Timor-Leste",
+        "region": "Dili Municipality",
+        "city": "Dili",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "154.30.31.143",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "KI",
+        "countryName": "Kiribati",
+        "region": "Gilbert Islands",
+        "city": "Tarawa",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "207.139.21.143",
+    "expected": {
+      "countryCode": "AG",
+      "countryName": "Antigua and Barbuda"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "3.175.118.38",
+    "expected": {
+      "countryCode": "AU",
+      "countryName": "Australia"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.58.107.140",
+    "expected": {
+      "countryCode": "AU",
+      "countryName": "Australia"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.105.158",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.139.153",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "203.193.117.148",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "HK",
+        "countryName": "Hong Kong",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "202.59.6.45",
+    "expected": {
+      "countryCode": "NU",
+      "countryName": "Niue"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "NZ",
+        "countryName": "New Zealand",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "31.56.83.76",
+    "expected": {
+      "countryCode": "GE",
+      "countryName": "Georgia"
+    },
+    "actual": {
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      },
+      "geojs.io": {
+        "countryCode": "AE",
+        "countryName": "United Arab Emirates",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
