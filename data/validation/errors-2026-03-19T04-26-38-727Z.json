@@ -1,0 +1,112 @@
+[
+  {
+    "ip": "149.57.28.142",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.121.50",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.61.99",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Frankfurt am Main",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "193.43.131.89",
+    "expected": {
+      "countryCode": "VA",
+      "countryName": "Vatican City"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "IT",
+        "countryName": "Italy",
+        "region": "Lombardy",
+        "city": "Milan",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.17.193.55",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "California",
+        "city": "Palo Alto",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
