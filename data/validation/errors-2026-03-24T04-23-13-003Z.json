@@ -1,0 +1,218 @@
+[
+  {
+    "ip": "37.26.67.113",
+    "expected": {
+      "countryCode": "AL",
+      "countryName": "Albania"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "XK",
+        "countryName": "Kosovo",
+        "city": "Pristina",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "XK",
+        "countryName": "Kosovo",
+        "region": "Pristina",
+        "city": "Pristina",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "41.109.117.165",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Blida",
+        "city": "Blida",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Blida",
+        "city": "Blida",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "149.57.28.120",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "38.54.60.157",
+    "expected": {
+      "countryCode": "AZ",
+      "countryName": "Azerbaijan"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "EG",
+        "countryName": "Egypt",
+        "region": "Cairo Governorate",
+        "city": "Cairo",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "EG",
+        "countryName": "Egypt",
+        "region": "Cairo Governorate",
+        "city": "Cairo",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "172.225.226.7",
+    "expected": {
+      "countryCode": "BI",
+      "countryName": "Burundi"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "AL",
+        "countryName": "Albania",
+        "region": "Tirana",
+        "city": "Tirana",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "AL",
+        "countryName": "Albania",
+        "region": "Tirana",
+        "city": "Tirana",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.19.105",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.61.163",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Frankfurt am Main",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.24.155.254",
+    "expected": {
+      "countryCode": "LT",
+      "countryName": "Lithuania"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "GB",
+        "countryName": "United Kingdom",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "GB",
+        "countryName": "United Kingdom",
+        "region": "England",
+        "city": "Gainsborough",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "43.109.34.226",
+    "expected": {
+      "countryCode": "BD",
+      "countryName": "Bangladesh"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "SG",
+        "countryName": "Singapore",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "CN",
+        "countryName": "China",
+        "region": "Beijing",
+        "city": "Beijing",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
