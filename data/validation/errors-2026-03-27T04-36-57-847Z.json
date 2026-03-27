@@ -1,0 +1,194 @@
+[
+  {
+    "ip": "212.17.189.54",
+    "expected": {
+      "countryCode": "AX",
+      "countryName": "Åland Islands"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "FI",
+        "countryName": "Finland",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FI",
+        "countryName": "Finland",
+        "region": "Uusimaa",
+        "city": "Helsinki",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "185.230.54.199",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Catalonia",
+        "city": "Barcelona",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Catalonia",
+        "city": "Barcelona",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "5.56.133.52",
+    "expected": {
+      "countryCode": "AE",
+      "countryName": "United Arab Emirates"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "Drenthe",
+        "city": "Meppel",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "region": "Drenthe",
+        "city": "Meppel",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "46.8.66.129",
+    "expected": {
+      "countryCode": "AZ",
+      "countryName": "Azerbaijan"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "RU",
+        "countryName": "Russia",
+        "region": "St.-Petersburg",
+        "city": "St Petersburg",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "RU",
+        "countryName": "Russia",
+        "region": "St.-Petersburg",
+        "city": "St Petersburg",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "172.225.226.124",
+    "expected": {
+      "countryCode": "BI",
+      "countryName": "Burundi"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "CF",
+        "countryName": "Central African Republic",
+        "region": "Bangui",
+        "city": "Bangui",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "CF",
+        "countryName": "Central African Republic",
+        "region": "Bangui",
+        "city": "Bangui",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.18.40.218",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Frankfurt am Main",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.89.9",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "41.194.34.248",
+    "expected": {
+      "countryCode": "IO",
+      "countryName": "British Indian Ocean Territory"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "ZA",
+        "countryName": "South Africa",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "California",
+        "city": "San Jose",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
