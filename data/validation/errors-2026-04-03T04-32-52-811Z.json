@@ -1,0 +1,156 @@
+[
+  {
+    "ip": "213.204.42.107",
+    "expected": {
+      "countryCode": "AX",
+      "countryName": "Åland Islands"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "SE",
+        "countryName": "Sweden",
+        "region": "Stockholm County",
+        "city": "Södertälje",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "18.65.54.87",
+    "expected": {
+      "countryCode": "AR",
+      "countryName": "Argentina"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "BR",
+        "countryName": "Brazil",
+        "region": "São Paulo",
+        "city": "São Paulo",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "149.57.28.16",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "209.59.66.56",
+    "expected": {
+      "countryCode": "AG",
+      "countryName": "Antigua and Barbuda"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "KN",
+        "countryName": "Saint Kitts and Nevis",
+        "region": "Saint Paul Charlestown",
+        "city": "Charlestown",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.148.155",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hesse",
+        "city": "Frankfurt am Main",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.40.239",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "PL",
+        "countryName": "Poland",
+        "region": "Mazovia",
+        "city": "Warsaw",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "13.32.0.189",
+    "expected": {
+      "countryCode": "HU",
+      "countryName": "Hungary"
+    },
+    "actual": {
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "New York",
+        "city": "New York",
+        "success": true
+      },
+      "ipwho.is": {
+        "success": false,
+        "error": "ipwho.is error: HTTP 403"
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
