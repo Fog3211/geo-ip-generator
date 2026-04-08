@@ -1,0 +1,146 @@
+[
+  {
+    "ip": "34.103.254.185",
+    "expected": {
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Catalonia",
+        "city": "Barcelona",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "region": "Catalonia",
+        "city": "Barcelona",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "41.109.117.114",
+    "expected": {
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Blida",
+        "city": "Blida",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "DZ",
+        "countryName": "Algeria",
+        "region": "Blida",
+        "city": "Blida",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "149.57.28.120",
+    "expected": {
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.28.86",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "region": "Hamburg",
+        "city": "Hamburg",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.255.180",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "MX",
+        "countryName": "Mexico",
+        "region": "Mexico City",
+        "city": "Mexico City",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "78.234.147.136",
+    "expected": {
+      "countryCode": "GP",
+      "countryName": "Guadeloupe"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Chelles",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
