@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-04-13T05:00:50.179Z",
+  "timestamp": "2026-04-13T05:43:11.806Z",
   "summary": {
-    "totalSamples": 50,
-    "correctCount": 36,
-    "incorrectCount": 14,
+    "totalSamples": 100,
+    "correctCount": 72,
+    "incorrectCount": 28,
     "errorCount": 0,
     "accuracyRate": 0.72,
     "averageConfidence": 0.72
@@ -20,5 +20,5 @@
       "responseTime": 0
     }
   },
-  "errorCount": 14
+  "errorCount": 28
 }
