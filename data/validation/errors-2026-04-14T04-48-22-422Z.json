@@ -1,0 +1,143 @@
+[
+  {
+    "ip": "2.18.65.78",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "NL",
+        "countryName": "The Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "2.16.86.88",
+    "expected": {
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "NL",
+        "countryName": "Netherlands",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "IT",
+        "countryName": "Italy",
+        "region": "Lombardy",
+        "city": "Milan",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "197.216.11.23",
+    "expected": {
+      "countryCode": "BJ",
+      "countryName": "Benin"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "AO",
+        "countryName": "Angola",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "AO",
+        "countryName": "Angola",
+        "region": "Luanda Province",
+        "city": "Luanda",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "194.55.224.81",
+    "expected": {
+      "countryCode": "MH",
+      "countryName": "Marshall Islands"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "California",
+        "city": "Los Angeles",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "California",
+        "city": "Los Angeles",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "5.181.64.19",
+    "expected": {
+      "countryCode": "PH",
+      "countryName": "Philippines"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "region": "Texas",
+        "city": "Dallas",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  },
+  {
+    "ip": "89.16.10.126",
+    "expected": {
+      "countryCode": "MQ",
+      "countryName": "Martinique"
+    },
+    "actual": {
+      "geojs.io": {
+        "countryCode": "GP",
+        "countryName": "Guadeloupe",
+        "city": "Les Abymes",
+        "success": true
+      },
+      "ip-api.com": {
+        "countryCode": "FR",
+        "countryName": "France",
+        "region": "Île-de-France",
+        "city": "Paris",
+        "success": true
+      }
+    },
+    "isCorrect": false,
+    "confidence": 0
+  }
+]
