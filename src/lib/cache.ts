@@ -119,11 +119,16 @@ class CacheManager {
 
     try {
       const pattern = this.getKey(prefix, '*');
-      const keys = await this.redis.keys(pattern);
-      
-      if (keys.length > 0) {
-        await this.redis.del(...keys);
-      }
+      let cursor = '0';
+
+      do {
+        const [nextCursor, keys] = await this.redis.scan(cursor, 'MATCH', pattern, 'COUNT', 100);
+        cursor = nextCursor;
+
+        if (keys.length > 0) {
+          await this.redis.del(...keys);
+        }
+      } while (cursor !== '0');
     } catch (error) {
       console.warn(`Cache clear prefix error for ${prefix}:`, error);
     }
@@ -138,10 +143,18 @@ class CacheManager {
     }
 
     try {
-      const keys = await this.redis.keys('ipregion:*');
+      let cursor = '0';
+      let keyCount = 0;
+
+      do {
+        const [nextCursor, keys] = await this.redis.scan(cursor, 'MATCH', 'ipregion:*', 'COUNT', 100);
+        cursor = nextCursor;
+        keyCount += keys.length;
+      } while (cursor !== '0');
+
       return {
         connected: true,
-        keyCount: keys.length,
+        keyCount,
       };
     } catch (error) {
       console.warn('Cache stats error:', error);

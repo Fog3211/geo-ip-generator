@@ -4,7 +4,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { incrementRateLimit, getRateLimitCount } from '~/lib/cache';
+import { incrementRateLimit } from '~/lib/cache';
 import { RATE_LIMITS } from '~/config';
 import type { RateLimitEndpoint, RateLimitInfo } from '~/types';
 
@@ -117,36 +117,49 @@ export function withRateLimit(
   endpoint?: string
 ) {
   return async (request: NextRequest): Promise<NextResponse> => {
-    // Apply rate limiting
-    const rateLimitResponse = await rateLimitMiddleware(request, endpoint);
-    
-    // If rate limited, return the rate limit response
-    if (rateLimitResponse) {
-      return rateLimitResponse;
+    const clientIP = getClientIP(request);
+    const endpointName = endpoint || getEndpointName(request);
+    const config = RATE_LIMITS[endpointName as RateLimitEndpoint] || RATE_LIMITS.default;
+
+    let currentCount = 0;
+
+    try {
+      if (!(process.env.NODE_ENV === 'development' &&
+          (clientIP === '127.0.0.1' || clientIP === '::1' || clientIP === 'localhost'))) {
+        currentCount = await incrementRateLimit(clientIP, endpointName, config.ttl);
+
+        if (currentCount > config.requests) {
+          console.warn(`Rate limit exceeded for IP ${clientIP} on endpoint ${endpointName}: ${currentCount}/${config.requests}`);
+
+          return NextResponse.json(
+            {
+              error: 'Too Many Requests',
+              message: `Rate limit exceeded. Max ${config.requests} requests per minute allowed.`,
+              retryAfter: Math.ceil(config.windowMs / 1000),
+              timestamp: new Date().toISOString(),
+            },
+            {
+              status: 429,
+              headers: {
+                'X-RateLimit-Limit': config.requests.toString(),
+                'X-RateLimit-Remaining': Math.max(0, config.requests - currentCount).toString(),
+                'X-RateLimit-Reset': new Date(Date.now() + config.windowMs).toISOString(),
+                'Retry-After': Math.ceil(config.windowMs / 1000).toString(),
+              }
+            }
+          );
+        }
+      }
+    } catch (error) {
+      console.error('Rate limiting middleware error:', error);
     }
-    
-    // Otherwise, continue with the original handler
+
     const response = await handler(request);
 
-    // After successful handling, attach rate limit headers as well
-    try {
-      const clientIP = getClientIP(request);
-      const endpointName = endpoint || getEndpointName(request);
-      const config = RATE_LIMITS[endpointName as RateLimitEndpoint] || RATE_LIMITS.default;
-
-      // Fetch current usage (may be 0 if Redis disabled)
-      const currentCount = await getRateLimitCount(clientIP, endpointName);
-      const limit = config.requests;
-      const remaining = Math.max(0, limit - currentCount);
-      const resetAt = new Date(Date.now() + config.windowMs).toISOString();
-
-      response.headers.set('X-RateLimit-Limit', String(limit));
-      response.headers.set('X-RateLimit-Remaining', String(remaining));
-      response.headers.set('X-RateLimit-Reset', resetAt);
-      // Do not set Retry-After on success; it's meaningful when rejecting
-    } catch (err) {
-      // Fail open: do not block response if headers setting failed
-      console.warn('Failed to attach rate limit headers:', err);
+    if (currentCount > 0) {
+      response.headers.set('X-RateLimit-Limit', String(config.requests));
+      response.headers.set('X-RateLimit-Remaining', String(Math.max(0, config.requests - currentCount)));
+      response.headers.set('X-RateLimit-Reset', new Date(Date.now() + config.windowMs).toISOString());
     }
 
     return response;

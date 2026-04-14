@@ -135,3 +135,11 @@ logs
 
 # Turbo
 .turbo
+
+# Generated data artifacts
+data/backups/
+data/validation/validation-report-*.json
+data/validation/errors-*.json
+
+# Workflow temp files
+meta.env

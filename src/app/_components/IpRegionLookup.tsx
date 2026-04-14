@@ -74,7 +74,7 @@ export function IpRegionLookup() {
   useEffect(() => {
     const fetchMeta = async () => {
       try {
-        const res = await fetch('/api/countries');
+        const res = await fetch('/api/meta');
         if (!res.ok) return;
         const data = await res.json();
         const meta = data?.data?.meta as { lastUpdated?: string } | undefined;
