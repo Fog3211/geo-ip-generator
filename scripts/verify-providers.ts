@@ -185,7 +185,7 @@ const printTable = (verifications: IpVerification[]): void => {
   }
 
   const colWidths = header.map((h, idx) => Math.max(h.length, ...rows.map((r) => r[idx]?.length ?? 0)));
-  const fmt = (val: string, i: number): string => val.padEnd(colWidths[i], ' ');
+  const fmt = (val: string, i: number): string => val.padEnd(colWidths[i] ?? 0, ' ');
   console.log(header.map(fmt).join(' | '));
   console.log(colWidths.map((w) => '-'.repeat(w)).join('-|-'));
   for (const r of rows) {
@@ -198,6 +198,9 @@ const main = async (): Promise<void> => {
   const out: IpVerification[] = [];
   for (let i = 0; i < ips.length; i += 1) {
     const ip = ips[i];
+    if (ip === undefined) {
+      continue;
+    }
     console.log(`\nChecking ${ip} ...`);
     const v = await verifyIp(ip);
     out.push(v);

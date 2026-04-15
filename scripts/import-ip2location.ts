@@ -98,12 +98,19 @@ async function downloadIPData(): Promise<void> {
       for (const url of IP2LOCATION_URLS) {
         try {
           console.log(`🔗 Trying URL: ${url}`);
-          response = await fetch(url, {
-            timeout: 60000, // 60 second timeout
-            headers: {
-              'User-Agent': 'geo-ip-generator/1.0 (+https://github.com/Fog3211/geo-ip-generator)'
-            }
-          });
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 60000);
+
+          try {
+            response = await fetch(url, {
+              signal: controller.signal,
+              headers: {
+                'User-Agent': 'geo-ip-generator/1.0 (+https://github.com/Fog3211/geo-ip-generator)'
+              }
+            });
+          } finally {
+            clearTimeout(timeoutId);
+          }
           
           if (response.ok) {
             console.log(`✅ Successfully connected to: ${url}`);
@@ -172,9 +179,9 @@ async function extractZipFile(): Promise<void> {
       
       // Try using Node.js built-in extraction (if available)
       try {
-        const AdmZip = await import('adm-zip').catch(() => null);
-        if (AdmZip) {
-          const zip = new AdmZip.default(ZIP_FILE);
+        const AdmZipModule = await import('adm-zip').catch(() => null) as unknown as { default: new (filePath: string) => { extractAllTo: (targetPath: string, overwrite?: boolean) => void } } | null;
+        if (AdmZipModule) {
+          const zip = new AdmZipModule.default(ZIP_FILE);
           zip.extractAllTo(DATA_DIR, true);
           console.log('✅ ZIP file extracted using Node.js');
           return;
