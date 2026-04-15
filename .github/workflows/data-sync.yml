@@ -186,8 +186,7 @@ jobs:
           data/combined-geo-ip-data.csv
           data/combined-geo-ip-data.xlsx
           data/sync-report.json
-          data/backups/
-        retention-days: 30
+        retention-days: 3
         if-no-files-found: warn
 
     - name: Notify on failure

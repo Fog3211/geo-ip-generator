@@ -105,7 +105,7 @@ jobs:
         name: validation-reports-${{ github.run_number }}
         path: |
           data/validation/
-        retention-days: 30
+        retention-days: 3
 
     - name: Commit validation reports
       if: always()
