@@ -3,8 +3,8 @@
  *
  * Notes:
  * - This script runs locally via `pnpm exec tsx scripts/verify-providers.ts`.
- * - It queries 6 providers without API keys to maximize coverage while avoiding auth.
- * - Providers: geojs.io, ip-api.com, ipwho.is, ipapi.co, db-ip.com (free key), freegeoip.app
+ * - It queries a small set of CI-friendlier providers without API keys.
+ * - Providers: geojs.io, ip-api.com, db-ip.com (free)
  * - The script processes IPs sequentially to respect provider rate limits,
  *   while each IP fans out to providers in parallel with per-request timeouts.
  */
@@ -44,7 +44,7 @@ const INPUT_IPS: string[] = [
 ];
 
 const REQUEST_TIMEOUT_MS = 6000;
-const BETWEEN_IP_DELAY_MS = 1000; // keep under ip-api.com's rate limit
+const BETWEEN_IP_DELAY_MS = 1500; // 保守一点，降低免费 provider 的限流风险
 
 const sleep = async (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms));
 
@@ -118,53 +118,11 @@ const providers: Array<{
     },
   },
   {
-    name: 'ipwho.is',
-    lookup: async (ip: string): Promise<CountryCode | null> => {
-      const obj = await safeFetchJson(`https://ipwho.is/${encodeURIComponent(ip)}?fields=success,country_code`);
-      if (typeof obj === 'object' && obj !== null) {
-        const o = obj as { success?: unknown; country_code?: unknown };
-        if (o.success === true && typeof o.country_code === 'string') {
-          const cc = o.country_code.toUpperCase();
-          return isIso2Country(cc) ? cc : null;
-        }
-      }
-      return null;
-    },
-  },
-  {
-    name: 'ipapi.co',
-    lookup: async (ip: string): Promise<CountryCode | null> => {
-      const res = await fetch(`https://ipapi.co/${encodeURIComponent(ip)}/country/`, {
-        method: 'GET',
-        headers: { 'accept': 'text/plain' },
-      });
-      if (!res.ok) {
-        return null;
-      }
-      const text = (await res.text()).trim().toUpperCase();
-      return isIso2Country(text) ? text : null;
-    },
-  },
-  {
-    name: 'db-ip.com (free)',
+    name: 'db-ip.com',
     lookup: async (ip: string): Promise<CountryCode | null> => {
       const obj = await safeFetchJson(`https://api.db-ip.com/v2/free/${encodeURIComponent(ip)}`);
       if (typeof obj === 'object' && obj !== null && 'countryCode' in obj) {
         const code = (obj as { countryCode?: unknown }).countryCode;
-        if (typeof code === 'string') {
-          const cc = code.toUpperCase();
-          return isIso2Country(cc) ? cc : null;
-        }
-      }
-      return null;
-    },
-  },
-  {
-    name: 'freegeoip.app',
-    lookup: async (ip: string): Promise<CountryCode | null> => {
-      const obj = await safeFetchJson(`https://freegeoip.app/json/${encodeURIComponent(ip)}`);
-      if (typeof obj === 'object' && obj !== null && 'country_code' in obj) {
-        const code = (obj as { country_code?: unknown }).country_code;
         if (typeof code === 'string') {
           const cc = code.toUpperCase();
           return isIso2Country(cc) ? cc : null;

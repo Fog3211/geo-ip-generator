@@ -68,7 +68,7 @@ class IpDataValidator {
   private readonly sampleSize: number;
   private readonly outputDir: string;
   private readonly maxRetries = 3;
-  private readonly requestDelay = 1000; // 1秒延迟避免API限制
+  private readonly requestDelay = 1500; // 保守一点，降低免费 provider 的限流风险
 
   constructor(sampleSize = 100) {
     this.sampleSize = sampleSize;
@@ -233,13 +233,13 @@ class IpDataValidator {
   }
 
   /**
-   * 调用 ipwho.is API（替换 ipapi.co，避免 429 频繁限流）
+   * 调用 db-ip.com free API
    */
-  async queryIpWhoIs(ip: string): Promise<{ data: ApiResponse; responseTime: number }> {
+  async queryDbIp(ip: string): Promise<{ data: ApiResponse; responseTime: number }> {
     const startTime = Date.now();
 
     try {
-      const response = await fetch(`https://ipwho.is/${ip}`);
+      const response = await fetch(`https://api.db-ip.com/v2/free/${ip}`);
 
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`);
@@ -247,22 +247,17 @@ class IpDataValidator {
 
       const data = await response.json();
 
-      if (data && typeof data.success === 'boolean' && data.success === false) {
-        const reason = typeof data.message === 'string' ? data.message : 'API returned error';
-        throw new Error(reason);
-      }
-
       return {
         data: {
-          countryCode: data.country_code,
-          countryName: data.country,
-          region: data.region || data.region_name || undefined,
-          city: data.city,
+          countryCode: data.countryCode,
+          countryName: data.countryName,
+          region: data.stateProv || undefined,
+          city: data.city || undefined,
         },
         responseTime: Date.now() - startTime
       };
     } catch (error) {
-      throw new Error(`ipwho.is error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      throw new Error(`db-ip.com error: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   }
 
@@ -324,8 +319,8 @@ class IpDataValidator {
     const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
     const apiProviders = [
       { name: 'ip-api.com', fn: this.queryIpApi.bind(this) },
-      { name: 'ipwho.is', fn: this.queryIpWhoIs.bind(this) },
       { name: 'geojs.io', fn: this.queryGeoJs.bind(this) },
+      { name: 'db-ip.com', fn: this.queryDbIp.bind(this) },
     ];
 
     // 每天轮换使用不同的API组合
