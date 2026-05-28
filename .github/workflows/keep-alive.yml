@@ -2,8 +2,10 @@ name: Keep Render App Alive
 
 on:
   schedule:
-    # Run every 14 minutes (per your preference)
-    - cron: '*/14 * * * *'
+    # Run every 10 minutes. Render free tier sleeps after 15 min of inactivity,
+    # and GitHub Actions scheduled jobs are often delayed by several minutes,
+    # so we leave a ~5 min safety margin instead of the previous ~1 min.
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -33,18 +35,18 @@ jobs:
             url=$(echo "$raw" | xargs)
             if [ -z "$url" ]; then continue; fi
             echo "\n=== Pinging $url ==="
-            # homepage
+            # homepage. Use --max-time 60 so a cold-start (which can take 30-60s) does not time out at the default 0s.
             for i in 1 2 3; do
-              code=$(curl -s -o /dev/null -w "%{http_code}" -H "User-Agent: $UA" -H "Cache-Control: no-cache" "$url" || echo "000")
+              code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 60 -H "User-Agent: $UA" -H "Cache-Control: no-cache" "$url" || echo "000")
               echo "Attempt $i -> homepage: HTTP $code"
-              [ "$code" = "200" ] || [ "$code" = "304" ] && break
+              if [ "$code" = "200" ] || [ "$code" = "304" ]; then break; fi
               sleep 2
             done
             # health
             for i in 1 2 3; do
-              hcode=$(curl -s -o /dev/null -w "%{http_code}" -H "User-Agent: $UA" -H "Cache-Control: no-cache" "$url/api/health" || echo "000")
+              hcode=$(curl -s -o /dev/null -w "%{http_code}" --max-time 60 -H "User-Agent: $UA" -H "Cache-Control: no-cache" "$url/api/health" || echo "000")
               echo "Attempt $i -> /api/health: HTTP $hcode"
-              [ "$hcode" = "200" ] || [ "$hcode" = "304" ] && break
+              if [ "$hcode" = "200" ] || [ "$hcode" = "304" ]; then break; fi
               sleep 2
             done
             if { [ "$code" = "200" ] || [ "$code" = "304" ]; } && { [ "$hcode" = "200" ] || [ "$hcode" = "304" ]; }; then
@@ -59,4 +61,4 @@ jobs:
       - name: Log activity
         run: |
           echo "Keep-alive job executed at $(date -u)"
-          echo "Next scheduled run in ~13 minutes (GitHub Actions cron, UTC)"
+          echo "Next scheduled run in ~10 minutes (GitHub Actions cron, UTC)"
