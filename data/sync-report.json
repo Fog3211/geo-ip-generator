@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-06-14T06:42:45.094Z",
+  "timestamp": "2026-06-15T07:23:05.348Z",
   "version": "1.0.0",
   "countries": 250,
-  "ipRanges": 274987,
-  "dataSize": "43.86MB",
-  "fileSize": "43.86MB",
+  "ipRanges": 276451,
+  "dataSize": "44.09MB",
+  "fileSize": "44.09MB",
   "generatedFiles": [
     "combined-geo-ip-data.json",
     "combined-geo-ip-data.min.json",
