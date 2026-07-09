@@ -1,24 +1,24 @@
 {
-  "timestamp": "2026-07-08T05:23:51.660Z",
+  "timestamp": "2026-07-09T06:17:03.265Z",
   "summary": {
     "totalSamples": 50,
-    "correctCount": 46,
-    "incorrectCount": 4,
+    "correctCount": 42,
+    "incorrectCount": 8,
     "errorCount": 0,
-    "accuracyRate": 0.92,
-    "averageConfidence": 0.83
+    "accuracyRate": 0.84,
+    "averageConfidence": 0.73
   },
   "providerStats": {
-    "ip-api.com": {
+    "geojs.io": {
       "successRate": 1,
-      "accuracyRate": 0.86,
+      "accuracyRate": 0.66,
       "responseTime": 0
     },
-    "geojs.io": {
+    "db-ip.com": {
       "successRate": 1,
       "accuracyRate": 0.8,
       "responseTime": 0
     }
   },
-  "errorCount": 4
+  "errorCount": 8
 }
