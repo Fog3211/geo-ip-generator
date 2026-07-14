@@ -56,6 +56,10 @@ export function IpRegionLookup() {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement>(null);
 
+	// Which copy target is showing "copied" feedback: an IP string, 'all', or null
+	const [copiedKey, setCopiedKey] = useState<string | null>(null);
+	const copiedTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
     // State for IP generation
 	const [generateData, setGenerateData] = useState<GenerateIpResponse | null>(null);
 	const [generateLoading, setGenerateLoading] = useState(false);
@@ -88,31 +92,51 @@ export function IpRegionLookup() {
     fetchMeta();
   }, []);
 
-	// Handle click outside dropdown to close it
+	// Close dropdown on outside click or Escape key
 	useEffect(() => {
 		function handleClickOutside(event: MouseEvent) {
 			if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
 				setIsDropdownOpen(false);
 			}
 		}
+		function handleEscape(event: KeyboardEvent) {
+			if (event.key === 'Escape') {
+				setIsDropdownOpen(false);
+			}
+		}
 
 		if (isClient) {
 			document.addEventListener('mousedown', handleClickOutside);
+			document.addEventListener('keydown', handleEscape);
 			return () => {
 				document.removeEventListener('mousedown', handleClickOutside);
+				document.removeEventListener('keydown', handleEscape);
 			};
 		}
 	}, [isClient]);
 
-	// Safely handle clipboard operations
+	// Clear pending copied-feedback timer on unmount
+	useEffect(() => {
+		return () => {
+			if (copiedTimerRef.current) {
+				clearTimeout(copiedTimerRef.current);
+			}
+		};
+	}, []);
+
+	// Copy to clipboard and show transient "copied" feedback on the trigger button
 	const handleCopyToClipboard = async (text: string, isMultiple: boolean = false) => {
 		if (!isClient) return;
-		
+
 		try {
 			await navigator.clipboard.writeText(text);
-			if (isClient) {
-				trackIpCopy(text, isMultiple);
+			trackIpCopy(text, isMultiple);
+
+			setCopiedKey(isMultiple ? 'all' : text);
+			if (copiedTimerRef.current) {
+				clearTimeout(copiedTimerRef.current);
 			}
+			copiedTimerRef.current = setTimeout(() => setCopiedKey(null), 2000);
 		} catch (error) {
 			console.warn('Failed to copy to clipboard:', error);
 		}
@@ -121,7 +145,7 @@ export function IpRegionLookup() {
 
 
 	const handleGenerate = async () => {
-		if (!query.trim()) return;
+		if (!query.trim() || generateLoading) return;
 
 		// Track search query only on client
 		if (isClient) {
@@ -181,19 +205,20 @@ export function IpRegionLookup() {
 			{/* Generation input */}
 			<div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
 				<div className="space-y-4">
-					<label className="block text-sm font-medium text-gray-700">
+					<label htmlFor="country-query" className="block text-sm font-medium text-gray-700">
 						Enter country code or name
 					</label>
 					
 					{/* Mobile-optimized responsive layout */}
 					<div className="space-y-3 sm:space-y-0 sm:flex sm:gap-3">
 						<input
+							id="country-query"
 							type="text"
 							value={query}
 							onChange={(e) => setQuery(e.target.value)}
 							placeholder="e.g: CN, China, 中国, US, America..."
 							className="w-full sm:flex-1 px-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-base"
-							onKeyPress={(e) => {
+							onKeyDown={(e) => {
 								if (e.key === "Enter") {
 									handleGenerate();
 								}
@@ -303,9 +328,17 @@ export function IpRegionLookup() {
 										const allIps = generateData.ips.map(ip => ip.ip).join('\n');
 										handleCopyToClipboard(allIps, true);
 									}}
-									className="self-start sm:self-auto inline-flex items-center gap-2 px-3 py-2 text-xs sm:text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition-colors"
+									className={`self-start sm:self-auto inline-flex items-center gap-2 px-3 py-2 text-xs sm:text-sm rounded-lg transition-colors ${
+										copiedKey === 'all'
+											? 'bg-green-100 text-green-700'
+											: 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+									}`}
 								>
-									<span className="hidden sm:inline">Copy All</span> 📋
+									{copiedKey === 'all' ? (
+										<><span className="hidden sm:inline">Copied!</span> ✅</>
+									) : (
+										<><span className="hidden sm:inline">Copy All</span> 📋</>
+									)}
 								</button>
 							)}
 						</div>
@@ -319,12 +352,20 @@ export function IpRegionLookup() {
 											{ipData.ip}
 										</div>
 										<button
-											aria-label="Copy IP"
-											title="Copy"
+											aria-label={copiedKey === ipData.ip ? "Copied" : "Copy IP"}
+											title={copiedKey === ipData.ip ? "Copied!" : "Copy"}
 											onClick={() => handleCopyToClipboard(ipData.ip, false)}
-											className="shrink-0 inline-flex items-center justify-center h-8 w-8 rounded-md bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-100"
+											className={`shrink-0 inline-flex items-center justify-center h-8 w-8 rounded-md border transition-colors ${
+												copiedKey === ipData.ip
+													? 'bg-green-50 text-green-600 border-green-200'
+													: 'bg-blue-50 text-blue-700 hover:bg-blue-100 border-blue-100'
+											}`}
 										>
-											<svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+											{copiedKey === ipData.ip ? (
+												<svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+											) : (
+												<svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+											)}
 										</button>
 									</div>
 									<div className="mt-1.5 text-[11px] text-gray-600 leading-5">
