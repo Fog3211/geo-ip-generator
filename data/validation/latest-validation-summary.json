@@ -1,24 +1,24 @@
 {
-  "timestamp": "2026-08-03T05:44:10.875Z",
+  "timestamp": "2026-08-03T06:21:03.494Z",
   "summary": {
-    "totalSamples": 50,
-    "correctCount": 43,
-    "incorrectCount": 7,
+    "totalSamples": 100,
+    "correctCount": 85,
+    "incorrectCount": 15,
     "errorCount": 0,
-    "accuracyRate": 0.86,
-    "averageConfidence": 0.84
+    "accuracyRate": 0.85,
+    "averageConfidence": 0.8
   },
   "providerStats": {
     "db-ip.com": {
       "successRate": 1,
-      "accuracyRate": 0.84,
+      "accuracyRate": 0.81,
       "responseTime": 0
     },
     "ip-api.com": {
       "successRate": 1,
-      "accuracyRate": 0.84,
+      "accuracyRate": 0.79,
       "responseTime": 0
     }
   },
-  "errorCount": 7
+  "errorCount": 15
 }
